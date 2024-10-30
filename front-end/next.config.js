@@ -1,9 +1,10 @@
-/** @type {import('next').Config} */
-const config = {
-  /* config options here */
-
-};
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  basePath: '/rockethacks.github.io',
+  images: {
+    unoptimized: true,
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -12,12 +13,5 @@ module.exports = {
     return config;
   },
 };
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
-}
 
-module.exports = nextConfig
+module.exports = nextConfig;
