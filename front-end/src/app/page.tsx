@@ -1,6 +1,8 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Rocket as NavRocket, Flame } from 'lucide-react';
+import { LampDemo } from "@/components/ui/lamp";
+import Footer from "@/components/ui/footer";
 import RocketIcon from '@/assets/rocket.svg';
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
@@ -39,90 +41,60 @@ const AnimatedRocket = () => {
     <div 
       className="fixed right-8 bottom-8 transition-all duration-300 z-50"
       style={{
-        transform: `translateY(${-scroll * 2}px)`,
+        transform: `translateY(${-scroll * 7}px)`, // Increased multiplier for longer travel
         opacity: scroll > 95 ? 0 : 1
       }}
     >
-      {/* Imported Rocket SVG */}
+      {/* Rocket SVG */}
       <div className="drop-shadow-[0_0_10px_rgba(244,226,108,0.5)]">
-        <RocketIcon className="w-20 h-20" />
+        <RocketIcon className="w-32 h-32" />
       </div>
-      {/* Animated Flames */}
-      <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center">
+      
+      {/* Animated Trail */}
+      <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center">
+        {/* Main flame */}
         <Flame 
-          className="w-8 h-8 text-[#f4e26c] animate-pulse absolute"
+          className="w-8 h-8 text-[#f4e26c] animate-pulse rotate-180"
           style={{
             opacity: 0.8,
-            transform: 'scale(0.8)',
             filter: 'drop-shadow(0 0 5px rgba(244, 226, 108, 0.5))'
           }}
         />
-        <Flame 
-          className="w-6 h-6 text-orange-500 animate-pulse absolute -bottom-2"
-          style={{
-            opacity: 0.6,
-            transform: 'scale(0.6)',
-            animationDelay: '150ms'
-          }}
-        />
-        {/* Rocket Trail */}
-        <div 
-          className="w-1 bg-gradient-to-b from-[#f4e26c] via-orange-500 to-transparent rounded-full"
-          style={{
-            height: `${Math.min(scroll * 0.7, 50)}px`,
-            opacity: Math.min(scroll * 0.02, 0.7),
-            marginTop: '32px'
-          }}
-        >
-          {/* Animated particles */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2">
-            {[...Array(3)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-2 h-2 rounded-full bg-[#f4e26c]"
-                style={{
-                  animation: `particle ${1 + i * 0.2}s infinite`,
-                  animationDelay: `${i * 0.1}s`,
-                  opacity: 0
-                }}
-              />
-            ))}
-          </div>
+        
+        {/* Animated trail line */}
+        <div className="relative">
+          <div 
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-1 bg-gradient-to-b from-[#f4e26c] to-transparent rounded-full transition-all duration-300"
+            style={{
+              height: `${Math.min(scroll * 1.5, 200)}px`, // Longer trail based on scroll
+              opacity: Math.min(scroll * 0.02, 0.7),
+              animation: 'pulseTrail 2s infinite'
+            }}
+          />
         </div>
       </div>
+      
+      {/* Styles for trail animation */}
+      <style jsx>{`
+        @keyframes pulseTrail {
+          0%, 100% {
+            opacity: 0.7;
+          }
+          50% {
+            opacity: 0.3;
+          }
+        }
+      `}</style>
     </div>
   );
 };
 
-// Move particle styles to a component
-const ParticleStyles = () => {
-  useEffect(() => {
-    const styleSheet = document.createElement('style');
-    styleSheet.textContent = `
-      @keyframes particle {
-        0% {
-          transform: translate(0, 0) scale(1);
-          opacity: 0.8;
-        }
-        100% {
-          transform: translate(${Math.random() > 0.5 ? '-' : ''}${Math.random() * 20}px, ${20 + Math.random() * 20}px) scale(0);
-          opacity: 0;
-        }
-      }
-    `;
-    document.head.appendChild(styleSheet);
-    return () => styleSheet.remove();
-  }, []);
-
-  return null;
-};
 
 export default function Home() {
   const [email, setEmail] = useState('');
   
   return (
     <div className="bg-gradient-to-br from-blue-700 via-blue-800 to-gray-900 relative overflow-x-hidden">
-      <ParticleStyles />
       {/* Add yellow tint to background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#f4e26c]/5 via-transparent to-transparent"></div>
       
@@ -147,15 +119,10 @@ export default function Home() {
 
       {/* Hero Section */}
       <Section id="home" className="pt-20">
-        <div className="max-w-4xl text-center mb-12">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/80 mb-2 leading-tight">
-            Join the biggest student
-            <span className="block">hackathon in space.</span>
-          </h1>
-        </div>
-
-        <div className="w-full max-w-md mx-auto relative mb-12">
+        <LampDemo />
+        <div className="w-full max-w-md mx-auto relative mb-12 mt-12">
           <input
+            id="email-input"
             type="email"
             placeholder="Enter email to stay updated"
             value={email}
@@ -174,8 +141,8 @@ export default function Home() {
           <h2 className="text-3xl md:text-5xl font-bold mb-12 text-white">About Us</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#f4e26c]/30 transition-colors">
-              <h3 className="text-xl font-bold mb-4 text-white">24 Hours</h3>
-              <p className="text-white/80">Join us for an intense 24-hour coding experience that will push your limits</p>
+              <h3 className="text-xl font-bold mb-4 text-white">12-24 Hours</h3>
+              <p className="text-white/80">Join us for an intense 12-24-hour coding experience that will push your limits</p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#f4e26c]/30 transition-colors">
               <h3 className="text-xl font-bold mb-4 text-white">$10k in Prizes</h3>
@@ -222,6 +189,7 @@ export default function Home() {
         <div className="absolute top-[-350px] left-[-350px] w-96 h-96 rounded-full bg-blue-500/10 blur-3xl"></div>
         <div className="absolute bottom-[-350px] right-[-350px] w-96 h-96 rounded-full bg-[#f4e26c]/5 blur-3xl"></div>
       </div>
+      <Footer />
     </div>
   );
 }
