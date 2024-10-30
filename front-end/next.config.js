@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/rockethacks.github.io',
+  basePath: '',
   images: {
     unoptimized: true,
   },
