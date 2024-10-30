@@ -3,19 +3,45 @@
 @tailwind utilities;
 
 :root {
-  --background: #f4e26c;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #172fb4;
-    --foreground: #feef22;
-  }
+  --blue-gradient-start: #1d4ed8;
+  --blue-gradient-middle: #1e40af;
+  --blue-gradient-end: #111827;
+  --accent: #f4e26c;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--blue-gradient-end);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--blue-gradient-end);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue-gradient-middle);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-gradient-start);
+}
+
+/* Autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px var(--blue-gradient-middle) inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
