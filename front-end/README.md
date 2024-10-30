@@ -56,3 +56,10 @@ The website currently has three pages: **Home/Landing Page**, **About Us Page**,
    ```bash
    git clone https://github.com/rockethacks/rockethacks.github.io.git
    cd rockethacks.github.io/front-end
+
+## TO DO 
+IMP- create a design pattern structure for the entire website. 
+1) Add content to make it feel filled up 
+2) Add backend functionality for the email and Sponsor Us buttons
+3) Add social media links
+4) Get more ideas. 
