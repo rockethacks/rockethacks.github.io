@@ -29,7 +29,7 @@ const Footer = () => {
           Join our Mailing List
         </button>
         <span className="hidden md:inline text-white/50">•</span>
-        <a href="/sponsor" className="text-white/90 hover:text-white transition-colors">
+        <a href="mailto:RocketHacks@utoledo.edu?subject=Sponsorship%20Inquiry&body=Hi%20RocketHacks%20Team,%0D%0A%0D%0AI'm%20interested%20in%20learning%20more%20about%20sponsorship%20opportunities%20for%20RocketHacks." className="text-white/90 hover:text-white transition-colors">
           Sponsor Us
         </a>
       </div>
