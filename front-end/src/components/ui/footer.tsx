@@ -1,5 +1,5 @@
 "use client";
-import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Twitter , Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const scrollToEmailAndFocus = () => {
@@ -7,18 +7,15 @@ const Footer = () => {
     const emailInput = document.querySelector<HTMLInputElement>('#email-input');
     
     if (homeSection && emailInput) {
-      // Scroll to home section first
       homeSection.scrollIntoView({ behavior: 'smooth' });
-
-      // Focus the input after scrolling completes
       setTimeout(() => {
         emailInput.focus();
-      }, 1000); // Increased timeout to ensure scroll completes
+      }, 1000);
     }
   };
 
   return (
-    <footer className="w-full py-8 px-4 mt-20">
+    <footer className="relative w-full py-8 px-4 mt-20 z-10">
       {/* Top Links */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-8">
         <a href="/code-of-conduct" className="text-white/90 hover:text-white transition-colors">
@@ -39,16 +36,28 @@ const Footer = () => {
 
       {/* Social Media Icons */}
       <div className="flex justify-center items-center gap-8 mb-8">
-        <a href="https://instagram.com/rockethacks" target="_blank" rel="noopener noreferrer" 
-           className="text-white/80 hover:text-white transition-colors">
+        <a 
+          href="https://www.instagram.com/rockethacks.ut" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-white/80 hover:text-white transition-colors p-2"
+        >
           <Instagram className="w-6 h-6" />
         </a>
-        <a href="https://twitter.com/rockethacks" target="_blank" rel="noopener noreferrer"
-           className="text-white/80 hover:text-white transition-colors">
+        <a 
+          href="https://x.com/UTRocketHacks" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-white/80 hover:text-white transition-colors p-2"
+        >
           <Twitter className="w-6 h-6" />
         </a>
-        <a href="https://facebook.com/rockethacks" target="_blank" rel="noopener noreferrer"
-           className="text-white/80 hover:text-white transition-colors">
+        <a 
+          href="https://facebook.com/rockethacks" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-white/80 hover:text-white transition-colors p-2"
+        >
           <Facebook className="w-6 h-6" />
         </a>
       </div>
