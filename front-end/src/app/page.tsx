@@ -1,7 +1,7 @@
 // src/app/page.tsx
 'use client';
 import React from 'react';
-import Navbar from '@/components/navbar/Navbar';
+import { Navbar } from '@/components/navbar/Navbar';
 import Hero from '@/components/hero/hero';
 import About from '@/components/about/About';
 import FAQ from '@/components/faq/Faq';
