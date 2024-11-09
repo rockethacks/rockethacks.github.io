@@ -1,5 +1,5 @@
 "use client";
-import { Facebook, Instagram, Twitter  } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, X } from 'lucide-react';
 
 const Footer = () => {
   const scrollToEmailAndFocus = () => {
@@ -54,7 +54,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="text-white/80 hover:text-white transition-colors p-2"
         >
-          <Twitter className="w-6 h-6" />
+          <X className="w-6 h-6" />
         </a>
         <a 
           href="https://www.instagram.com/rockethacks.ut" 
@@ -63,6 +63,14 @@ const Footer = () => {
           className="text-white/80 hover:text-white transition-colors p-2"
         >
           <Facebook className="w-6 h-6" />
+        </a>
+        <a 
+          href="https://www.linkedin.com/company/rocket-hacks" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-white/80 hover:text-white transition-colors p-2"
+        >
+          <Linkedin className="w-6 h-6" />
         </a>
       </div>
 
