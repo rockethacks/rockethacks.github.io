@@ -7,12 +7,12 @@ interface InterestFormButtonProps {
 
 const InterestFormButton: React.FC<InterestFormButtonProps> = ({ className = '' }) => {
   return (
-    <div className={`flex justify-end p-2 ${className}`}>
+    <div className={`flex justify-end ${className}`}>
       <a
         href="https://docs.google.com/forms/d/e/1FAIpQLSepdYbwcXgkbKY6oCprN8e4nJyyE_v7DqNOt1Qi-PaD8uvoMw/viewform"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-transparent text-[#FFDA00] px-4 py-3 rounded-md font-medium 
+        className="bg-transparent text-[#FFDA00] px-4 py-2 rounded-md font-medium 
                  border-2 border-[#FFDA00]
                  transform hover:scale-105
                  transition-all duration-300
