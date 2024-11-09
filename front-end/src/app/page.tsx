@@ -10,7 +10,7 @@ import AnimatedRocket from '@/components/rocket/AnimatedRocket';
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-br from-[#15397F] to-[#005CB9] relative overflow-x-hidden">
+    <div className="bg-gradient-to-br from-[#15397F] to-[#102b5f] relative overflow-x-hidden">
       {/* Add yellow tint to background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#f4e26c]/5 via-transparent to-transparent"></div>
       
