@@ -36,7 +36,7 @@ export const About = () => {
         <div className="mb-16 max-w-3xl mx-auto">
           <p className="text-lg leading-relaxed text-white/90 bg-white/5 backdrop-blur-sm rounded-xl p-8 
                        border border-[#FFDA00]/20 hover:border-[#FFDA00]/40 transition-all duration-300
-                       shadow-[0_0_15px_rgba(244,226,108,0.1)] hover:shadow-[0_0_20px_rgba(244,226,108,0.15)]">
+                       shadow-[0_0_15px_rgba(244,226,108,0.1)] hover:shadow-[0_0_20px_rgba(244,226,108,0.15)] text-justify">
             RocketHacks is a 24-hour hackathon hosted by the University of Toledo, 
             dedicated to fostering innovation and problem-solving among students from 
             the Midwest and beyond. This event will gather talented students, from 

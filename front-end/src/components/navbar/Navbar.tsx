@@ -53,7 +53,7 @@ export const Navbar = () => {
             <div className="flex justify-end items-center z-10">
               <NavLink href="#home">HOME</NavLink>
               <NavLink href="#about">ABOUT US</NavLink>
-              <NavLink href="#sponsors" isSponsors={true}>SPONSORS</NavLink>
+              <NavLink href="#sponsors" isSponsors={true}>SPONSOR US</NavLink>
               <NavLink href="#faq">FAQs</NavLink>
             </div>
           </div>
