@@ -7,20 +7,36 @@ import InterestFormButton from '@/components/navbar/InterestFormButton';
 type NavLinkProps = {
   href: string;
   children: React.ReactNode;
+  isSponsors?: boolean;
 };
 
-const NavLink = ({ href, children }: NavLinkProps) => (
-  <a 
-    href={href}
-    onClick={(e) => {
-      e.preventDefault();
+const NavLink = ({ href, children, isSponsors }: NavLinkProps) => {
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (isSponsors) {
+      const sponsorLink = document.querySelector('#sponsor-link');
+      if (sponsorLink) {
+        sponsorLink.scrollIntoView({ behavior: 'smooth' });
+        sponsorLink.classList.remove('sponsor-glow'); // Remove existing animation if any
+        void (sponsorLink as HTMLElement).offsetWidth; // Trigger reflow to restart animation
+        sponsorLink.classList.add('sponsor-glow');
+      }
+    } else {
       document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-    }}
-    className="text-[#ffda00] hover:text-white transition-colors text-lg font-medium px-4 py-2"
-  >
-    {children}
-  </a>
-);
+    }
+  };
+
+  return (
+    <a 
+      href={href}
+      onClick={handleClick}
+      className="text-[#ffda00] hover:text-white transition-colors text-lg font-medium px-4 py-2"
+    >
+      {children}
+    </a>
+  );
+};
+
 
 export const Navbar = () => {
   return (
@@ -40,7 +56,7 @@ export const Navbar = () => {
               <div className="flex items-center">
                 <NavLink href="#home">HOME</NavLink>
                 <NavLink href="#about">ABOUT US</NavLink>
-                <NavLink href="#sponsors">SPONSOR US</NavLink>
+                <NavLink href="#sponsors" isSponsors={true}>SPONSOR US</NavLink>
                 <NavLink href="#faq">FAQs</NavLink>
               </div>
               
