@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import RocketIcon from '@/assets/rocket.svg';
-import { Flame } from 'lucide-react';
+import RocketIcon from '@/assets/Rocket-Icon-Final.svg';
 
 export default function AnimatedRocket() {
     const [scroll, setScroll] = useState(0);
@@ -17,7 +16,7 @@ export default function AnimatedRocket() {
   
     return (
       <div 
-        className="fixed right-8 bottom-8 transition-all duration-300 z-50"
+        className="fixed right-10 bottom-8 transition-all duration-300 z-50"
         style={{
           transform: `translateY(${-scroll * 7}px)`, // Increased multiplier for longer travel
           opacity: scroll > 95 ? 0 : 1
@@ -25,20 +24,11 @@ export default function AnimatedRocket() {
       >
         {/* Rocket SVG */}
         <div className="drop-shadow-[0_0_10px_rgba(244,226,108,0.5)]">
-          <RocketIcon className="w-32 h-32" />
+          <RocketIcon className="w-20 h-20" />
         </div>
         
         {/* Animated Trail */}
         <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center">
-          {/* Main flame */}
-          <Flame 
-            className="w-8 h-8 text-[#f4e26c] animate-pulse rotate-180"
-            style={{
-              opacity: 0.8,
-              filter: 'drop-shadow(0 0 5px rgba(244, 226, 108, 0.5))'
-            }}
-          />
-          
           {/* Animated trail line */}
           <div className="relative">
             <div 
