@@ -79,7 +79,7 @@ export const FAQ = () => {
 
           {/* Prospectus Button */}
           <a
-            href="/documents/Sponsorship Packet RocketHacks.pdf"
+            href="/documents/SPONSORSHIP PACKET- RocketHacks.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-transparent text-white px-4 py-3 rounded-md font-medium 
