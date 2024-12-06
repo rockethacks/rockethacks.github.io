@@ -74,10 +74,11 @@ export const FAQ = () => {
                          shadow-[0_0_15px_rgba(244,226,108,0.1)] hover:shadow-[0_0_20px_rgba(244,226,108,0.15)]
                          text-justify"
             >
-              RocketHacks can't happen without the support of our wonderful
-              sponsors. As we celebrate our inaugural year, we're ready to make
-              our event bigger and create a mark. We're all about fostering a
-              community, and we'd love to bring you into the RocketHacks family!
+              RocketHacks can&apos;t happen without the support of our wonderful
+              sponsors. As we celebrate our inaugural year, we&apos;re ready to
+              make our event bigger and create a mark. We&apos;re all about
+              fostering a community, and we&apos;d love to bring you into the
+              RocketHacks family!
             </p>
 
             {/* Why Sponsor Section */}
@@ -91,7 +92,7 @@ export const FAQ = () => {
                 Why Sponsor RocketHacks ?
               </h3>
               <h4 className="text-xl font-semibold mb-4 text-white">
-                As a sponsor, you'll be able to:
+                As a sponsor, you&apos;ll be able to:
               </h4>
               <ul className="list-disc list-inside space-y-2 text-white/90 mb-6">
                 <li>
@@ -103,8 +104,8 @@ export const FAQ = () => {
                   computer science engineers
                 </li>
                 <li>
-                  Increase your brand's visibility through RocketHacks' social
-                  media channels and events
+                  Increase your brand&apos;s visibility through
+                  RocketHacks&apos; social media channels and events
                 </li>
                 <li>
                   Facilitate interaction between participants and your employees
