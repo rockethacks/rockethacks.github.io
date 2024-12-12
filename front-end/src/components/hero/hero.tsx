@@ -121,15 +121,22 @@ export const Hero = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen w-full flex flex-col items-center justify-center px-4 pt-20"
+      className="min-h-screen w-full flex flex-col items-center justify-center 
+                 px-4 sm:px-6 md:px-8 
+                 pt-16 sm:pt-20 md:pt-24
+                 pb-8 sm:pb-12 md:pb-16"
     >
-      <LampDemo />
-      
-      <div className="mb-10 ml-[10px]">
-        <NameLogo className="w-160 h-80 text-[#FFDA00]" />
+      <div className="w-full max-w-[100vw] overflow-hidden">
+        <LampDemo />
       </div>
       
-      <div className="w-full max-w-md mx-auto relative mb-12">
+      <div className="mb-6 sm:mb-8 md:mb-10 ml-[5px] sm:ml-[10px]
+                    transform scale-75 sm:scale-90 md:scale-100">
+        <NameLogo className="w-[280px] sm:w-[320px] md:w-[400px] 
+                            h-auto text-[#FFDA00]" />
+      </div>
+      
+      <div className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-md mx-auto relative mb-8 sm:mb-10 md:mb-12">
         <input
           id="email-input"
           type="email"
@@ -137,34 +144,38 @@ export const Hero = () => {
           value={email}
           onChange={handleEmailChange}
           disabled={isSubmitting || connectionStatus !== 'connected'}
-          className={`w-full px-6 py-4 rounded-full bg-white/10 backdrop-blur-sm 
-                   border ${!isValidEmail ? 'border-red-500' : 'border-white/20'} 
-                   text-white placeholder:text-white/50 
-                   focus:outline-none focus:ring-2 focus:ring-[#f4e26c] focus:border-transparent
-                   disabled:opacity-50 disabled:cursor-not-allowed`}
+          className={`w-full 
+                     px-4 sm:px-6 
+                     py-3 sm:py-4 
+                     text-sm sm:text-base
+                     rounded-full bg-white/10 backdrop-blur-sm 
+                     border ${!isValidEmail ? 'border-red-500' : 'border-white/20'} 
+                     text-white placeholder:text-white/50 
+                     focus:outline-none focus:ring-2 focus:ring-[#f4e26c] focus:border-transparent
+                     disabled:opacity-50 disabled:cursor-not-allowed`}
         />
         {!isValidEmail && (
-          <p className="text-red-500 text-sm mt-1 ml-4">
+          <p className="text-red-500 text-xs sm:text-sm mt-1 ml-4">
             Please enter a valid email address
           </p>
         )}
         {submitStatus === 'success' && (
-          <p className="text-green-500 text-sm mt-1 ml-4">
+          <p className="text-green-500 text-xs sm:text-sm mt-1 ml-4">
             Thank you for subscribing!
           </p>
         )}
         {submitStatus === 'error' && (
-          <p className="text-red-500 text-sm mt-1 ml-4">
+          <p className="text-red-500 text-xs sm:text-sm mt-1 ml-4">
             Failed to subscribe. Please try again.
           </p>
         )}
         {connectionStatus === 'checking' && (
-          <p className="text-yellow-500 text-sm mt-1 ml-4">
+          <p className="text-yellow-500 text-xs sm:text-sm mt-1 ml-4">
             Initializing connection...
           </p>
         )}
         {connectionStatus === 'error' && (
-          <p className="text-red-500 text-sm mt-1 ml-4">
+          <p className="text-red-500 text-xs sm:text-sm mt-1 ml-4">
             Connection error. Please try again later.
           </p>
         )}
@@ -172,9 +183,15 @@ export const Hero = () => {
           onClick={handleSubmit}
           disabled={!isValidEmail || !email || isSubmitting || connectionStatus !== 'connected'}
           className={`absolute right-2 top-1/2 -translate-y-1/2 
-                   bg-[#FFDA00] text-gray-900 px-6 py-2 rounded-full font-medium 
-                   ${(!isValidEmail || !email || isSubmitting || connectionStatus !== 'connected') ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#f4e26c]/90'} 
-                   transition-colors`}
+                     bg-[#FFDA00] text-gray-900 
+                     px-4 sm:px-6 
+                     py-1.5 sm:py-2 
+                     text-sm sm:text-base
+                     rounded-full font-medium 
+                     ${(!isValidEmail || !email || isSubmitting || connectionStatus !== 'connected') 
+                       ? 'opacity-50 cursor-not-allowed' 
+                       : 'hover:bg-[#f4e26c]/90'} 
+                     transition-colors`}
         >
           {isSubmitting ? '...' : '→'}
         </button>
