@@ -41,8 +41,11 @@ const NavLink = ({ href, children }: NavLinkProps) => {
     <a 
       href={href}
       onClick={handleClick}
-      className="text-[#ffda00] hover:text-white transition-colors font-medium px-2 md:px-4 py-2
-                text-sm md:text-base lg:text-lg"
+      className="text-[#ffda00] hover:text-white transition-colors 
+                text-xs sm:text-sm md:text-base lg:text-lg
+                font-medium 
+                px-2 sm:px-3 md:px-4 
+                py-1 sm:py-1.5 md:py-2"
     >
       {children}
     </a>
@@ -53,16 +56,20 @@ export const Navbar = () => {
   return (
     <div className="relative w-full">
       <nav className="bg-transparent">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4">
-          <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="max-w-7xl mx-auto 
+                      px-2 sm:px-4 md:px-6
+                      py-2 sm:py-3 md:py-4">
+          <div className="flex items-center justify-between 
+                        h-12 sm:h-16 md:h-20">
             {/* Left section with both logos */}
-            <div className="flex items-center z-10 space-x-1 md:space-x-2">
-              <Logo className="w-10 h-10 md:w-16 md:h-16 text-[#FFDA00]" />
-              <NameLogo className="w-14 h-14 md:w-20 md:h-16 text-[#FFDA00]" />
+            <div className="flex items-center z-10 space-x-1 sm:space-x-2">
+              <Logo className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 text-[#FFDA00]" />
+              <NameLogo className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-16 text-[#FFDA00]" />
             </div>
             
             {/* Center section with navigation links */}
-            <div className="flex justify-center items-center z-10 absolute left-1/2 transform -translate-x-1/2
+            <div className="flex justify-center items-center z-10 
+                          absolute left-1/2 transform -translate-x-1/2
                           space-x-1 sm:space-x-2 md:space-x-4">
               <NavLink href="#home">HOME</NavLink>
               <NavLink href="#about">ABOUT US</NavLink>
@@ -71,7 +78,8 @@ export const Navbar = () => {
             </div>
 
             {/* Right section with Interest Form Button */}
-            <div className="flex items-center z-10 mr-[60px] md:mr-[100px]">
+            <div className="flex items-center z-10 
+                          mr-[40px] sm:mr-[60px] md:mr-[80px] lg:mr-[100px]">
               <InterestFormButton />
             </div>
           </div>
