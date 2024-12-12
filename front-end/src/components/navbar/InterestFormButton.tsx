@@ -9,7 +9,7 @@ const InterestFormButton: React.FC<InterestFormButtonProps> = ({ className = '' 
   return (
     <div className={`flex justify-end ${className}`}>
       <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSepdYbwcXgkbKY6oCprN8e4nJyyE_v7DqNOt1Qi-PaD8uvoMw/viewform"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSe5Nt8T60O27BlTSM17a6BQQ4WNS7TgQA5Y4qJd8XgmY0VoXg/viewform"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-transparent text-[#FFDA00] px-4 py-2 rounded-md font-medium 
@@ -20,8 +20,8 @@ const InterestFormButton: React.FC<InterestFormButtonProps> = ({ className = '' 
                  flex items-center gap-2 backdrop-blur-sm
                  hover:bg-[#FFDA00]/10"
       >
-        <span className="tracking-wide">Interest Form</span>
-        <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">→</span>
+        <span className="tracking-wide">Pre-Register</span>
+        
       </a>
     </div>
   );

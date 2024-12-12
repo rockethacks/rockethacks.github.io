@@ -7,22 +7,41 @@ import InterestFormButton from '@/components/navbar/InterestFormButton';
 type NavLinkProps = {
   href: string;
   children: React.ReactNode;
-  isSponsors?: boolean;
 };
 
-const NavLink = ({ href, children, isSponsors }: NavLinkProps) => {
+const NavLink = ({ href, children }: NavLinkProps) => {
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (isSponsors) {
-      const sponsorLink = document.querySelector('#sponsor-link');
-      if (sponsorLink) {
-        sponsorLink.scrollIntoView({ behavior: 'smooth' });
-        sponsorLink.classList.remove('sponsor-glow'); // Remove existing animation if any
-        void (sponsorLink as HTMLElement).offsetWidth; // Trigger reflow to restart animation
-        sponsorLink.classList.add('sponsor-glow');
+    
+    // If it's the Sponsors link, scroll to the sponsor button and trigger glow
+    if (children === 'SPONSORS') {
+      const sponsorButton = document.querySelector('#sponsor-interest-form');
+      
+      if (sponsorButton) {
+        // Scroll to the sponsor button with offset
+        sponsorButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Wait for scroll to complete then trigger glow
+        setTimeout(() => {
+          // Remove any existing glow class
+          sponsorButton.classList.remove('sponsor-glow');
+          // Force reflow
+          void (sponsorButton as HTMLElement).offsetWidth;
+          // Add glow class again
+          sponsorButton.classList.add('sponsor-glow');
+          
+          // Optional: Remove the class after animation completes
+          setTimeout(() => {
+            sponsorButton.classList.remove('sponsor-glow');
+          }, 1500); // Match this to your animation duration
+        }, 500); // Give time for scroll to complete
       }
     } else {
-      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+      // For other links, just scroll to their sections
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -37,7 +56,6 @@ const NavLink = ({ href, children, isSponsors }: NavLinkProps) => {
   );
 };
 
-
 export const Navbar = () => {
   return (
     <div className="relative">
@@ -50,18 +68,17 @@ export const Navbar = () => {
               <NameLogo className="w-20 h-16 text-[#FFDA00]" />
             </div>
             
-            {/* Right section with navigation and interest form */}
-            <div className="flex items-center z-10 space-x-4">
-              {/* Navigation links */}
-              <div className="flex items-center">
-                <NavLink href="#home">HOME</NavLink>
-                <NavLink href="#about">ABOUT US</NavLink>
-                <NavLink href="#sponsors" isSponsors={true}>SPONSOR US</NavLink>
-                <NavLink href="#faq">FAQs</NavLink>
-              </div>
-              
-              {/* Interest Form Button inline with nav items */}
-              <InterestFormButton className="ml-4" />
+            {/* Center section with navigation links */}
+            <div className="flex justify-center items-center z-10 absolute left-1/2 transform -translate-x-1/2">
+              <NavLink href="#home">HOME</NavLink>
+              <NavLink href="#about">ABOUT US</NavLink>
+              <NavLink href="#faq">SPONSORS</NavLink>
+              <NavLink href="#faq">FAQs</NavLink>
+            </div>
+
+            {/* Right section with Interest Form Button */}
+            <div className="flex items-center z-10 mr-[100px]">
+              <InterestFormButton />
             </div>
           </div>
         </div>
