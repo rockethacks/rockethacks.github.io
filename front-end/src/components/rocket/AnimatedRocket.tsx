@@ -16,15 +16,18 @@ export default function AnimatedRocket() {
   
     return (
       <div 
-        className="fixed right-10 bottom-8 transition-all duration-300 z-50"
+        className="fixed 
+                  right-3 sm:right-6 md:right-8 lg:right-10 
+                  bottom-4 sm:bottom-6 md:bottom-8 
+                  transition-all duration-300 z-50"
         style={{
-          transform: `translateY(${-scroll * 7}px)`, // Increased multiplier for longer travel
+          transform: `translateY(${-scroll * 7}px)`,
           opacity: scroll > 95 ? 0 : 1
         }}
       >
         {/* Rocket SVG */}
         <div className="drop-shadow-[0_0_10px_rgba(244,226,108,0.5)]">
-          <RocketIcon className="w-20 h-20" />
+          <RocketIcon className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20" />
         </div>
         
         {/* Animated Trail */}
@@ -32,9 +35,12 @@ export default function AnimatedRocket() {
           {/* Animated trail line */}
           <div className="relative">
             <div 
-              className="absolute top-0 left-1/2 -translate-x-1/2 w-1 bg-gradient-to-b from-[#f4e26c] to-transparent rounded-full transition-all duration-300"
+              className="absolute top-0 left-1/2 -translate-x-1/2 
+                         w-0.5 sm:w-1 
+                         bg-gradient-to-b from-[#f4e26c] to-transparent 
+                         rounded-full transition-all duration-300"
               style={{
-                height: `${Math.min(scroll * 1.5, 200)}px`, // Longer trail based on scroll
+                height: `${Math.min(scroll * 1.2, 150)}px`, // Adjusted for mobile
                 opacity: Math.min(scroll * 0.02, 0.7),
                 animation: 'pulseTrail 2s infinite'
               }}

@@ -152,7 +152,7 @@ export const FAQ = () => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-12 w-full max-w-3xl mx-auto">
             <ActionButton 
-              href="/documents/SPONSORSHIP PACKET- RocketHacks.pdf"
+              href="/documents/SPONSORSHIP PACKET(Updated MLH)- RocketHacks.pdf"
               className="w-full sm:w-auto"
             >
               Prospectus
