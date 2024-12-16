@@ -13,11 +13,40 @@ const FAQItem = ({ question, answer }: FAQItemProps) => (
   </div>
 );
 
+const ActionButton = ({ 
+  href, 
+  children, 
+  id, 
+  className 
+}: { 
+  href: string; 
+  children: React.ReactNode; 
+  id?: string;
+  className?: string;
+}) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    id={id}
+    className={`inline-block bg-transparent text-white px-4 py-3 rounded-md font-medium 
+             border-2 border-[#FFDA00]
+             transform hover:scale-105
+             transition-all duration-300
+             shadow-lg hover:shadow-[0_0_20px_rgba(244,226,108,0.3)]
+             backdrop-blur-sm
+             hover:bg-[#FFDA00]/10
+             ${className || ''}`}
+  >
+    {children}
+  </a>
+);
+
 const faqData = [
   {
     question: "What is a hackathon?",
     answer:
-      "A hackathon is an event where individuals or teams collaborate intensively on software development or hardware projects, typically within a fixed time frame (e.g., 24-48 hours). It’s an opportunity to learn, create, and innovate while competing with other teams.",
+      "A hackathon is an event where individuals or teams collaborate intensively on software development or hardware projects, typically within a fixed time frame (e.g., 24-48 hours). It's an opportunity to learn, create, and innovate while competing with other teams.",
   },
   {
     question: "Who can participate?",
@@ -120,21 +149,30 @@ export const FAQ = () => {
             </div>
           </div>
 
-          {/* Prospectus Button */}
-          <a
-            href="/documents/Sponsorship Packet RocketHacks.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-transparent text-white px-4 py-3 rounded-md font-medium 
-                     border-2 border-[#FFDA00]
-                     transform hover:scale-105
-                     transition-all duration-300
-                     shadow-lg hover:shadow-[0_0_20px_rgba(244,226,108,0.3)]
-                     backdrop-blur-sm
-                     hover:bg-[#FFDA00]/10"
-          >
-            Prospectus
-          </a>
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-12 w-full max-w-3xl mx-auto">
+            <ActionButton 
+              href="/documents/SPONSORSHIP PACKET(Updated MLH)- RocketHacks.pdf"
+              className="w-full sm:w-auto"
+            >
+              Prospectus
+            </ActionButton>
+            
+            <ActionButton 
+              href="https://forms.gle/SDJEbGpQDwX8FBS46"
+              id="sponsor-interest-form"
+              className="w-full sm:w-auto"
+            >
+              Sponsor Interest Form
+            </ActionButton>
+            
+            <ActionButton 
+              href="https://forms.gle/7SGoQbESP6GAbTA9A"
+              className="w-full sm:w-auto"
+            >
+              Judge/Mentor Form
+            </ActionButton>
+          </div>
         </div>
       </div>
     </section>

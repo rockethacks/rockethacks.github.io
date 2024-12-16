@@ -45,3 +45,23 @@ input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px var(--blue-gradient-middle) inset;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+/* Sponsor button glow effect */
+.sponsor-glow {
+  animation: glowPulse 1.5s ease-in-out !important;
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 218, 0, 0);
+    transform: scale(1);
+  }
+  20% {
+    box-shadow: 0 0 30px rgba(255, 218, 0, 0.9);
+    transform: scale(1.1);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 218, 0, 0);
+    transform: scale(1);
+  }
+}
