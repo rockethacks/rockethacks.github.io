@@ -19,7 +19,7 @@ body {
       rgba(23, 45, 116, 0.95) 50%
     );
   background-clip: inherit;
-  background-size: contain;
+  background-size: cover;
 }
 
 ::selection {
