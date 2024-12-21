@@ -12,6 +12,7 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const mlh = "https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-yellow.svg";
 
 export const metadata: Metadata = {
   title: "Rocket Hacks",
@@ -36,7 +37,7 @@ export default function RootLayout({
           rel="noopener noreferrer"
         >
           <img 
-            src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-yellow.svg" 
+            src={mlh} 
             alt="Major League Hacking 2025 Hackathon Season" 
             className="w-full"
           />
