@@ -33,14 +33,7 @@ const SponsorForm = () => {
         }])
         .select();
 
-      if (error) {
-        if (error.code === '23505') {
-          const match = error.message.match(/Key \((.*?)\)=/);
-          const duplicateField = match ? match[1] : 'record';
-          throw new Error(`${duplicateField} already exists`);
-        }
-        throw error;
-      }
+      if (error) throw error;
 
       setSubmitStatus({
         type: 'success',
@@ -52,11 +45,12 @@ const SponsorForm = () => {
         email: '',
         inquiry: ''
       });
-    } catch (error: any) {
+    } catch (error) {
       setSubmitStatus({
         type: 'error',
-        message: `Failed to submit form: ${error.message}`
+        message: 'Failed to submit form. Please try again.'
       });
+      console.error('Error:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -105,7 +99,7 @@ const SponsorForm = () => {
           handleSubmit(e);
         }} className="space-y-6">
           <div>
-            <label htmlFor="contact_name" className="block text-white mb-2 text-left">
+            <label htmlFor="contact_name" className="block text-[#FFDA00] mb-2 text-left">
               Full Name: <span className="text-[#FFDA00]">*</span>
             </label>
             <input
@@ -115,14 +109,14 @@ const SponsorForm = () => {
               value={formData.contact_name}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 rounded-md bg-[#FFDA00] 
+              className="w-full px-4 py-3 rounded-md bg-white 
                        text-gray-900
-                       focus:outline-none focus:ring-2 focus:ring-white"
+                       focus:outline-none focus:ring-2 focus:ring-[#FFDA00]"
             />
           </div>
 
           <div>
-            <label htmlFor="company_name" className="block text-white mb-2 text-left">
+            <label htmlFor="company_name" className="block text-[#FFDA00] mb-2 text-left">
               Company: <span className="text-[#FFDA00]">*</span>
             </label>
             <input
@@ -132,14 +126,14 @@ const SponsorForm = () => {
               value={formData.company_name}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 rounded-md bg-[#FFDA00] 
+              className="w-full px-4 py-3 rounded-md bg-white 
                        text-gray-900
-                       focus:outline-none focus:ring-2 focus:ring-white"
+                       focus:outline-none focus:ring-2 focus:ring-[#FFDA00]"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-white mb-2 text-left">
+            <label htmlFor="email" className="block text-[#FFDA00] mb-2 text-left">
               Email: <span className="text-[#FFDA00]">*</span>
             </label>
             <input
@@ -149,14 +143,14 @@ const SponsorForm = () => {
               value={formData.email}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 rounded-md bg-[#FFDA00] 
+              className="w-full px-4 py-3 rounded-md bg-white 
                        text-gray-900
-                       focus:outline-none focus:ring-2 focus:ring-white"
+                       focus:outline-none focus:ring-2 focus:ring-[#FFDA00]"
             />
           </div>
 
           <div>
-            <label htmlFor="inquiry" className="block text-white mb-2 text-left">
+            <label htmlFor="inquiry" className="block text-[#FFDA00] mb-2 text-left">
               Inquiry: <span className="text-[#FFDA00]">*</span>
             </label>
             <textarea
@@ -166,9 +160,10 @@ const SponsorForm = () => {
               onChange={handleInputChange}
               required
               rows={4}
-              className="w-full px-4 py-3 rounded-md bg-[#FFDA00] 
+              className="w-full px-4 py-3 rounded-md bg-white 
                        text-gray-900
-                       focus:outline-none focus:ring-2 focus:ring-white"
+                       focus:outline-none focus:ring-2 focus:ring-[#FFDA00]
+                       resize-none"
             />
           </div>
 
