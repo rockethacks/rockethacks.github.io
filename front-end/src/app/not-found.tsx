@@ -7,7 +7,7 @@ import { Canvas } from "@react-three/fiber";
 {
   /* NOTE: Remember to rename this page as Not-found.tsx */
 }
-export default function custom404() {
+export default function Custom404() {
   const COLORS = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
   const color = useMotionValue(COLORS[0]);
   useEffect(() => {
