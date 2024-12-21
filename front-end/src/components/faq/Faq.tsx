@@ -1,6 +1,6 @@
 // src/components/faq/Faq.tsx
 import React from "react";
-
+import SponsorForm from "./SponsorForm";
 type FAQItemProps = {
   question: string;
   answer: string;
@@ -92,17 +92,15 @@ export const FAQ = () => {
 
         {/* Contributors Section */}
         <div className="text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#FFDA00]">
+          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-[#FFDA00]">
             Contributors
           </h2>
-          <div className="space-y-8 mb-12">
+          <div className="space-y-8">
             {/* Main description */}
-            <p
-              className="text-white/90 text-lg leading-relaxed bg-white/5 backdrop-blur-sm rounded-xl p-8 
+            <p className="text-white/90 text-lg leading-relaxed bg-white/5 backdrop-blur-sm rounded-xl p-8 
                          border border-[#FFDA00]/20 hover:border-[#FFDA00]/40 transition-all duration-300
                          shadow-[0_0_15px_rgba(244,226,108,0.1)] hover:shadow-[0_0_20px_rgba(244,226,108,0.15)]
-                         text-justify"
-            >
+                         max-w-3xl mx-auto">
               RocketHacks can&apos;t happen without the support of our wonderful
               sponsors. As we celebrate our inaugural year, we&apos;re ready to
               make our event bigger and create a mark. We&apos;re all about
@@ -110,69 +108,32 @@ export const FAQ = () => {
               RocketHacks family!
             </p>
 
-            {/* Why Sponsor Section */}
-            <div
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-8 
+            {/* Sponsor Form Section */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl 
                           border border-[#FFDA00]/20 hover:border-[#FFDA00]/40 transition-all duration-300
-                          shadow-[0_0_15px_rgba(244,226,108,0.1)] hover:shadow-[0_0_20px_rgba(244,226,108,0.15)]
-                          text-left"
-            >
-              <h3 className="text-2xl font-bold mb-4 text-[#FFDA00]">
-                Why Sponsor RocketHacks ?
-              </h3>
-              <h4 className="text-xl font-semibold mb-4 text-white">
-                As a sponsor, you&apos;ll be able to:
-              </h4>
-              <ul className="list-disc list-inside space-y-2 text-white/90 mb-6">
-                <li>
-                  Introduce your product or platform to over 200+ student
-                  developers
-                </li>
-                <li>
-                  Recruit from an elite pool of software developers and upcoming
-                  computer science engineers
-                </li>
-                <li>
-                  Increase your brand&apos;s visibility through
-                  RocketHacks&apos; social media channels and events
-                </li>
-                <li>
-                  Facilitate interaction between participants and your employees
-                  & brand
-                </li>
-                <li>Mentor and assist hackers with their projects</li>
-              </ul>
-              <p className="text-lg font-semibold text-[#FFDA00] italic">
-                Interested in sponsoring? Hit the sponsor us tag below and get
-                in touch with us!
-              </p>
+                          shadow-[0_0_15px_rgba(244,226,108,0.1)] hover:shadow-[0_0_20px_rgba(244,226,108,0.15)]">
+              <SponsorForm />
             </div>
           </div>
+        </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-12 w-full max-w-3xl mx-auto">
-            <ActionButton 
-              href="/documents/SPONSORSHIP PACKET(Updated MLH)- RocketHacks.pdf"
-              className="w-full sm:w-auto"
-            >
-              Prospectus
-            </ActionButton>
-            
-            <ActionButton 
-              href="https://forms.gle/SDJEbGpQDwX8FBS46"
-              id="sponsor-interest-form"
-              className="w-full sm:w-auto"
-            >
-              Sponsor Interest Form
-            </ActionButton>
-            
-            <ActionButton 
-              href="https://forms.gle/7SGoQbESP6GAbTA9A"
-              className="w-full sm:w-auto"
-            >
-              Judge/Mentor Form
-            </ActionButton>
-          </div>
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-12 w-full max-w-3xl mx-auto">
+          <ActionButton 
+            href="/documents/SPONSORSHIP PACKET(Updated MLH)- RocketHacks.pdf"
+            className="w-full sm:w-auto"
+          >
+            Prospectus
+          </ActionButton>
+          
+
+          
+          <ActionButton 
+            href="https://forms.gle/7SGoQbESP6GAbTA9A"
+            className="w-full sm:w-auto"
+          >
+            Judge/Mentor Form
+          </ActionButton>
         </div>
       </div>
     </section>
