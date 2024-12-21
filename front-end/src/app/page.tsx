@@ -9,7 +9,6 @@ import Footer from "@/components/ui/footer";
 import AnimatedRocket from "@/components/rocket/AnimatedRocket";
 import {
   motion,
-  useMotionTemplate,
   useMotionValue,
   animate,
 } from "framer-motion";
