@@ -10,14 +10,16 @@ import AnimatedRocket from "@/components/rocket/AnimatedRocket";
 import {
   motion,
   useMotionValue,
+  useMotionTemplate,
   animate,
 } from "framer-motion";
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+const COLORS = ["#122D88", "#4d011d", "#024d13"];
 
 export default function Home() {
-  const COLORS = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
   const color = useMotionValue(COLORS[0]);
+  const backgroundImage = useMotionTemplate`radial-gradient(125% 100% at 50% 0%, #020617 30%, ${color})`;
   useEffect(() => {
     animate(color, COLORS, {
       ease: "easeInOut",
@@ -25,12 +27,12 @@ export default function Home() {
       repeat: Infinity,
       repeatType: "mirror",
     });
-  });
+  }, []);
   return (
+    /* Aurora Effect */
     <motion.section
       style={{
-        backgroundImage:
-          "radial-gradient(125% 100% at 50% 0%, #020617 30%, #122D88)",
+        backgroundImage,
       }}
       className="relative grid min-h-screen  overflow-hidden bg-gray-950  text-gray-200"
     >
