@@ -25,7 +25,7 @@ const SponsorForm = () => {
     setSubmitStatus({ type: '', message: '' });
 
     try {
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('sponsor_interest_list')
         .insert([{
           ...formData,
