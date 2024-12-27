@@ -1,5 +1,5 @@
 # Rockethacks Hackathon Website
-![image](https://github.com/user-attachments/assets/7056bd34-1d44-4bde-8d68-6ab377a375e9)
+![image](https://github.com/adi-075/rockethacks.github.io/blob/main/public/rockethacks-screenshot.png)
 
 
 ## Overview
