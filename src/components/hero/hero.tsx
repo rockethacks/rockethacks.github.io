@@ -7,18 +7,21 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="pb-40 w-full flex flex-col items-center justify-center"
+      className="pb-40 w-full flex flex-col items-center justify-center min-h-screen"
     >
       <video
-        src="/blackhole.webm"
+        width="1920"
+        height="1080"
         autoPlay
         loop
         muted
-        className="opacity-50 -z-10 absolute inset-y-0 h-screen "
+        className="opacity-70 absolute"
         // className="opacity-40 -z-10 "
-      ></video>
-      <div className="relative py-52">
-        <h1 className="text-4xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500 text-center text-balance m-0 md:m-10">
+      >
+        <source src="/blackhole.webm" type="video/webm" />
+      </video>
+      <div className="relative py-64 md:py-48">
+        <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500 text-center text-balance m-1 md:m-28 lg:m-16 text-4xl lg:text-6xl xl:text-8xl">
           Join the biggest hackathon in the midwest!
         </h1>
         <br />
