@@ -19,7 +19,7 @@ const COLORS = ["#122D88", "#4d011d", "#024d13"];
 
 export default function Home() {
   const color = useMotionValue(COLORS[0]);
-  const backgroundImage = useMotionTemplate`radial-gradient(125% 100% at 50% 0%, #020617 30%, ${color})`;
+  const backgroundImage = useMotionTemplate`radial-gradient(300% 100% at 50% 0%, #030013 30%, ${color})`;
   useEffect(() => {
     animate(color, COLORS, {
       ease: "easeInOut",
@@ -33,15 +33,16 @@ export default function Home() {
     <motion.section
       style={{
         backgroundImage,
+        zIndex: "10",
       }}
-      className="relative grid min-h-screen  overflow-hidden bg-gray-950  text-gray-200"
+      className="relative grid min-h-screen overflow-hidden bg-gray-950  text-gray-200 z-10"
     >
-      <div className="absolute inset-0 z-1">
+      <div className="absolute inset-0 z-2">
         <Canvas>
           <Stars
             radius={10}
             depth={46}
-            count={10000}
+            count={5000}
             factor={3}
             saturation={0}
             fade

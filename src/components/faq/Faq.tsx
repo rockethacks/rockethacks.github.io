@@ -74,7 +74,7 @@ export const FAQ = () => {
   return (
     <section
       id="faq"
-      className="min-h-screen w-full flex flex-col items-center justify-center px-4"
+      className="w-full flex flex-col items-center justify-center px-4"
     >
       <div className="max-w-4xl mx-auto w-full">
         <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center text-[#FFDA00]">
@@ -91,8 +91,8 @@ export const FAQ = () => {
         </div>
 
         {/* Contributors Section */}
-        <div className="text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-[#FFDA00]">
+        <section id="sponsor" className="text-center">
+          <h2 className="pt-20 text-3xl md:text-5xl font-bold mb-12 text-[#FFDA00]">
             Contributors
           </h2>
           <div className="space-y-8">
@@ -115,7 +115,7 @@ export const FAQ = () => {
               <SponsorForm />
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-12 w-full max-w-3xl mx-auto">
