@@ -1,5 +1,5 @@
 # Rockethacks Hackathon Website
-![image](https://github.com/user-attachments/assets/7056bd34-1d44-4bde-8d68-6ab377a375e9)
+![image](https://github.com/adi-075/rockethacks.github.io/blob/main/public/rockethacks-screenshot.png)
 
 
 ## Overview
@@ -60,8 +60,6 @@ The website currently has three pages: **Home/Landing Page**, **About Us Page**,
    cd rockethacks.github.io/front-end
 
 ## TO DO 
-IMP- create a design pattern structure for the entire website. 
-1) Add content to make it feel filled up 
-2) Add backend functionality for the email and Sponsor Us buttons
-3) Add social media links
-4) Get more ideas. 
+1) Fix the Sponsor Button in the Navigation Panel
+2) Add the new registration portal link
+3) Get more design ideas

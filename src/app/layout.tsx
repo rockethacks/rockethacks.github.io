@@ -12,7 +12,8 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-const mlh = "https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-yellow.svg";
+const mlh =
+  "https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-yellow.svg";
 
 export const metadata: Metadata = {
   title: "Rocket Hacks",
@@ -29,16 +30,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <a 
-          id="mlh-trust-badge" 
-          className="block max-w-[100px] min-w-[60px] fixed right-[12px] sm:right-[28px] top-0 w-[10%] z-[10000]"
-          href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=yellow" 
+        <a
+          id="mlh-trust-badge"
+          className="block max-w-[100px] min-w-[60px] fixed right-[12px] sm:right-[28px] top-0 w-[10%] z-20 hidden lg:block"
+          href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=yellow"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img 
-            src={mlh} 
-            alt="Major League Hacking 2025 Hackathon Season" 
+          <img
+            src={mlh}
+            alt="Major League Hacking 2025 Hackathon Season"
             className="w-full"
           />
         </a>
