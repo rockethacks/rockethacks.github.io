@@ -102,7 +102,6 @@ export const Navbar = () => {
               <Link
                 href="/documents/RocketHacks High School Flyer.pdf"
                 className="mt-2"
-                closeMenu={closeMenu}
               >
                 <Codeandcreate className="w-32 h-32 text-[#FFDA00]" />
               </Link>
@@ -141,7 +140,6 @@ export const Navbar = () => {
               <Link
                 href="/documents/RocketHacks High School Flyer.pdf"
                 target="_blank"
-                closeMenu={closeMenu}
               >
                 <h1
                   className="
