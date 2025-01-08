@@ -3,7 +3,7 @@ import Logo from "@/assets/logo.svg";
 import NameLogo from "@/assets/name-logo.svg";
 import Link from "next/link";
 import Codeandcreate from "@/assets/CodeAndCreate.svg";
-import InterestFormButton from "@/components/navbar/InterestFormButton";
+// import InterestFormButton from "@/components/navbar/InterestFormButton";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 
 type NavLinkProps = {
@@ -48,9 +48,8 @@ const NavLink = ({ href, children, closeMenu }: NavLinkProps) => {
       onClick={handleClick}
       className="text-[#ffda00] hover:text-white transition-colors 
                 text-xs sm:text-sm md:text-base lg:text-lg
-                font-medium 
-                px-2 sm:px-3 md:px-4 
-                py-1 sm:py-1.5 md:py-2"
+                font-bold 
+               px-2 py-2"
     >
       {children}
     </a>
@@ -89,23 +88,23 @@ export const Navbar = () => {
 
             <div className="flex justify-center items-center z-10 absolute left-1/2 transform -translate-x-1/2 space-x-1 sm:space-x-2 md:space-x-4 hidden lg:flex">
               <NavLink href="#home" closeMenu={closeMenu}>
-                HOME
+                <h1 className="text-2xl">HOME</h1>
               </NavLink>
               <NavLink href="#about" closeMenu={closeMenu}>
-                ABOUT US
+                <h1 className="text-2xl">ABOUT US</h1>
               </NavLink>
               <NavLink href="#sponsor" closeMenu={closeMenu}>
-                SPONSORS
+                <h1 className="text-2xl">SPONSORS</h1>
               </NavLink>
               <NavLink href="#faq" closeMenu={closeMenu}>
-                FAQs
+                <h1 className="text-2xl">FAQs</h1>
               </NavLink>
               <Link
                 href="/documents/RocketHacks High School Flyer.pdf"
                 className="mt-2"
                 closeMenu={closeMenu}
               >
-                <Codeandcreate className="w-24 h-w-24 text-[#FFDA00]" />
+                <Codeandcreate className="w-32 h-32 text-[#FFDA00]" />
               </Link>
             </div>
 
@@ -119,9 +118,9 @@ export const Navbar = () => {
               </button>
             </div>
 
-            <div className="flex items-center z-10 mr-[40px] sm:mr-[60px] md:mr-[80px] lg:mr-[100px] hidden xl:inline-block">
+            {/* <div className="flex items-center z-10 mr-[40px] sm:mr-[60px] md:mr-[80px] lg:mr-[100px] hidden xl:inline-block">
               <InterestFormButton />
-            </div>
+            </div> */}
           </div>
 
           <div
@@ -147,9 +146,8 @@ export const Navbar = () => {
                 <h1
                   className="
                 text-[#ffda00] hover:text-white transition-colors 
-                font-medium 
                 px-2 sm:px-3 md:px-4 
-                py-1 sm:py-1.5 md:py-2 text-3xl
+                py-1 sm:py-1.5 md:py-2 text-3xl font-bold
                 "
                 >
                   CODE {"&"} CREATE
