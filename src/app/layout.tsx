@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Image from "next/image";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -37,10 +38,11 @@ export default function RootLayout({
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             src={mlh}
             alt="Major League Hacking 2025 Hackathon Season"
-            className="w-full"
+            width={100}
+            height={100}
           />
         </a>
         {children}
