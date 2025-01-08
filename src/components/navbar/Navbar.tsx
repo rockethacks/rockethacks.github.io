@@ -88,16 +88,16 @@ export const Navbar = () => {
 
             <div className="flex justify-center items-center z-10 absolute left-1/2 transform -translate-x-1/2 space-x-1 sm:space-x-2 md:space-x-4 hidden lg:flex">
               <NavLink href="#home" closeMenu={closeMenu}>
-                <h1 className="text-2xl">HOME</h1>
+                <h1 className="lg:text-lg xl:text-2xl">HOME</h1>
               </NavLink>
               <NavLink href="#about" closeMenu={closeMenu}>
-                <h1 className="text-2xl">ABOUT US</h1>
+                <h1 className="lg:text-lg xl:text-2xl">ABOUT US</h1>
               </NavLink>
               <NavLink href="#sponsor" closeMenu={closeMenu}>
-                <h1 className="text-2xl">SPONSORS</h1>
+                <h1 className="lg:text-lg xl:text-2xl">SPONSORS</h1>
               </NavLink>
               <NavLink href="#faq" closeMenu={closeMenu}>
-                <h1 className="text-2xl">FAQs</h1>
+                <h1 className="lg:text-lg xl:text-2xl">FAQs</h1>
               </NavLink>
               <Link
                 href="/documents/RocketHacks High School Flyer.pdf"
