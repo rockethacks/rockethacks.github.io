@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Logo from "@/assets/logo.svg";
 import NameLogo from "@/assets/name-logo.svg";
+import Link from "next/link";
+import Codeandcreate from "@/assets/CodeAndCreate.svg";
 import InterestFormButton from "@/components/navbar/InterestFormButton";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 
@@ -98,6 +100,13 @@ export const Navbar = () => {
               <NavLink href="#faq" closeMenu={closeMenu}>
                 FAQs
               </NavLink>
+              <Link
+                href="/documents/RocketHacks High School Flyer.pdf"
+                className="mt-2"
+                closeMenu={closeMenu}
+              >
+                <Codeandcreate className="w-24 h-w-24 text-[#FFDA00]" />
+              </Link>
             </div>
 
             <div className="lg:hidden z-40">
@@ -130,6 +139,22 @@ export const Navbar = () => {
               <NavLink href="#sponsor" closeMenu={closeMenu}>
                 <h1 className="text-3xl">SPONSOR US</h1>
               </NavLink>
+              <Link
+                href="/documents/RocketHacks High School Flyer.pdf"
+                target="_blank"
+                closeMenu={closeMenu}
+              >
+                <h1
+                  className="
+                text-[#ffda00] hover:text-white transition-colors 
+                font-medium 
+                px-2 sm:px-3 md:px-4 
+                py-1 sm:py-1.5 md:py-2 text-3xl
+                "
+                >
+                  CODE {"&"} CREATE
+                </h1>
+              </Link>
               <NavLink href="#faq" closeMenu={closeMenu}>
                 <h1 className="text-3xl">FAQ</h1>
               </NavLink>
