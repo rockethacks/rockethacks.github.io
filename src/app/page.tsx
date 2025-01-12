@@ -27,7 +27,7 @@ export default function Home() {
       repeat: Infinity,
       repeatType: "mirror",
     });
-  }, []);
+  }, [color]);
   return (
     /* Aurora Effect */
     <motion.section

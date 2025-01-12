@@ -25,8 +25,8 @@ function distributeLogos(logos: Logo[], columnCount: number): Logo[][] {
   return result;
 }
 
-const LogoColumn: React.FC<LogoColumnProps> = React.memo(
-  ({ logos, index, currentTime }) => {
+const LogoColumn = React.memo<LogoColumnProps>(
+  function LogoColumn({ logos, index, currentTime }) {
     const cycleInterval = 2000
     const columnDelay = index * 200
     const adjustedTime = (currentTime + columnDelay) % (cycleInterval * logos.length)
@@ -81,7 +81,9 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
   }
 )
 
-export function LogoCarousel({ columnCount = 2, logos }: LogoCarouselProps) {
+LogoColumn.displayName = 'LogoColumn';
+
+export const LogoCarousel: React.FC<LogoCarouselProps> = ({ columnCount = 2, logos }) => {
   const [logoSets, setLogoSets] = useState<Logo[][]>([])
   const [currentTime, setCurrentTime] = useState(0)
 
@@ -112,3 +114,5 @@ export function LogoCarousel({ columnCount = 2, logos }: LogoCarouselProps) {
     </div>
   )
 }
+
+LogoCarousel.displayName = 'LogoCarousel';
