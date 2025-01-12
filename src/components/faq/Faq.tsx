@@ -1,6 +1,7 @@
 // src/components/faq/Faq.tsx
 import React from "react";
 import SponsorForm from "./SponsorForm";
+import { SponsorShowcase } from "../sponsors/SponsorShowcase";
 type FAQItemProps = {
   question: string;
   answer: string;
@@ -51,7 +52,7 @@ const faqData = [
   {
     question: "Who can participate?",
     answer:
-      "Any student enrolled in a university or college can participate in RocketHacks.",
+      "Any student enrolled in an university or high school can participate in RocketHacks.",
   },
   {
     question: "What should I bring?",
@@ -89,6 +90,9 @@ export const FAQ = () => {
             />
           ))}
         </div>
+
+        {/* Sponsor Showcase Section */}
+        <SponsorShowcase />
 
         {/* Contributors Section */}
         <section id="sponsor" className="text-center">
