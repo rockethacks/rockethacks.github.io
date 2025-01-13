@@ -81,7 +81,7 @@ export const Navbar = () => {
       <nav className="bg-n-8/90 background-blur-md">
         <div className="max-w-7xl mx-auto px-6 py-2">
           <div className="flex items-center justify-between">
-            <div className="flex items-center z-10 space-x-1 sm:space-x-2">
+            <div className="flex items-center z-10">
               <Logo className="w-16 h-16 text-[#FFDA00]" />
               <NameLogo className="w-24 h-24 text-[#FFDA00]" />
             </div>
@@ -107,7 +107,7 @@ export const Navbar = () => {
               </Link>
             </div>
 
-            <div className="lg:hidden z-40">
+            <div className="block lg:hidden z-40">
               <button onClick={toggleMenu}>
                 {isMenuOpen ? (
                   <RxCross2 className="w-6 h-6 text-[#FFDA00]" />
