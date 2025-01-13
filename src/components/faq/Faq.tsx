@@ -5,23 +5,36 @@ import { SponsorShowcase } from "../sponsors/SponsorShowcase";
 type FAQItemProps = {
   question: string;
   answer: string;
+  heading?: string;
+  altHeading?: string;
+  altAnswer?: string;
 };
 
-const FAQItem = ({ question, answer }: FAQItemProps) => (
+const FAQItem = ({
+  question,
+  answer,
+  heading,
+  altHeading,
+  altAnswer,
+}: FAQItemProps) => (
   <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#f4e26c]/30 transition-colors">
     <h3 className="text-xl font-bold mb-2 text-white">{question}</h3>
+    <h3 className="text-lg font-medium text-white">{heading}</h3>
     <p className="text-white/80">{answer}</p>
+    <br />
+    <h3 className="text-lg font-medium text-white">{altHeading}</h3>
+    <p className="text-white/80">{altAnswer}</p>
   </div>
 );
 
-const ActionButton = ({ 
-  href, 
-  children, 
-  id, 
-  className 
-}: { 
-  href: string; 
-  children: React.ReactNode; 
+const ActionButton = ({
+  href,
+  children,
+  id,
+  className,
+}: {
+  href: string;
+  children: React.ReactNode;
   id?: string;
   className?: string;
 }) => (
@@ -37,7 +50,7 @@ const ActionButton = ({
              shadow-lg hover:shadow-[0_0_20px_rgba(244,226,108,0.3)]
              backdrop-blur-sm
              hover:bg-[#FFDA00]/10
-             ${className || ''}`}
+             ${className || ""}`}
   >
     {children}
   </a>
@@ -51,8 +64,11 @@ const faqData = [
   },
   {
     question: "Who can participate?",
+    heading: "RocketHacks",
     answer:
       "Any student enrolled in an university or high school can participate in RocketHacks.",
+    altHeading: "Code&Create",
+    altAnswer: "Any under Classman/Senior enrolled at any high school.",
   },
   {
     question: "What should I bring?",
@@ -86,7 +102,10 @@ export const FAQ = () => {
             <FAQItem
               key={index}
               question={item.question}
+              heading={item.heading}
               answer={item.answer}
+              altHeading={item.altHeading}
+              altAnswer={item.altAnswer}
             />
           ))}
         </div>
@@ -101,10 +120,12 @@ export const FAQ = () => {
           </h2>
           <div className="space-y-8">
             {/* Main description */}
-            <p className="text-white/90 text-lg leading-relaxed bg-white/5 backdrop-blur-sm rounded-xl p-8 
+            <p
+              className="text-white/90 text-lg leading-relaxed bg-white/5 backdrop-blur-sm rounded-xl p-8 
                          border border-[#FFDA00]/20 hover:border-[#FFDA00]/40 transition-all duration-300
                          shadow-[0_0_15px_rgba(244,226,108,0.1)] hover:shadow-[0_0_20px_rgba(244,226,108,0.15)]
-                         max-w-3xl mx-auto">
+                         max-w-3xl mx-auto"
+            >
               RocketHacks can&apos;t happen without the support of our wonderful
               sponsors. As we celebrate our inaugural year, we&apos;re ready to
               make our event bigger and create a mark. We&apos;re all about
@@ -113,9 +134,11 @@ export const FAQ = () => {
             </p>
 
             {/* Sponsor Form Section */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl 
+            <div
+              className="bg-white/5 backdrop-blur-sm rounded-xl 
                           border border-[#FFDA00]/20 hover:border-[#FFDA00]/40 transition-all duration-300
-                          shadow-[0_0_15px_rgba(244,226,108,0.1)] hover:shadow-[0_0_20px_rgba(244,226,108,0.15)]">
+                          shadow-[0_0_15px_rgba(244,226,108,0.1)] hover:shadow-[0_0_20px_rgba(244,226,108,0.15)]"
+            >
               <SponsorForm />
             </div>
           </div>
@@ -123,16 +146,14 @@ export const FAQ = () => {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-12 w-full max-w-3xl mx-auto">
-          <ActionButton 
+          <ActionButton
             href="/documents/SPONSORSHIP PACKET(Updated MLH)- RocketHacks.pdf"
             className="w-full sm:w-auto"
           >
             Prospectus
           </ActionButton>
-          
 
-          
-          <ActionButton 
+          <ActionButton
             href="https://forms.gle/7SGoQbESP6GAbTA9A"
             className="w-full sm:w-auto"
           >
