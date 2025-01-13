@@ -131,3 +131,14 @@ input:-webkit-autofill:focus {
   }
 }
 
+@media screen and (max-width: 1080px) {
+  * {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    overflow-x: hidden;
+  }
+  /* Disable custom scrollbars on mobile */
+  ::-webkit-scrollbar {
+    display: none; /* Hide the custom scrollbar */
+  }
+}
