@@ -15,7 +15,7 @@ const sponsors = [
     name: "Perplexity",
     id: "2",
     img: RiPerplexityFill,
-    href: "https://perplexity.io",
+    href: "https://perplexity.ai",
   },
   {
     name: "Warp",
