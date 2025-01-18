@@ -7,6 +7,10 @@
   --background: #030c1b;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   /* Always show the scrollbar  */
