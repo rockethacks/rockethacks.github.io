@@ -13,7 +13,7 @@ export default function hero() {
         <img
           src={"/assets/rocky.png"}
           alt="Rocky"
-          className="mx-auto opacity-90 absolute inset-0 h-full w-full object-cover md:object-fill"
+          className="mx-auto opacity-90 absolute inset-0 h-full w-full object-cover md:object-"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div>
