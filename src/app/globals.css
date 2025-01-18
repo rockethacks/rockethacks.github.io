@@ -16,3 +16,7 @@ body {
   /* Always show the scrollbar  */
   /* overflow-y: scroll; */
 }
+
+.about-us {
+  padding: 40px 300px 80px;
+}
