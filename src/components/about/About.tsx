@@ -9,10 +9,12 @@ export default function about() {
       >
         <div className="container text-left">
           <h2 className="text-3xl font-bold my-[10px]">ABOUT US</h2>
-          <p className="mt-4 text-base text-balance break-normal font-normal">
+          <p className="mt-4 text-base text-pretty break-normal font-normal">
             RocketHacks is a 24-hour hackathon hosted by the University of
             Toledo, dedicated to fostering innovation and problem-solving among
-            students from the Midwest and beyond. This event will gather
+            students from the Midwest and beyond.{" "}
+            <br className="inline-block xl:hidden" />
+            <br className="inline-block xl:hidden" /> This event will gather
             talented students, from budding programmers to visionary designers,
             to build real solutions to real-world challenges. With an emphasis
             on collaboration, creativity, and technical skills, RocketHacks will
