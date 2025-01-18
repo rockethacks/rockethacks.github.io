@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav className="bg-[#030c1b] text-white text-base sticky top-0 z-20">
       {/* Logo Link */}
-      <div className="container ml-10 px-1 xl:px-96 flex space-x-10 items-center h-[3.8rem] mr-10">
+      <div className="container px-5 xl:px-96 flex space-x-10 items-center h-[3.8rem] mr-10">
         <div className="font-bold">
           <Link href="https://www.rockethacks.org">
             <RocketHacks className="h-16 w-auto" />
