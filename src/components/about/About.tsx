@@ -1,4 +1,8 @@
 import React from "react";
+import { PiTerminalWindow } from "react-icons/pi";
+import { IoDiamond } from "react-icons/io5";
+import localFont from "next/font/local";
+const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
 export default function about() {
   return (
@@ -20,6 +24,56 @@ export default function about() {
             on collaboration, creativity, and technical skills, RocketHacks will
             empower students to turn their ideas into impactful projects.
           </p>
+          <div className="flex flex-col lg:flex-row items-center justify-center align-middle text-base space-x-4">
+            <div className="border border-blue-600 border-2 mt-16 text-center">
+              <div className="px-4 py-4">
+                <PiTerminalWindow
+                  className="mx-auto mb-2"
+                  size={64}
+                  color="#E4335E"
+                />
+                <h3
+                  className={`${terminal.className} mb-5 text-[#E4335E] text-[32px] `}
+                >
+                  Hackers
+                </h3>
+                <p className="text-balance break-normal text-base">
+                  Applications for RocketHacks are now <br />open.  Apply to be
+                  a hacker today!
+                </p>
+                <br />
+                <button className="bg-blue-600 py-3 px-20 rounded-md">
+                  APPLY NOW
+                </button>
+                <br />
+                <br />
+              </div>
+            </div>
+            <div className="border border-blue-600 border-2 mt-16 text-center">
+              <div className="px-4 py-4">
+                <IoDiamond
+                  className="mx-auto mb-2"
+                  size={64}
+                  color="#FFDA20"
+                ></IoDiamond>
+                <h3
+                  className={`${terminal.className} mb-5 text-[#FFDA20] text-[32px] `}
+                >
+                  Sponsors
+                </h3>
+                <p className="text-balance break-normal text-base">
+                  Are you interested in sponsoring <br /> RocketHacks? Check out
+                  the sponsorship <br /> packet for more info!
+                </p>
+                <br />
+
+                <button className="bg-blue-600 py-3 px-20 rounded-md">
+                  SPONSOR US
+                </button>
+                <br />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
