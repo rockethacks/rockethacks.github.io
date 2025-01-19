@@ -3,6 +3,7 @@ import { PiTerminalWindow } from "react-icons/pi";
 import { IoDiamond } from "react-icons/io5";
 import { AiOutlineDiscord } from "react-icons/ai";
 import localFont from "next/font/local";
+import Link from "next/link";
 const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
 export default function about() {
@@ -68,9 +69,11 @@ export default function about() {
                 </p>
                 <br />
 
-                <button className="bg-blue-600 py-3 px-20 rounded-md">
-                  SPONSOR US
-                </button>
+                <Link href="/public/documents/sponsorship-packet.pdf">
+                  <button className="bg-blue-600 py-3 px-20 rounded-md">
+                    SPONSOR US
+                  </button>
+                </Link>
                 <br />
               </div>
             </div>
@@ -92,9 +95,11 @@ export default function about() {
                 </p>
                 <br />
 
-                <button className="bg-blue-600 py-3 px-20 rounded-md">
-                  JOIN DISCORD
-                </button>
+                <Link href="https://discord.gg/9NHTphRSUv">
+                  <button className="bg-blue-600 py-3 px-20 rounded-md">
+                    JOIN DISCORD
+                  </button>
+                </Link>
                 <br />
               </div>
             </div>
