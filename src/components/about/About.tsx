@@ -44,10 +44,12 @@ export default function about() {
                   open. Apply to be a hacker today!
                 </p>
                 <br />
-                <button className="bg-blue-600 py-3 px-20 rounded-md">
-                  APPLY NOW
-                </button>
                 <br />
+                <Link href="https://portal.rockethacks.org/">
+                  <button className="bg-blue-600 py-3 px-20 rounded-md">
+                    APPLY NOW
+                  </button>
+                </Link>
                 <br />
               </div>
             </div>
