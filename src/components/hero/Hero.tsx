@@ -11,9 +11,9 @@ export default function hero() {
         className="home text-white relative text-center h-screen overflow-hidden"
       >
         <img
-          src={"/assets/rocky.png"}
+          src={"/assets/rocky2.png"}
           alt="Rocky"
-          className="mx-auto opacity-90 absolute inset-0 h-full w-full object-cover md:object-"
+          className="mx-auto opacity-40 absolute inset-0 h-full w-full object-cover md:object-"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div>
