@@ -17,3 +17,6 @@ body {
   /* overflow-y: scroll; */
 }
 
+.no-scroll {
+  overflow: hidden;
+}
