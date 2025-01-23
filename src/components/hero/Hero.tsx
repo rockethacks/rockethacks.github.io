@@ -11,7 +11,7 @@ export default function hero() {
         className="home text-white relative text-center h-screen overflow-hidden"
       >
         <img
-          src={"/assets/rocky2.png"}
+          src={"/assets/Retro_Futuristic_Moebius.png"}
           alt="Rocky"
           className="mx-auto opacity-40 absolute inset-0 h-full w-full object-cover md:object-"
         />
@@ -23,8 +23,9 @@ export default function hero() {
           </div>
           <div>
             <h1 className="text-5xl">
-              <span className="text-blue-700">{"{"}</span>RocketHacks
-              <span className="text-blue-700">{"}"}</span>
+              <span className="text-blue-700">{"{ "}</span>
+              <span className="text-[#FFDA1F]">RocketHacks</span>
+              <span className="text-blue-700">{" }"}</span>
             </h1>
           </div>
           <div>
