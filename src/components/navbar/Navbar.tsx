@@ -45,7 +45,7 @@ export default function Navbar() {
             About Us
           </Link>
           <Link href="#faq">FAQ</Link>
-          <Link href="/sponsor">Sponsor</Link>
+          <Link href="#sponsor">Sponsors</Link>
           <Link href="/contact">Contact Us</Link>
         </div>
       </div>
@@ -60,8 +60,8 @@ export default function Navbar() {
             <Link href="#faq" onClick={toggleMenu}>
               FAQ
             </Link>
-            <Link href="/sponsor" onClick={toggleMenu}>
-              Sponsor
+            <Link href="#sponsor" onClick={toggleMenu}>
+              Sponsors
             </Link>
             <Link href="/contact" onClick={toggleMenu}>
               Contact Us
