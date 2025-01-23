@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="bg-[#030c1b] text-white text-base sticky top-0 z-20 shadow-xl">
       {/* Logo and Hamburger Menu */}
-      <div className="container px-5 xl:px-96 flex space-x-10 items-center h-[3.8rem] justify-between">
+      <div className="container flex justify-around sm:justify-between sm:mx-auto  md:justify-center space-x-10 items-center h-[3.8rem]">
         {/* Logo */}
         <div className="font-bold">
           <Link href="/">
@@ -29,10 +29,10 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger Menu for Mobile */}
-        <div className="xl:hidden z-30">
+        <div className="md:hidden z-30">
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none mr-24" // Added right margin
+            className="text-white focus:outline-none" // Added right margin
             aria-label="Toggle menu"
           >
             {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -40,7 +40,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className="space-x-10 hidden xl:block">
+        <div className="space-x-10 hidden md:block lg:mr-20">
           <Link href="#about" style={{ scrollBehavior: "smooth" }}>
             About Us
           </Link>
