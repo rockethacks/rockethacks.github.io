@@ -21,7 +21,14 @@ function faq() {
             alt="backdrop"
             width={10000}
             height={10000}
-            className="opacity-60"
+            className="opacity-60 hidden lg:inline-block"
+          />
+          <Image
+            src="/assets/backdrop-mobile.png"
+            alt="backdrop"
+            width={10000}
+            height={10000}
+            className="opacity-60 lg:hidden"
           />
           {/* FAQ text positioned at the top */}
           <div className="absolute top-8 py-10 left-1/2 transform -translate-x-1/2 text-center">
@@ -36,7 +43,7 @@ function faq() {
               height={3000}
               className="z-20 w-full h-full mt-10"
             ></Image> */}
-            <div className="mt-10 bg-[#202020] hidden xl:inline-block xl:h-[700px] xl:w-[1000px]">
+            <div className="mt-10 bg-[#202020] hidden xl:inline-block xl:h-[700px] xl:w-[1000px] shadow-xl shadow-black/20">
               <div className="inline">
                 <Image
                   src={"/assets/buttons.svg"}
