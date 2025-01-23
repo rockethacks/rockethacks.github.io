@@ -34,7 +34,7 @@ function faq() {
             </h1>
             <h1 className="text-white text-5xl z-20 block lg:hidden">FAQ</h1>
             <div className={`${inter.className} text-2xl`}>
-              <div className="rounded-md bg-slate-950/55 backdrop-blur-sm border-amber-300 border-2 mt-10 px-5 py-3 w-80 md:w-full lg:px-24 lg:py-10 text-white text-balance break-normal text-left">
+              <div className="rounded-md bg-slate-950/55 backdrop-blur-md border-amber-300 border-2 mt-10 px-5 py-3 w-80 md:w-full lg:px-24 lg:py-10 text-white text-balance break-normal text-left">
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
                     <AccordionTrigger>What is a Hackathon?</AccordionTrigger>
