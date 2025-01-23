@@ -1,5 +1,6 @@
 import React from "react";
 import localFont from "next/font/local";
+import Image from "next/image";
 
 const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
@@ -10,10 +11,12 @@ export default function hero() {
         id="home"
         className="home text-white relative text-center h-screen overflow-hidden"
       >
-        <img
-          src={"/assets/Retro_Futuristic_Moebius.png"}
-          alt="Rocky"
-          className="mx-auto opacity-40 absolute inset-0 h-full w-full object-cover md:object-"
+        <Image
+          src="/assets/Retro_Futuristic_Moebius.png"
+          alt="background"
+          className="opacity-45"
+          layout="fill"
+          objectFit="cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div>
