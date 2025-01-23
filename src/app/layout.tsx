@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={jakarta.className}>
         <a
           id="mlh-trust-badge"
-          className="z-30 block fixed right-8 top-0"
+          className="z-30 block fixed right-8 top-0 hidden lg:inline-block"
           href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=yellow"
           target="_blank"
           rel="noopener noreferrer"
