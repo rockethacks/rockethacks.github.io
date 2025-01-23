@@ -13,8 +13,8 @@ export default function Footer() {
           <Image
             src="/assets/name-logo.svg"
             alt="RocketHacks"
-            height={120}
-            width={120}
+            height={80}
+            width={80}
           />
         </h1>
       </div>
