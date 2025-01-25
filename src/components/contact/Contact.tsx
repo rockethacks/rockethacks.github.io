@@ -17,9 +17,11 @@ export default function Contact() {
           >
             MORE QUESTIONS?
           </h2>
-          <button className="bg-[#2563EB] px-3 py-2 rounded-lg text-base flex mx-auto items-center justify-center">
-            <FaDiscord className="h-5 w-auto px-1" /> JOIN OUR DISCORD
-          </button>
+          <a href="https://discord.gg/9NHTphRSUv">
+            <button className="bg-[#2563EB] px-3 py-2 rounded-lg text-base flex mx-auto items-center justify-center">
+              <FaDiscord className="h-5 w-auto px-1" /> JOIN OUR DISCORD
+            </button>
+          </a>
         </div>
       </section>
     </div>
