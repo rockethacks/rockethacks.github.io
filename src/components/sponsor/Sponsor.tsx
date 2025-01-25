@@ -23,31 +23,30 @@ export default function Sponsor() {
 
         <div className="mt-12">
           {/* Mobile View */}
-          <div className="flex flex-col items-center justify-center space-y-6 md:hidden">
+          <div className="flex flex-col items-center justify-center space-y-3 md:hidden">
             <a
               href="https://aws.amazon.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaAws className="h-20 w-20" />
+              <FaAws className="h-16 w-auto" />
             </a>
             <a
               href="https://www.github.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <DiGithubFull className="h-20 w-20" />
+              <DiGithubFull className="h-24 w-auto" />
             </a>
             <a
               href="https://www.perplexity.ai/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
+              <img
                 src="/assets/sponsors/perplexity.png"
                 alt="Perplexity"
-                width={100}
-                height={100}
+                className="h-10 w-auto"
               />
             </a>
             <a
@@ -55,11 +54,10 @@ export default function Sponsor() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
+              <img
                 src="/assets/sponsors/warp.png"
                 alt="Warp"
-                width={100}
-                height={100}
+                className="h-24 w-auto"
               />
             </a>
           </div>
@@ -98,8 +96,8 @@ export default function Sponsor() {
                 <Image
                   src="/assets/sponsors/Perplexity.png"
                   alt="Perplexity"
-                  width={120}
-                  height={120}
+                  width={150}
+                  height={150}
                 />
               </a>
             </div>
@@ -114,8 +112,8 @@ export default function Sponsor() {
                 <Image
                   src="/assets/sponsors/warp.png"
                   alt="Warp"
-                  width={150}
-                  height={150}
+                  width={200}
+                  height={200}
                 />
               </a>
             </div>
