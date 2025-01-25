@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={jakarta.className}>
+      <body className={`${jakarta.className}`}>
         <a
           id="mlh-trust-badge"
           className="z-30 block fixed right-8 top-0 hidden lg:inline-block"
