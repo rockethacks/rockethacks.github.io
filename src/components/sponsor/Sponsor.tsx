@@ -96,7 +96,7 @@ export default function Sponsor() {
                 rel="noopener noreferrer"
               >
                 <Image
-                  src="/assets/sponsors/perplexity.png"
+                  src="/assets/sponsors/Perplexity.png"
                   alt="Perplexity"
                   width={120}
                   height={120}
