@@ -46,7 +46,7 @@ export default function Sponsor() {
               <img
                 src="/assets/sponsors/perplexity.png"
                 alt="Perplexity"
-                className="h-10 w-auto"
+                className="h-10 w-44 lg:w-auto"
               />
             </a>
             <a
