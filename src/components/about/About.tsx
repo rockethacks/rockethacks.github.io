@@ -14,8 +14,12 @@ export default function about() {
         className="about-us bg-gradient-to-b from-[#030c1b] from-50% to-[#081d41] to-90% text-white py-16 px-5 md:px-10 xl:py-20 xl:px-[300px]"
       >
         <div className="container text-left">
-          <h2 className="text-3xl font-bold my-[10px]">ABOUT US</h2>
-          <p className="mt-4 text-base text-pretty break-normal font-normal">
+          <h2
+            className={`${terminal.className} text-4xl md:text-6xl my-[10px] text-center`}
+          >
+            ABOUT US
+          </h2>
+          <p className="mt-4 text-base text-pretty break-normal font-normal text-center">
             RocketHacks is a 24-hour hackathon hosted by the University of
             Toledo, dedicated to fostering innovation and problem-solving among
             students from the Midwest and beyond.{" "}
