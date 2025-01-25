@@ -11,7 +11,7 @@ export default function Sponsor() {
     <div>
       <section
         id="sponsor"
-        className="sponsor bg-gradient-to-b from-[#030c1b] to-[#081d41]  text-white py-16 px-5 md:px-10 xl:py-20 xl:px-[300px]"
+        className="sponsor bg-gradient-to-b from-[#081d41] from-10% to-[#030c1b] to-80% text-white py-16 px-5 md:px-10 xl:py-20 xl:px-[300px]"
       >
         <div className="text-center">
           <h2

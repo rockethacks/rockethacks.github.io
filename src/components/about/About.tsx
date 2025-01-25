@@ -11,7 +11,7 @@ export default function about() {
     <div>
       <section
         id="about"
-        className="about-us bg-[#030c1b] text-white py-16 px-5 md:px-10 xl:py-20 xl:px-[300px]"
+        className="about-us bg-gradient-to-b from-[#030c1b] from-50% to-[#081d41] to-90% text-white py-16 px-5 md:px-10 xl:py-20 xl:px-[300px]"
       >
         <div className="container text-left">
           <h2 className="text-3xl font-bold my-[10px]">ABOUT US</h2>
