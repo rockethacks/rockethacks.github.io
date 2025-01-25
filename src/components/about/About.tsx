@@ -71,7 +71,7 @@ export default function about() {
                 </p>
                 <br />
 
-                <Link href="/public/documents/sponsorship-packet.pdf">
+                <Link href="/documents/sponsorship-packet.pdf" target="_blank">
                   <button className="bg-blue-600 py-3 px-20 rounded-md">
                     SPONSOR US
                   </button>
