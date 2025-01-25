@@ -19,13 +19,13 @@ function faq() {
     <div className="space-y-8">
       {/* Fullscreen background section */}
       <section id="faq">
-        <div className="h-screen bg-cover bg-center relative">
+        <div className="h-screen bg-cover bg-center relative bg-gradient-to-b from-[#030c1b] from-10% via-[#081d41] to-[#030c1b] to-85%">
           <Image
-            src="/assets/space-station.png"
+            src="/assets/arcade.png"
             alt="Person in space"
             fill
             style={{ objectFit: "cover" }}
-            className="opacity-60"
+            className="opacity-5"
           />
           {/* FAQ text positioned at the top */}
           <div className="absolute top-8 py-10 left-1/2 transform -translate-x-1/2 text-center">
