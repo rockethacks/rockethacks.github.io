@@ -27,7 +27,7 @@ export default function hero() {
           <div>
             <h1 className="text-5xl">
               <span className="text-blue-700">{"{ "}</span>
-              <span className="text-[#FFDA1F]">RocketHacks</span>
+              <span className="text-[#FFDA1F] font-bold">RocketHacks</span>
               <span className="text-blue-700">{" }"}</span>
             </h1>
           </div>
