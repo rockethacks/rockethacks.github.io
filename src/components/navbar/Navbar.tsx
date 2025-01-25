@@ -40,13 +40,13 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className="space-x-10 hidden md:block lg:mr-20">
+        <div className="space-x-10 hidden md:block lg:mr-20 font-medium">
           <Link href="#about" style={{ scrollBehavior: "smooth" }}>
-            About Us
+            ABOUT US
           </Link>
           <Link href="#faq">FAQ</Link>
-          <Link href="#sponsor">Sponsors</Link>
-          <Link href="#contact">Contact Us</Link>
+          <Link href="#sponsor">SPONSORS</Link>
+          <Link href="#contact">CONTACT</Link>
         </div>
       </div>
 
