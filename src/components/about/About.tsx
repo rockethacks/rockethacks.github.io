@@ -53,7 +53,7 @@ export default function About() {
               </div>
               <Link href="https://portal.rockethacks.org/" aria-label="Apply to be a hacker">
                 <button 
-                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 hover:bg-[#FFDA20] hover:text-blue-600 transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20] focus:ring-2 focus:ring-blue-400 focus:outline-none"
                   aria-label="Apply now to be a hacker"
                 >
                   APPLY NOW
@@ -82,7 +82,7 @@ export default function About() {
               </div>
               <Link href="/documents/sponsorship-packet.pdf" target="_blank" rel="noopener noreferrer" aria-label="View sponsorship packet">
                 <button 
-                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 hover:bg-[#FFDA20] hover:text-blue-600 transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20] focus:ring-2 focus:ring-blue-400 focus:outline-none"
                   aria-label="Download sponsor packet"
                 >
                   SPONSOR
@@ -111,7 +111,7 @@ export default function About() {
               </div>
               <Link href="https://discord.gg/9NHTphRSUv" target="_blank" rel="noopener noreferrer" aria-label="Join Discord server">
                 <button 
-                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 hover:bg-[#FFDA20] hover:text-blue-600 transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20] focus:ring-2 focus:ring-blue-400 focus:outline-none"
                   aria-label="Join Discord server"
                 >
                   JOIN
