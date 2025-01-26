@@ -63,7 +63,7 @@ export default function About() {
                 aria-label="Apply to be a hacker"
               >
                 <button
-                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 focus:ring-2 focus:ring-blue-400 focus:outline-none hover:bg-[#FFDA20] hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20]"
                   aria-label="Apply now to be a hacker"
                 >
                   APPLY NOW
@@ -100,7 +100,7 @@ export default function About() {
                 aria-label="View sponsorship packet"
               >
                 <button
-                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 focus:ring-2 focus:ring-blue-400 focus:outline-none hover:bg-[#FFDA20] hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20]"
                   aria-label="Download sponsor packet"
                 >
                   SPONSOR US
@@ -136,7 +136,7 @@ export default function About() {
                 aria-label="Fill the volunteer form"
               >
                 <button
-                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 focus:ring-2 focus:ring-blue-400 focus:outline-none hover:bg-[#FFDA20] hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20]"
                   aria-label="Fill out the volunteer form"
                 >
                   VOLUNTEER
