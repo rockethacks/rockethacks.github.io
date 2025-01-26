@@ -1,7 +1,8 @@
 import React from "react";
 import { PiTerminalWindow } from "react-icons/pi";
 import { IoDiamond } from "react-icons/io5";
-import { AiOutlineDiscord } from "react-icons/ai";
+// import { AiOutlineDiscord } from "react-icons/ai";
+import { FaHandshake } from "react-icons/fa6";
 import localFont from "next/font/local";
 import Link from "next/link";
 
@@ -24,9 +25,9 @@ export default function About() {
             RocketHacks is a 24-hour hackathon hosted by the University of
             Toledo dedicated to fostering innovation and problem-solving among
             students from the Midwest and beyond. This event will gather
-            talented students from budding programmers to visionary designers
-            to build real solutions to real-world challenges. With an emphasis
-            on collaboration, creativity, and technical skills, RocketHacks will
+            talented students from budding programmers to visionary designers to
+            build real solutions to real-world challenges. With an emphasis on
+            collaboration, creativity, and technical skills, RocketHacks will
             empower students to turn their ideas into impactful projects.
           </p>
           <div className="flex flex-col lg:flex-row items-center justify-center gap-4 mt-10 max-w-5xl w-full">
@@ -48,7 +49,7 @@ export default function About() {
                   hacker today!
                 </p>
               </div>
-              <Link href="https://portal.rockethacks.org/">
+              <Link href="https://portal.rockethacks.org/" target="_blank">
                 <button className="bg-blue-600 py-3 px-20 rounded-md mt-6">
                   APPLY NOW
                 </button>
@@ -70,14 +71,14 @@ export default function About() {
               </div>
               <Link href="/documents/sponsorship-packet.pdf" target="_blank">
                 <button className="bg-blue-600 py-3 px-20 rounded-md mt-6">
-                  SPONSOR
+                  SPONSOR US
                 </button>
               </Link>
             </div>
             {/* Box 3 */}
             <div className="flex-1 border-2 border-blue-600 rounded-lg text-center p-8 flex flex-col items-center justify-between">
               <div>
-                <AiOutlineDiscord
+                <FaHandshake
                   className="mx-auto mb-4"
                   size={64}
                   color="#5865F2"
@@ -88,13 +89,13 @@ export default function About() {
                   VOLUNTEER
                 </h3>
                 <p className="text-base">
-                  Do you want to volunteer at RocketHacks this year? Join the
-                  Discord Server.
+                  Do you want to volunteer at RocketHacks this year? Fill out
+                  this form.
                 </p>
               </div>
-              <Link href="https://discord.gg/9NHTphRSUv">
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeAmg3YExuSxCsBWOElKdpByMP_UXKGnB4HJZtd29xJTXnZzQ/viewform?usp=dialog">
                 <button className="bg-blue-600 py-3 px-20 rounded-md mt-6">
-                  JOIN
+                  VOLUNTEER
                 </button>
               </Link>
             </div>
@@ -104,4 +105,3 @@ export default function About() {
     </div>
   );
 }
-
