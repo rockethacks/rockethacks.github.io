@@ -17,7 +17,7 @@ export default function About() {
       >
         <div className="flex flex-col items-center">
           <h2
-            className={`${terminal.className} text-4xl md:text-6xl my-[10px] text-center`}
+            className={`${terminal.className} text-4xl md:text-6xl my-[10px] text-center text-[#FFDA20]`}
           >
             ABOUT US
           </h2>
