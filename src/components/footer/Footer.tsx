@@ -2,7 +2,6 @@ import React from "react";
 import { BsTwitterX } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
-import { BsFacebook } from "react-icons/bs";
 import Image from "next/image";
 
 export default function Footer() {
