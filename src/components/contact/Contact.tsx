@@ -1,6 +1,6 @@
 import React from "react";
 import localFont from "next/font/local";
-import { FaDiscord } from "react-icons/fa";
+import { PiMicrosoftOutlookLogo } from "react-icons/pi";
 
 const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
@@ -16,9 +16,9 @@ export default function Contact() {
         >
           HAVE ANY QUESTIONS?
         </h2>
-        <a href="https://discord.gg/9NHTphRSUv">
+        <a href="mailto:RocketHacks@utoledo.edu">
           <button className="bg-[#2563EB] px-3 py-2 rounded-lg text-base flex mx-auto items-center justify-center">
-            <FaDiscord className="h-5 w-auto px-1" /> JOIN OUR DISCORD
+            <PiMicrosoftOutlookLogo className="h-5 w-auto px-1" /> Send an Email
           </button>
         </a>
       </section>
