@@ -7,12 +7,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 
-const inter = Inter({
-  weight: "400",
-  subsets: ["latin"],
-});
+const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
 function faq() {
   return (
@@ -29,11 +26,13 @@ function faq() {
           /> */}
           {/* FAQ text positioned at the top */}
           <div className="absolute top-8 py-10 left-1/2 transform -translate-x-1/2 text-center">
-            <h1 className="text-white text-5xl z-20 hidden lg:block">
+            <h1 className={`${terminal.className} text-white text-5xl z-20 hidden lg:block`}>
               FREQUENTLY ASKED QUESTIONS
             </h1>
-            <h1 className="text-white text-5xl z-20 block lg:hidden">FAQ</h1>
-            <div className={`${inter.className} text-2xl`}>
+            <h1 className={`${terminal.className} text-white text-5xl z-20 block lg:hidden`}>
+              FAQ
+            </h1>
+            <div className="text-2xl">
               <div className="rounded-md bg-slate-950/30 backdrop-blur-sm border-amber-300 border-2 mt-10 px-5 py-3 w-80 md:w-full lg:px-24 lg:py-10 text-white text-balance break-normal text-left">
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
