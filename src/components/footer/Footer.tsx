@@ -30,11 +30,6 @@ export default function Footer() {
           </a>
         </div>
         <div>
-          <a href="https://www.instagram.com/rockethacks.ut">
-            <BsFacebook color="white" size={24} />
-          </a>
-        </div>
-        <div>
           <a href="https://www.linkedin.com/company/rocket-hacks">
             <BsLinkedin color="white" size={24} />
           </a>
