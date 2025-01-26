@@ -6,7 +6,7 @@ const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
 export default function Contact() {
   return (
-    <div className="flex items-center justify-center h-80 bg-gradient-to-b from-[#081d41]/50 from-10% to-[#030c1b] to-80% text-white">
+    <div className="flex items-center justify-center h-80 bg-gradient-to-b from-[#030c1b]/50 from-28% to-[#081d41]/60 to-90% text-white">
       <section
         id="contact"
         className="text-center py-16 px-5 md:px-10 xl:py-20 xl:px-[300px]"
@@ -14,7 +14,7 @@ export default function Contact() {
         <h2
           className={`${terminal.className} text-4xl md:text-6xl font-bold mb-8`}
         >
-          MORE QUESTIONS?
+          HAVE ANY QUESTIONS?
         </h2>
         <a href="https://discord.gg/9NHTphRSUv">
           <button className="bg-[#2563EB] px-3 py-2 rounded-lg text-base flex mx-auto items-center justify-center">

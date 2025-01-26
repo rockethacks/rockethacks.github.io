@@ -9,7 +9,6 @@ import Sponsor from "@/components/sponsor/Sponsor";
 import Footer from "@/components/footer/Footer";
 import Contact from "@/components/contact/Contact";
 
-
 export default function Home() {
   return (
     <div>
@@ -17,8 +16,8 @@ export default function Home() {
       <Hero />
       <About />
       <Sponsor />
-      <Faq />
       <Contact />
+      <Faq />
       <Footer />
     </div>
   );

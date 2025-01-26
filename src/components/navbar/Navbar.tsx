@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="bg-[#030c1b] text-white text-base sticky top-0 z-20 shadow-xl">
       {/* Logo and Hamburger Menu */}
-      <div className="container flex justify-around sm:justify-between sm:mx-auto  md:justify-center md:space-x-20 items-center h-[3.8rem]">
+      <div className="container flex justify-around sm:justify-between sm:mx-auto md:justify-center md:space-x-20 items-center h-[3.8rem]">
         {/* Logo */}
         <div className="font-bold">
           <Link href="/">
@@ -44,9 +44,9 @@ export default function Navbar() {
           <Link href="#about" style={{ scrollBehavior: "smooth" }}>
             ABOUT US
           </Link>
-          <Link href="#faq">FAQ</Link>
           <Link href="#sponsor">SPONSORS</Link>
           <Link href="#contact">CONTACT</Link>
+          <Link href="#faq">FAQ</Link>
         </div>
       </div>
 
@@ -60,11 +60,11 @@ export default function Navbar() {
             <Link href="#sponsor" onClick={toggleMenu}>
               Sponsors
             </Link>
-            <Link href="#faq" onClick={toggleMenu}>
-              FAQ
-            </Link>
             <Link href="#contact" onClick={toggleMenu}>
               Contact Us
+            </Link>
+            <Link href="#faq" onClick={toggleMenu}>
+              FAQ
             </Link>
           </div>
         </div>
