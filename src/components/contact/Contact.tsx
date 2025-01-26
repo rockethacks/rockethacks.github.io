@@ -13,7 +13,7 @@ export default function Contact() {
         className="text-center py-16 px-5 md:px-10 xl:py-20 xl:px-[300px]"
       >
         <h2
-          className={`${terminal.className} text-4xl md:text-6xl font-bold mb-8 text-[#FFDA20]`}
+          className={`${terminal.className} text-4xl md:text-6xl mb-8 text-[#FFDA20]`}
         >
           HAVE ANY QUESTIONS?
         </h2>
