@@ -18,7 +18,7 @@ export default function Contact() {
         </h2>
         <a href="mailto:RocketHacks@utoledo.edu">
           <button className="bg-[#2563EB] px-3 py-2 rounded-lg text-base flex mx-auto items-center justify-center">
-            <PiMicrosoftOutlookLogo className="h-5 w-auto px-1" /> Send an Email
+            <PiMicrosoftOutlookLogo className="h-5 w-auto px-1" /> Send us an Email
           </button>
         </a>
       </section>
