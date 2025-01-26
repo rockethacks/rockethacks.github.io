@@ -17,7 +17,7 @@ export default function Sponsor() {
           <h2
             className={`${terminal.className} text-4xl md:text-6xl mb-8 text-[#FFDA20]`}
           >
-            OUR SPONSORS
+            SPONSORS
           </h2>
         </div>
 
@@ -63,18 +63,6 @@ export default function Sponsor() {
               />
             </a>
             <a
-              href="https://www.desmos.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={"/assets/sponsors/desmos.png"}
-                alt="Desmos"
-                width={100}
-                height={100}
-              />
-            </a>
-            <a
               href="https://www.photoroom.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -116,18 +104,7 @@ export default function Sponsor() {
           </div>
 
           {/* Desktop View */}
-          <div className="hidden md:flex flex-row gap-x-6 justify-center items-center">
-            {/* AWS */}
-            <div className="flex items-center justify-center h-24 w-24 rounded-xl transform hover:scale-105 transition duration-300">
-              <a
-                href="https://aws.amazon.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaAws className="h-16 w-16" />
-              </a>
-            </div>
-
+          <div className="hidden md:flex flex-row gap-x-2 justify-center items-center">
             {/* GitHub */}
             <div className="flex items-center justify-center h-24 w-40 rounded-xl transform hover:scale-105 transition duration-300">
               <a
@@ -136,6 +113,17 @@ export default function Sponsor() {
                 rel="noopener noreferrer"
               >
                 <DiGithubFull className="h-24 w-auto" />
+              </a>
+            </div>
+
+            {/* AWS */}
+            <div className="flex items-center justify-center h-24 w-24 rounded-xl transform hover:scale-105 transition duration-300">
+              <a
+                href="https://aws.amazon.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaAws className="h-16 w-16 mt-4" />
               </a>
             </div>
 
@@ -154,9 +142,21 @@ export default function Sponsor() {
                 />
               </a>
             </div>
-
+          </div>
+          {/* Row 2  */}
+          <div className="hidden md:flex flex-row gap-x-6 justify-center items-center">
+            {/* MercyHealth */}
+            <div className="flex items-center justify-center h-24 w-24 rounded-xl transform hover:scale-105 transition duration-300">
+              <a
+                href="https://www.mercy.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Mercy className="h-8 mr-20" />
+              </a>
+            </div>
             {/* Warp */}
-            <div className="flex items-center justify-center  h-24 w-40 rounded-xl transform hover:scale-105 transition duration-300">
+            <div className="flex items-center justify-center  h-24 w-auto rounded-xl transform hover:scale-105 transition duration-300">
               <a
                 href="https://www.warp.dev/"
                 target="_blank"
@@ -165,41 +165,13 @@ export default function Sponsor() {
                 <Image
                   src="/assets/sponsors/warp.png"
                   alt="Warp"
-                  width={200}
-                  height={200}
-                />
-              </a>
-            </div>
-          </div>
-          {/* Row 2  */}
-          <div className="hidden md:flex flex-row gap-x-16 justify-center items-center">
-            {/* MercyHealth */}
-            <div className="flex items-center justify-center h-24 w-24 rounded-xl transform hover:scale-105 transition duration-300">
-              <a
-                href="https://www.mercy.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Mercy className="h-16 mt-8 mr-36" />
-              </a>
-            </div>
-            {/* Desmos */}
-            <div className="flex items-center justify-center h-24 w-24 rounded-xl transform hover:scale-105 transition duration-300">
-              <a
-                href="https://www.desmos.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={"/assets/sponsors/desmos.png"}
-                  alt="Desmos"
-                  width={100}
-                  height={100}
+                  width={150}
+                  height={150}
                 />
               </a>
             </div>
             {/* XYZ */}
-            <div className="flex items-center justify-center h-24 w-24 rounded-xl transform hover:scale-105 transition duration-300">
+            <div className="flex items-center justify-center h-24 w-16 rounded-xl transform hover:scale-105 transition duration-300">
               <a
                 href="https://gen.xyz/"
                 target="_blank"
@@ -208,8 +180,8 @@ export default function Sponsor() {
                 <Image
                   src={"/assets/sponsors/xyz.svg"}
                   alt=".xyz"
-                  width={60}
-                  height={60}
+                  width={50}
+                  height={50}
                 />
               </a>
             </div>

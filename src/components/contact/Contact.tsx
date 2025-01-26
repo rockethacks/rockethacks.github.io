@@ -18,14 +18,14 @@ export default function Contact() {
           HAVE ANY QUESTIONS?
         </h2>
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-          <a href="https://discord.gg/9NHTphRSUv">
+          {/* <a href="https://discord.gg/9NHTphRSUv">
             <button className="bg-[#2563EB] px-6 py-2 rounded-lg text-base flex items-center justify-center hover:bg-[#FFDA20] hover:text-blue-600 transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20] focus:ring-2 focus:ring-blue-400 focus:outline-none">
               <FaDiscord className="h-5 w-auto mr-2" /> JOIN OUR DISCORD
             </button>
-          </a>
+          </a> */}
           <a href="mailto:contact@rockethacks.org">
-            <button className="bg-[#2563EB] px-6 py-2 rounded-lg text-base flex items-center justify-center hover:bg-[#FFDA20] hover:text-blue-600 transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20] focus:ring-2 focus:ring-blue-400 focus:outline-none">
-              <MdEmail className="h-5 w-auto mr-2" />  ROCKETHACKS.ORG
+            <button className="bg-[#2563EB] px-6 py-2 rounded-lg text-base flex items-center justify-center hover:bg-[#FFDA20] hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20] focus:ring-2 focus:ring-blue-400 focus:outline-none">
+              <MdEmail className="h-5 w-auto mr-2" /> ROCKETHACKS.ORG
             </button>
           </a>
         </div>

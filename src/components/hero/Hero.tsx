@@ -14,7 +14,7 @@ export default function hero() {
         <Image
           src="/assets/Retro_Futuristic_Moebius.png"
           alt="background"
-          className="opacity-45"
+          className="opacity-30"
           layout="fill"
           objectFit="cover"
         />
