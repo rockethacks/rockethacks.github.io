@@ -15,7 +15,7 @@ export default function Sponsor() {
       >
         <div className="text-center">
           <h2
-            className={`${terminal.className} text-4xl md:text-6xl font-bold mb-8`}
+            className={`${terminal.className} text-4xl md:text-6xl font-bold mb-8 text-[#FFDA20]`}
           >
             OUR SPONSORS
           </h2>

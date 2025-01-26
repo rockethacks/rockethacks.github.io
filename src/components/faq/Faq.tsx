@@ -26,7 +26,7 @@ function faq() {
           /> */}
           {/* FAQ text positioned at the top */}
           <div className="absolute top-8 py-10 left-1/2 transform -translate-x-1/2 text-center">
-            <h1 className={`${terminal.className} text-white text-5xl z-20 hidden lg:block`}>
+            <h1 className={`${terminal.className} text-5xl z-20 hidden lg:block text-[#FFDA20]`}>
               FREQUENTLY ASKED QUESTIONS
             </h1>
             <h1 className={`${terminal.className} text-white text-5xl z-20 block lg:hidden`}>
