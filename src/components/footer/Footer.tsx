@@ -2,6 +2,7 @@ import React from "react";
 import { BsTwitterX } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
 import Image from "next/image";
 
 export default function Footer() {
@@ -19,18 +20,35 @@ export default function Footer() {
       </div>
       <div className="flex flex-row space-x-10 mb-10 lg:mb-0">
         <div>
-          <a href="https://x.com/UTRocketHacks">
+          <a
+            href="https://x.com/UTRocketHacks"
+            aria-label="Follow us on X (Twitter)"
+          >
             <BsTwitterX color="white" size={24} />
           </a>
         </div>
         <div>
-          <a href="https://www.instagram.com/rockethacks.ut">
+          <a
+            href="https://www.instagram.com/rockethacks.ut"
+            aria-label="Follow us on Instagram"
+          >
             <BsInstagram color="white" size={24} />
           </a>
         </div>
         <div>
-          <a href="https://www.linkedin.com/company/rocket-hacks">
+          <a
+            href="https://www.linkedin.com/company/rocket-hacks"
+            aria-label="Follow us on LinkedIn"
+          >
             <BsLinkedin color="white" size={24} />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.facebook.com/rockethacks"
+            aria-label="Follow us on Facebook"
+          >
+            <BsFacebook color="white" size={24} />
           </a>
         </div>
       </div>
