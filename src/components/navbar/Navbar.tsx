@@ -48,7 +48,7 @@ export default function Navbar() {
           <Link href="#contact">CONTACT</Link>
           <Link href="#faq">FAQ</Link>
           <Link href="/assets/Code&CreateFlyer.pdf" target="_blank">
-            Code & Create
+            CODE & CREATE
           </Link>
         </div>
       </div>
