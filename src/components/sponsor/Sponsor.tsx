@@ -44,8 +44,8 @@ export default function Sponsor() {
               rel="noopener noreferrer"
             >
               <Image
-                src="/assets/sponsors/perplexity.png"
-                alt="Perplexity"
+                src="/assets/sponsors/Perplexity.png"
+                alt="Perplexity AI"
                 height={150}
                 width={150}
               />
@@ -57,7 +57,7 @@ export default function Sponsor() {
             >
               <Image
                 src="/assets/sponsors/warp.png"
-                alt="Perplexity"
+                alt="Warp Terminal"
                 height={180}
                 width={180}
               />
