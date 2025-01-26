@@ -10,7 +10,8 @@ const mlh =
 
 export const metadata: Metadata = {
   title: "Rocket Hacks",
-  description: "Created by RocketHacks team",
+  description:
+    "RocketHacks is a 24-hour Hackathon hosted by The University of Toledo.",
 };
 
 export default function RootLayout({
