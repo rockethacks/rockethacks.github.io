@@ -1,6 +1,7 @@
 import React from "react";
 import localFont from "next/font/local";
-import { PiMicrosoftOutlookLogo } from "react-icons/pi";
+import { FaDiscord } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
@@ -12,16 +13,22 @@ export default function Contact() {
         className="text-center py-16 px-5 md:px-10 xl:py-20 xl:px-[300px]"
       >
         <h2
-          className={`${terminal.className} text-4xl md:text-6xl font-bold mb-8 text-[#ffda20]`}
+          className={`${terminal.className} text-4xl md:text-6xl font-bold mb-8 text-[#FFDA20]`}
         >
           HAVE ANY QUESTIONS?
         </h2>
-        <a href="mailto:RocketHacks@utoledo.edu">
-          <button className="bg-[#2563EB] px-3 py-2 rounded-lg text-base flex mx-auto items-center justify-center">
-            <PiMicrosoftOutlookLogo className="h-5 w-auto px-1" /> Send us an
-            Email
-          </button>
-        </a>
+        <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+          {/* <a href="https://discord.gg/9NHTphRSUv">
+            <button className="bg-[#2563EB] px-6 py-2 rounded-lg text-base flex items-center justify-center hover:bg-[#FFDA20] hover:text-blue-600 transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20] focus:ring-2 focus:ring-blue-400 focus:outline-none">
+              <FaDiscord className="h-5 w-auto mr-2" /> JOIN OUR DISCORD
+            </button>
+          </a> */}
+          <a href="mailto:contact@rockethacks.org">
+            <button className="bg-[#2563EB] px-6 py-2 rounded-lg text-base flex items-center justify-center hover:bg-[#FFDA20] hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20] focus:ring-2 focus:ring-blue-400 focus:outline-none">
+              <MdEmail className="h-5 w-auto mr-2" /> ROCKETHACKS.ORG
+            </button>
+          </a>
+        </div>
       </section>
     </div>
   );
