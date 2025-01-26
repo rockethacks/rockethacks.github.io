@@ -13,6 +13,7 @@ export default function About() {
     <div>
       <section
         id="about"
+        aria-label="About RocketHacks"
         className="about-us bg-gradient-to-b from-[#030c1b] from-50% to-[#081d41] to-90% text-white py-16 px-5 md:px-10 xl:py-20"
       >
         <div className="flex flex-col items-center">
