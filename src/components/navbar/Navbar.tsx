@@ -29,7 +29,7 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger Menu for Mobile */}
-        <div className="md:hidden z-30">
+        <div className="inline-block md:hidden z-30">
           <button
             onClick={toggleMenu}
             className="text-white focus:outline-none" // Added right margin
@@ -52,7 +52,7 @@ export default function Navbar() {
 
       {/* Mobile Full-Screen Navigation Menu */}
       {menuOpen && (
-        <div className="bg-[#030c1b]/[99%] text-white xl:hidden fixed overflow-hidden inset-0  max-h-screen">
+        <div className="bg-[#030c1b]/[99%] text-white inline-block xl:hidden fixed overflow-hidden inset-0  max-h-screen">
           <div className="flex flex-col space-y-10 items-center justify-center h-full text-3xl">
             <Link href="#about" onClick={toggleMenu}>
               About Us
