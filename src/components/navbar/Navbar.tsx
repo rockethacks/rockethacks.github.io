@@ -57,11 +57,11 @@ export default function Navbar() {
             <Link href="#about" onClick={toggleMenu}>
               About Us
             </Link>
-            <Link href="#faq" onClick={toggleMenu}>
-              FAQ
-            </Link>
             <Link href="#sponsor" onClick={toggleMenu}>
               Sponsors
+            </Link>
+            <Link href="#faq" onClick={toggleMenu}>
+              FAQ
             </Link>
             <Link href="#contact" onClick={toggleMenu}>
               Contact Us
