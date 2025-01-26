@@ -1,65 +1,107 @@
-import React from 'react';
+import React from "react";
+import { PiTerminalWindow } from "react-icons/pi";
+import { IoDiamond } from "react-icons/io5";
+import { AiOutlineDiscord } from "react-icons/ai";
+import localFont from "next/font/local";
+import Link from "next/link";
 
-type FeatureCardProps = {
-  title: string;
-  description: string;
-};
+const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
-const FeatureCard = ({ title, description }: FeatureCardProps) => (
-  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-[#f4e26c]/20 hover:border-[#f4e26c]/40 transition-all duration-300 shadow-[0_0_15px_rgba(244,226,108,0.1)] hover:shadow-[0_0_20px_rgba(244,226,108,0.15)]">
-    <h3 className="text-xl font-bold mb-4 text-white">{title}</h3>
-    <p className="text-white/80">{description}</p>
-  </div>
-);
-
-const features = [
-  {
-    title: "24 Hours",
-    description: "Join us for an intense 24-hour coding experience that will push your limits"
-  },
-  {
-    title: "Win Prizes & More..",
-    description: "Compete for amazing prizes and opportunities to launch your ideas"
-  },
-  {
-    title: "Learn & Connect",
-    description: "Network with industry experts and learn from experienced mentors"
-  }
-];
-
-export const About = () => {
+export default function About() {
   return (
-    <section id="about" className="pb-40 w-full flex flex-col items-center justify-center">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-12 text-[#FFDA00]">About Us</h2>
-        {/* Description Container */}
-        <div className="px-4 mb-16 max-w-3xl mx-auto">
-          <p className="text-lg leading-relaxed text-white/90 bg-white/5 backdrop-blur-sm rounded-xl p-8 
-                       border border-[#FFDA00]/20 hover:border-[#FFDA00]/40 transition-all duration-300
-                       shadow-[0_0_15px_rgba(244,226,108,0.1)] hover:shadow-[0_0_20px_rgba(244,226,108,0.15)] text-center">
-            RocketHacks is a 24-hour hackathon hosted by the University of Toledo, 
-            dedicated to fostering innovation and problem-solving among students from 
-            the Midwest and beyond. This event will gather talented students, from 
-            budding programmers to visionary designers, to build real solutions to 
-            real-world challenges. With an emphasis on collaboration, creativity, 
-            and technical skills, RocketHacks will empower students to turn their 
-            ideas into impactful projects.
+    <div>
+      <section
+        id="about"
+        className="about-us bg-gradient-to-b from-[#030c1b] from-50% to-[#081d41] to-90% text-white py-16 px-5 md:px-10 xl:py-20"
+      >
+        <div className="flex flex-col items-center">
+          <h2
+            className={`${terminal.className} text-4xl md:text-6xl my-[10px] text-center`}
+          >
+            ABOUT US
+          </h2>
+          <p className="mt-4 text-base text-pretty font-normal text-center max-w-3xl">
+            RocketHacks is a 24-hour hackathon hosted by the University of
+            Toledo dedicated to fostering innovation and problem-solving among
+            students from the Midwest and beyond. This event will gather
+            talented students from budding programmers to visionary designers
+            to build real solutions to real-world challenges. With an emphasis
+            on collaboration, creativity, and technical skills, RocketHacks will
+            empower students to turn their ideas into impactful projects.
           </p>
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-4 mt-10 max-w-5xl w-full">
+            {/* Box 1 */}
+            <div className="flex-1 border-2 border-blue-600 rounded-lg text-center p-8 flex flex-col items-center justify-between">
+              <div>
+                <PiTerminalWindow
+                  className="mx-auto mb-4"
+                  size={64}
+                  color="#E4335E"
+                />
+                <h3
+                  className={`${terminal.className} mb-4 text-[#E4335E] text-[32px]`}
+                >
+                  HACKERS
+                </h3>
+                <p className="text-base">
+                  Applications for RocketHacks are now open.&nbsp; Apply to be a
+                  hacker today!
+                </p>
+              </div>
+              <Link href="https://portal.rockethacks.org/">
+                <button className="bg-blue-600 py-3 px-20 rounded-md mt-6">
+                  APPLY NOW
+                </button>
+              </Link>
+            </div>
+            {/* Box 2 */}
+            <div className="flex-1 border-2 border-blue-600 rounded-lg text-center p-8 flex flex-col items-center justify-between">
+              <div>
+                <IoDiamond className="mx-auto mb-4" size={64} color="#FFDA20" />
+                <h3
+                  className={`${terminal.className} mb-4 text-[#FFDA20] text-[32px]`}
+                >
+                  SPONSORS
+                </h3>
+                <p className="text-base">
+                  Are you interested in sponsoring RocketHacks? Check out the
+                  sponsorship packet for more info!
+                </p>
+              </div>
+              <Link href="/documents/sponsorship-packet.pdf" target="_blank">
+                <button className="bg-blue-600 py-3 px-20 rounded-md mt-6">
+                  SPONSOR
+                </button>
+              </Link>
+            </div>
+            {/* Box 3 */}
+            <div className="flex-1 border-2 border-blue-600 rounded-lg text-center p-8 flex flex-col items-center justify-between">
+              <div>
+                <AiOutlineDiscord
+                  className="mx-auto mb-4"
+                  size={64}
+                  color="#5865F2"
+                />
+                <h3
+                  className={`${terminal.className} mb-4 text-[#5865F2] text-[32px]`}
+                >
+                  VOLUNTEER
+                </h3>
+                <p className="text-base">
+                  Do you want to volunteer at RocketHacks this year? Join the
+                  Discord Server.
+                </p>
+              </div>
+              <Link href="https://discord.gg/9NHTphRSUv">
+                <button className="bg-blue-600 py-3 px-20 rounded-md mt-6">
+                  JOIN
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
-
-        {/* Feature Cards */}
-        <div className="px-4 grid md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <FeatureCard
-              key={index}
-              title={feature.title}
-              description={feature.description}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
-};
+}
 
-export default About;
