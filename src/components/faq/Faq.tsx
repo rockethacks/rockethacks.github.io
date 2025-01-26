@@ -27,7 +27,7 @@ function FAQ() {
             </h1>
             <h1 className="text-white text-5xl z-20 block lg:hidden">FAQ</h1>
             <div
-              className={`${inter.className} rounded-md bg-slate-950/30 backdrop-blur-sm border-amber-300 border-2 mt-10 px-5 py-3 w-[500px] md:w-[700px] lg:w-[1000px] mx-auto text-white text-balance break-normal text-left`}
+              className={`${inter.className} rounded-md bg-slate-950/30 backdrop-blur-sm border-amber-300 border-2 mt-10 px-5 py-3 w-[400px] sm:w-[500px] md:w-[700px] lg:w-[1000px] mx-auto text-white text-balance break-normal text-left`}
             >
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
