@@ -12,15 +12,15 @@ export default function About() {
     <div>
       <section
         id="about"
-        className="about-us bg-gradient-to-b from-[#030c1b] from-50% to-[#081d41] to-90% text-white py-16 px-5 md:px-10 xl:py-20 xl:px-[300px]"
+        className="about-us bg-gradient-to-b from-[#030c1b] from-50% to-[#081d41] to-90% text-white py-16 px-5 md:px-10 xl:py-20"
       >
-        <div className="container text-left">
+        <div className="flex flex-col items-center">
           <h2
             className={`${terminal.className} text-4xl md:text-6xl my-[10px] text-center`}
           >
             ABOUT US
           </h2>
-          <p className="mt-4 text-base text-pretty font-normal text-center">
+          <p className="mt-4 text-base text-pretty font-normal text-center max-w-3xl">
             RocketHacks is a 24-hour hackathon hosted by the University of
             Toledo, dedicated to fostering innovation and problem-solving among
             students from the Midwest and beyond. This event will gather
@@ -29,7 +29,7 @@ export default function About() {
             on collaboration, creativity, and technical skills, RocketHacks will
             empower students to turn their ideas into impactful projects.
           </p>
-          <div className="flex flex-col lg:flex-row items-stretch justify-center gap-4 mt-10 max-w-5xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-4 mt-10 max-w-5xl w-full">
             {/* Box 1 */}
             <div className="flex-1 border-2 border-blue-600 rounded-lg text-center p-8 flex flex-col items-center justify-between">
               <div>
@@ -104,3 +104,4 @@ export default function About() {
     </div>
   );
 }
+
