@@ -22,9 +22,9 @@ export default function About() {
           </h2>
           <p className="mt-4 text-base text-pretty font-normal text-center max-w-3xl">
             RocketHacks is a 24-hour hackathon hosted by the University of
-            Toledo, dedicated to fostering innovation and problem-solving among
+            Toledo dedicated to fostering innovation and problem-solving among
             students from the Midwest and beyond. This event will gather
-            talented students, from budding programmers to visionary designers,
+            talented students from budding programmers to visionary designers
             to build real solutions to real-world challenges. With an emphasis
             on collaboration, creativity, and technical skills, RocketHacks will
             empower students to turn their ideas into impactful projects.
