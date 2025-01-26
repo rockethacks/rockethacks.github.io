@@ -30,14 +30,22 @@ export default function About() {
             collaboration, creativity, and technical skills, RocketHacks will
             empower students to turn their ideas into impactful projects.
           </p>
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-4 mt-10 max-w-5xl w-full">
+          <div
+            className="flex flex-col lg:flex-row items-center justify-center gap-4 mt-10 max-w-5xl w-full"
+            role="list"
+          >
             {/* Box 1 */}
-            <div className="flex-1 border-2 border-blue-600 rounded-lg text-center p-8 flex flex-col items-center justify-between">
+            <div
+              className="flex-1 border-2 border-blue-600 rounded-lg text-center p-8 flex flex-col items-center justify-between"
+              role="listitem"
+            >
               <div>
                 <PiTerminalWindow
                   className="mx-auto mb-4"
                   size={64}
                   color="#E4335E"
+                  aria-hidden="true"
+                  role="img"
                 />
                 <h3
                   className={`${terminal.className} mb-4 text-[#E4335E] text-[32px]`}
@@ -49,16 +57,32 @@ export default function About() {
                   hacker today!
                 </p>
               </div>
-              <Link href="https://portal.rockethacks.org/" target="_blank">
-                <button className="bg-blue-600 py-3 px-20 rounded-md mt-6">
+              <Link
+                href="https://portal.rockethacks.org/"
+                target="_blank"
+                aria-label="Apply to be a hacker"
+              >
+                <button
+                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                  aria-label="Apply now to be a hacker"
+                >
                   APPLY NOW
                 </button>
               </Link>
             </div>
             {/* Box 2 */}
-            <div className="flex-1 border-2 border-blue-600 rounded-lg text-center p-8 flex flex-col items-center justify-between">
+            <div
+              className="flex-1 border-2 border-blue-600 rounded-lg text-center p-8 flex flex-col items-center justify-between"
+              role="listitem"
+            >
               <div>
-                <IoDiamond className="mx-auto mb-4" size={64} color="#FFDA20" />
+                <IoDiamond
+                  className="mx-auto mb-4"
+                  size={64}
+                  color="#FFDA20"
+                  aria-hidden="true"
+                  role="img"
+                />
                 <h3
                   className={`${terminal.className} mb-4 text-[#FFDA20] text-[32px]`}
                 >
@@ -69,19 +93,32 @@ export default function About() {
                   sponsorship packet for more info!
                 </p>
               </div>
-              <Link href="/documents/sponsorship-packet.pdf" target="_blank">
-                <button className="bg-blue-600 py-3 px-20 rounded-md mt-6">
+              <Link
+                href="/documents/sponsorship-packet.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View sponsorship packet"
+              >
+                <button
+                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                  aria-label="Download sponsor packet"
+                >
                   SPONSOR US
                 </button>
               </Link>
             </div>
             {/* Box 3 */}
-            <div className="flex-1 border-2 border-blue-600 rounded-lg text-center p-8 flex flex-col items-center justify-between">
+            <div
+              className="flex-1 border-2 border-blue-600 rounded-lg text-center p-8 flex flex-col items-center justify-between"
+              role="listitem"
+            >
               <div>
                 <FaHandshake
                   className="mx-auto mb-4"
                   size={64}
                   color="#5865F2"
+                  aria-hidden="true"
+                  role="img"
                 />
                 <h3
                   className={`${terminal.className} mb-4 text-[#5865F2] text-[32px]`}
@@ -93,8 +130,15 @@ export default function About() {
                   this form.
                 </p>
               </div>
-              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeAmg3YExuSxCsBWOElKdpByMP_UXKGnB4HJZtd29xJTXnZzQ/viewform?usp=dialog">
-                <button className="bg-blue-600 py-3 px-20 rounded-md mt-6">
+              <Link
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeAmg3YExuSxCsBWOElKdpByMP_UXKGnB4HJZtd29xJTXnZzQ/viewform?usp=dialog"
+                rel="noopener noreferrer"
+                aria-label="Fill the volunteer form"
+              >
+                <button
+                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                  aria-label="Fill out the volunteer form"
+                >
                   VOLUNTEER
                 </button>
               </Link>

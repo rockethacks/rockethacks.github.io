@@ -7,12 +7,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  weight: "400",
-  subsets: ["latin"],
-});
+import localFont from "next/font/local";
+const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
 function FAQ() {
   return (
@@ -22,12 +18,18 @@ function FAQ() {
         <div className="h-screen bg-cover bg-center relative bg-gradient-to-b from-[#081d41]/60 from-10% via-[#081d41] to-[#030c1b] to-85%">
           {/* FAQ text positioned at the top */}
           <div className="absolute top-8 py-10 left-1/2 transform -translate-x-1/2 text-center">
-            <h1 className="text-white text-5xl z-20 hidden lg:block">
+            <h1
+              className={`${terminal.className} text-white text-5xl z-20 hidden lg:block`}
+            >
               FREQUENTLY ASKED QUESTIONS
             </h1>
-            <h1 className="text-white text-5xl z-20 block lg:hidden">FAQ</h1>
+            <h1
+              className={`${terminal.className} text-white text-5xl z-20 block lg:hidden`}
+            >
+              FAQ
+            </h1>
             <div
-              className={`${inter.className} rounded-md bg-slate-950/30 backdrop-blur-sm border-amber-300 border-2 mt-10 px-5 py-3 w-[400px] sm:w-[500px] md:w-[700px] lg:w-[1000px] mx-auto text-white text-balance break-normal text-left`}
+              className={`${terminal.className} rounded-md bg-slate-950/30 backdrop-blur-sm border-amber-300 border-2 mt-10 px-5 py-3 w-[400px] sm:w-[500px] md:w-[700px] lg:w-[1000px] mx-auto text-white text-balance break-normal text-left`}
             >
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
