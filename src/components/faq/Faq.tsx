@@ -11,10 +11,6 @@ import localFont from "next/font/local";
 const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
 function FAQ() {
-
-const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
-
-function faq() {
   return (
     <div className="space-y-8">
       {/* Fullscreen background section */}
