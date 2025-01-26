@@ -63,18 +63,6 @@ export default function Sponsor() {
               />
             </a>
             <a
-              href="https://www.desmos.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={"/assets/sponsors/desmos.png"}
-                alt="Desmos"
-                width={100}
-                height={100}
-              />
-            </a>
-            <a
               href="https://www.photoroom.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -181,21 +169,6 @@ export default function Sponsor() {
                 rel="noopener noreferrer"
               >
                 <Mercy className="h-16 mt-8 mr-36" />
-              </a>
-            </div>
-            {/* Desmos */}
-            <div className="flex items-center justify-center h-24 w-24 rounded-xl transform hover:scale-105 transition duration-300">
-              <a
-                href="https://www.desmos.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={"/assets/sponsors/desmos.png"}
-                  alt="Desmos"
-                  width={100}
-                  height={100}
-                />
               </a>
             </div>
             {/* XYZ */}
