@@ -41,6 +41,42 @@ export default function About() {
               role="listitem"
             >
               <div>
+                <IoDiamond
+                  className="mx-auto mb-4"
+                  size={64}
+                  color="#FFDA20"
+                  aria-hidden="true"
+                  role="img"
+                />
+                <h3
+                  className={`${terminal.className} mb-4 text-[#FFDA20] text-[32px]`}
+                >
+                  SPONSORS
+                </h3>
+                <p className="text-base">
+                  Check out the sponsorship packet for more info!
+                </p>
+              </div>
+              <Link
+                href="/documents/sponsorship-packet.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View sponsorship packet"
+              >
+                <button
+                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 focus:ring-2 focus:ring-blue-400 focus:outline-none hover:bg-[#FFDA20] hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20]"
+                  aria-label="Download sponsor packet"
+                >
+                  SPONSOR US
+                </button>
+              </Link>
+            </div>
+            {/* Box 2 */}
+            <div
+              className="flex-1 border-2 border-blue-600 rounded-lg text-center p-8 flex flex-col items-center justify-between"
+              role="listitem"
+            >
+              <div>
                 <PiTerminalWindow
                   className="mx-auto mb-4"
                   size={64}
@@ -71,43 +107,7 @@ export default function About() {
                 </button>
               </Link>
             </div>
-            {/* Box 2 */}
-            <div
-              className="flex-1 border-2 border-blue-600 rounded-lg text-center p-8 flex flex-col items-center justify-between"
-              role="listitem"
-            >
-              <div>
-                <IoDiamond
-                  className="mx-auto mb-4"
-                  size={64}
-                  color="#FFDA20"
-                  aria-hidden="true"
-                  role="img"
-                />
-                <h3
-                  className={`${terminal.className} mb-4 text-[#FFDA20] text-[32px]`}
-                >
-                  SPONSORS
-                </h3>
-                <p className="text-base">
-                  Are you interested in sponsoring RocketHacks? Check out the
-                  sponsorship packet for more info!
-                </p>
-              </div>
-              <Link
-                href="/documents/sponsorship-packet.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View sponsorship packet"
-              >
-                <button
-                  className="bg-blue-600 py-3 px-20 rounded-md mt-6 focus:ring-2 focus:ring-blue-400 focus:outline-none hover:bg-[#FFDA20] hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20]"
-                  aria-label="Download sponsor packet"
-                >
-                  SPONSOR US
-                </button>
-              </Link>
-            </div>
+
             {/* Box 3 */}
             <div
               className="flex-1 border-2 border-blue-600 rounded-lg text-center p-8 flex flex-col items-center justify-between"

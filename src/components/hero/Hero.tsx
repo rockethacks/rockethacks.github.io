@@ -36,6 +36,16 @@ export default function hero() {
               The biggest Hackathon <br /> in the midwest
             </h1>
           </div>
+          <div>
+            <a
+              href="https://portal.rockethacks.org/auth/signup"
+              target="_blank"
+            >
+              <button className="border-2 text-base md:text-lg mt-10 border-[#E4335E] bg-[#E4335E] hover:bg-[#ff1550] hover:border-[#ff1550] rounded-lg text-center px-5 py-3 flex flex-col items-center justify-between">
+                APPLY NOW
+              </button>
+            </a>
+          </div>
         </div>
       </section>
     </div>
