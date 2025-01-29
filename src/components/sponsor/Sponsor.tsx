@@ -21,186 +21,179 @@ export default function Sponsor() {
           </h2>
         </div>
 
-        <div className="mt-12">
+        <div className="mt-16">
           {/* Mobile View */}
-          <div className="flex flex-col items-center justify-center space-y-3 md:hidden">
+          <div className="flex flex-col items-center justify-center space-y-6 md:hidden">
             <a
               href="https://aws.amazon.com/"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center justify-center"
             >
-              <FaAws className="h-12 w-auto" />
+              <FaAws className="h-20 w-auto hover:scale-110 transition-transform duration-300" />
             </a>
             <a
               href="https://www.github.com/"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center justify-center"
             >
-              <DiGithubFull className="h-24 w-auto" />
+              <DiGithubFull className="h-32 w-auto hover:scale-110 transition-transform duration-300" />
             </a>
             <a
               href="https://www.perplexity.ai/"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center justify-center"
             >
               <Image
                 src="/assets/sponsors/Perplexity.png"
                 alt="Perplexity AI"
-                height={150}
-                width={150}
+                height={200}
+                width={200}
+                className="hover:scale-110 transition-transform duration-300"
               />
             </a>
             <a
               href="https://www.warp.dev/"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center justify-center"
             >
               <Image
                 src="/assets/sponsors/warp.png"
                 alt="Warp Terminal"
-                height={180}
-                width={180}
+                height={200}
+                width={200}
+                className="hover:scale-110 transition-transform duration-300"
               />
             </a>
             <a
               href="https://www.photoroom.com/"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center justify-center"
             >
               <Image
                 src={"/assets/sponsors/photoroom.svg"}
                 alt="Photoroom"
-                width={160}
-                height={160}
-                className="mt-7"
+                width={200}
+                height={200}
+                className="hover:scale-110 transition-transform duration-300"
               />
             </a>
             <a
               href="https://www.gen.xyz/"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center justify-center"
             >
               <Image
                 src={"/assets/sponsors/xyz.svg"}
                 alt=".xyz"
-                width={60}
-                height={60}
-                className="mt-7"
+                width={100}
+                height={100}
+                className="hover:scale-110 transition-transform duration-300"
               />
             </a>
             <a
               href="https://www.mercy.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center justify-center"
             >
               <Image
                 src={"/assets/sponsors/mercy.svg"}
-                alt=".xyz"
-                width={200}
-                height={200}
-                className="mt-7"
+                alt="Mercy Health"
+                width={250}
+                height={250}
+                className="hover:scale-110 transition-transform duration-300"
               />
             </a>
           </div>
 
           {/* Desktop View */}
-          <div className="hidden md:flex flex-row gap-x-2 justify-center items-center">
-            {/* GitHub */}
-            <div className="flex items-center justify-center h-24 w-40 rounded-xl transform hover:scale-105 transition duration-300">
-              <a
-                href="https://www.github.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <DiGithubFull className="h-24 w-auto" />
-              </a>
-            </div>
-
-            {/* AWS */}
-            <div className="flex items-center justify-center h-24 w-24 rounded-xl transform hover:scale-105 transition duration-300">
-              <a
-                href="https://aws.amazon.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaAws className="h-16 w-16 mt-4" />
-              </a>
-            </div>
-
-            {/* Perplexity */}
-            <div className="flex items-center justify-center h-24 w-40 rounded-xl transform hover:scale-105 transition duration-300">
-              <a
-                href="https://www.perplexity.ai/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/assets/sponsors/Perplexity.png"
-                  alt="Perplexity"
-                  width={150}
-                  height={150}
-                />
-              </a>
-            </div>
-          </div>
-          {/* Row 2  */}
-          <div className="hidden md:flex flex-row gap-x-6 justify-center items-center">
-            {/* MercyHealth */}
-            <div className="flex items-center justify-center h-24 w-24 rounded-xl transform hover:scale-105 transition duration-300">
-              <a
-                href="https://www.mercy.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Mercy className="h-8 mr-20" />
-              </a>
-            </div>
-            {/* Warp */}
-            <div className="flex items-center justify-center  h-24 w-auto rounded-xl transform hover:scale-105 transition duration-300">
-              <a
-                href="https://www.warp.dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/assets/sponsors/warp.png"
-                  alt="Warp"
-                  width={150}
-                  height={150}
-                />
-              </a>
-            </div>
-            {/* XYZ */}
-            <div className="flex items-center justify-center h-24 w-16 rounded-xl transform hover:scale-105 transition duration-300">
-              <a
-                href="https://gen.xyz/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={"/assets/sponsors/xyz.svg"}
-                  alt=".xyz"
-                  width={50}
-                  height={50}
-                />
-              </a>
-            </div>
-
-            {/* Photoroom */}
-            <div className="flex items-center justify-center h-24 w-24 rounded-xl transform hover:scale-105 transition duration-300">
-              <a
-                href="https://www.photoroom.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={"/assets/sponsors/photoroom.svg"}
-                  alt="Photoroom"
-                  width={200}
-                  height={200}
-                />
-              </a>
-            </div>
+          <div className="hidden md:grid grid-cols-3 gap-y-10 gap-x-12 justify-items-center items-center">
+            <a
+              href="https://www.github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <DiGithubFull className="h-36 w-auto hover:scale-110 transition-transform duration-300" />
+            </a>
+            <a
+              href="https://aws.amazon.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <FaAws className="h-28 w-auto hover:scale-110 transition-transform duration-300" />
+            </a>
+            <a
+              href="https://www.perplexity.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/Perplexity.png"
+                alt="Perplexity"
+                width={200}
+                height={200}
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+            <a
+              href="https://www.mercy.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Mercy className="h-28 hover:scale-110 transition-transform duration-300" />
+            </a>
+            <a
+              href="https://www.warp.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/warp.png"
+                alt="Warp"
+                width={200}
+                height={200}
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+            <a
+              href="https://gen.xyz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src={"/assets/sponsors/xyz.svg"}
+                alt=".xyz"
+                width={100}
+                height={100}
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+            <a
+              href="https://www.photoroom.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src={"/assets/sponsors/photoroom.svg"}
+                alt="Photoroom"
+                width={250}
+                height={250}
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            </a>
           </div>
         </div>
       </section>
