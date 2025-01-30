@@ -41,7 +41,7 @@ export default function hero() {
               href="https://portal.rockethacks.org/auth/signup"
               target="_blank"
             >
-              <button className="border-2 text-base md:text-lg mt-10 border-[#E4335E] bg-[#E4335E] hover:bg-[#ff1550] hover:border-[#ff1550] rounded-lg text-center px-5 py-3 flex flex-col items-center justify-between">
+              <button className="bg-blue-600 py-3 px-5 rounded-md mt-6 focus:ring-2 focus:ring-blue-400 focus:outline-none hover:bg-[#FFDA20] hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20]">
                 APPLY NOW
               </button>
             </a>
