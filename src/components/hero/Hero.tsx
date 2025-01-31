@@ -37,6 +37,13 @@ export default function hero() {
             </h1>
           </div>
           <div>
+            <h2
+              className={`${terminal.className} text-5xl mt-2 text-[#FFDA1F]`}
+            >
+              March 15-16<sup>th</sup>, 2025
+            </h2>
+          </div>
+          <div>
             <a
               href="https://portal.rockethacks.org/auth/signup"
               target="_blank"
