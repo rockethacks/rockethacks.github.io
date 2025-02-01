@@ -95,7 +95,7 @@ export default function About() {
                 </p>
               </div>
               <Link
-                href="https://portal.rockethacks.org/"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScf8m715bOb_mXKLkEAHbxWUosfkqaUU2z8fv_m3Q2j7w5OSg/viewform?usp=dialog"
                 target="_blank"
                 aria-label="Apply to be a hacker"
               >
