@@ -1,22 +1,23 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 // Importing terminal font
 import localFont from "next/font/local";
 const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
-type Image = {
+type ImageType = {
   src: string;
   alt: string;
   index: number;
 };
 
 type GalleryProps = {
-  images?: Image[];
+  images?: ImageType[];
 };
 
-const exampleImages: Image[] = [
+const exampleImages: ImageType[] = [
   {
     src: "/assets/event/001.jpg",
     alt: "🚀 Github Basics Workshop",
@@ -110,10 +111,12 @@ const Gallery: React.FC<GalleryProps> = ({ images = exampleImages }) => {
             <FaArrowLeft size={24} />
           </button>
           <div className="relative flex items-center justify-center w-full">
-            <img
+            <Image
               src={images[currentIndex].src}
               alt={images[currentIndex].alt}
-              loading="lazy"
+              width={800}
+              height={500}
+              priority
               className="w-full max-w-[80vw] h-auto max-h-[80vh] xl:max-h-[90vh] object-cover rounded-lg shadow-md transition-all duration-300"
             />
             <div className="absolute inset-0 p-20 flex items-center justify-center text-center text-white text-lg xl:text-3xl opacity-0 hover:opacity-100 hover:bg-black/70 hover:bg-opacity-50 transition-opacity backdrop-blur-sm">
