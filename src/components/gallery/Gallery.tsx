@@ -95,49 +95,51 @@ const Gallery: React.FC<GalleryProps> = ({ images = exampleImages }) => {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full flex flex-col items-center p-4 xl:h-[90vh] mt-10 xl:mt-20">
-      <h2
-        className={`${terminal.className} text-4xl md:text-6xl mb-8 text-[#FFDA20]`}
-      >
-        GALLERY
-      </h2>
-      <div className="relative w-full max-w-4xl h-auto flex justify-center items-center overflow-hidden">
-        <button
-          className="absolute left-4 bg-white p-2 rounded-full shadow-md z-50"
-          onClick={handlePrev}
+    <section id="gallery">
+      <div className="relative w-full flex flex-col items-center p-4 xl:h-[90vh] mt-10 xl:mt-20">
+        <h2
+          className={`${terminal.className} text-4xl md:text-6xl mb-8 text-[#FFDA20]`}
         >
-          <FaArrowLeft size={24} />
-        </button>
-        <div className="relative flex items-center justify-center w-full">
-          <img
-            src={images[currentIndex].src}
-            alt={images[currentIndex].alt}
-            loading="lazy"
-            className="w-full max-w-[80vw] h-auto max-h-[80vh] xl:max-h-[90vh] object-cover rounded-lg shadow-md transition-all duration-300"
-          />
-          <div className="absolute inset-0 p-20 flex items-center justify-center text-center text-white text-lg xl:text-3xl opacity-0 hover:opacity-100 hover:bg-black/70 hover:bg-opacity-50 transition-opacity backdrop-blur-sm">
-            {images[currentIndex].alt}
-          </div>
-        </div>
-        <button
-          className="absolute right-4 bg-white p-2 rounded-full shadow-md"
-          onClick={handleNext}
-        >
-          <FaArrowRight size={24} />
-        </button>
-      </div>
-      <div className="flex mt-4 space-x-2">
-        {images.map((image) => (
+          GALLERY
+        </h2>
+        <div className="relative w-full max-w-4xl h-auto flex justify-center items-center overflow-hidden">
           <button
-            key={image.index}
-            className={`w-5 h-5 rounded-full ${
-              currentIndex === image.index ? "bg-gray-900" : "bg-gray-400"
-            }`}
-            onClick={() => handleDotClick(image.index)}
-          />
-        ))}
+            className="absolute left-4 bg-white p-2 rounded-full shadow-md z-50"
+            onClick={handlePrev}
+          >
+            <FaArrowLeft size={24} />
+          </button>
+          <div className="relative flex items-center justify-center w-full">
+            <img
+              src={images[currentIndex].src}
+              alt={images[currentIndex].alt}
+              loading="lazy"
+              className="w-full max-w-[80vw] h-auto max-h-[80vh] xl:max-h-[90vh] object-cover rounded-lg shadow-md transition-all duration-300"
+            />
+            <div className="absolute inset-0 p-20 flex items-center justify-center text-center text-white text-lg xl:text-3xl opacity-0 hover:opacity-100 hover:bg-black/70 hover:bg-opacity-50 transition-opacity backdrop-blur-sm">
+              {images[currentIndex].alt}
+            </div>
+          </div>
+          <button
+            className="absolute right-4 bg-white p-2 rounded-full shadow-md"
+            onClick={handleNext}
+          >
+            <FaArrowRight size={24} />
+          </button>
+        </div>
+        <div className="flex mt-4 space-x-2">
+          {images.map((image) => (
+            <button
+              key={image.index}
+              className={`w-5 h-5 rounded-full ${
+                currentIndex === image.index ? "bg-gray-900" : "bg-gray-400"
+              }`}
+              onClick={() => handleDotClick(image.index)}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
