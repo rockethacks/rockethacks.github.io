@@ -8,6 +8,7 @@ import Faq from "@/components/faq/Faq";
 import Sponsor from "@/components/sponsor/Sponsor";
 import Footer from "@/components/footer/Footer";
 import Contact from "@/components/contact/Contact";
+import Gallery from "@/components/gallery/Gallery";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <About />
       <Sponsor />
+      <Gallery />
       <Contact />
       <Faq />
       <Footer />
