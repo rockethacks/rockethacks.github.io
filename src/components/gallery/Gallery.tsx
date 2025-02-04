@@ -105,7 +105,7 @@ const Gallery: React.FC<GalleryProps> = ({ images = exampleImages }) => {
         </h2>
         <div className="relative w-full max-w-4xl h-auto flex justify-center items-center overflow-hidden">
           <button
-            className="absolute left-4 bg-white p-2 rounded-full shadow-md z-50"
+            className="absolute left-4 bg-white p-2 rounded-full shadow-md z-10"
             onClick={handlePrev}
           >
             <FaArrowLeft size={24} />
@@ -124,7 +124,7 @@ const Gallery: React.FC<GalleryProps> = ({ images = exampleImages }) => {
             </div>
           </div>
           <button
-            className="absolute right-4 bg-white p-2 rounded-full shadow-md"
+            className="absolute right-4 bg-white p-2 rounded-full shadow-md z-10"
             onClick={handleNext}
           >
             <FaArrowRight size={24} />
