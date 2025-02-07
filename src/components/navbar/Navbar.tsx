@@ -45,7 +45,7 @@ export default function Navbar() {
             ABOUT US
           </Link>
           <Link href="#sponsor">SPONSORS</Link>
-          <Link href="#gallery">GALLERY</Link>
+          {/* <Link href="#gallery">GALLERY</Link> */}
           <Link href="#contact">CONTACT</Link>
           <Link href="#faq">FAQ</Link>
           <Link href="/assets/Code&CreateFlyer.pdf" target="_blank">
@@ -71,7 +71,7 @@ export default function Navbar() {
             <Link href="#sponsor" onClick={toggleMenu}>
               Sponsors
             </Link>
-            <Link href="#gallery">Gallery</Link>
+            {/* <Link href="#gallery">Gallery</Link> */}
             <Link href="#contact" onClick={toggleMenu}>
               Contact Us
             </Link>
