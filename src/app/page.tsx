@@ -8,7 +8,7 @@ import Faq from "@/components/faq/Faq";
 import Sponsor from "@/components/sponsor/Sponsor";
 import Footer from "@/components/footer/Footer";
 import Contact from "@/components/contact/Contact";
-// import Gallery from "@/components/gallery/Gallery";
+import Schedule from "@/components/schedule/Schedule";// import Gallery from "@/components/gallery/Gallery";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -42,6 +42,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Schedule />
       <Sponsor />
       {/* <Gallery /> */}
       <Contact />
