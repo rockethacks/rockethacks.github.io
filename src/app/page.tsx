@@ -9,7 +9,8 @@ import Sponsor from "@/components/sponsor/Sponsor";
 import { SponsorData } from "@/components/sponsor/SponsorData";
 import Footer from "@/components/footer/Footer";
 import Contact from "@/components/contact/Contact";
-import Schedule from "@/components/schedule/Schedule";// import Gallery from "@/components/gallery/Gallery";
+import Schedule from "@/components/schedule/Schedule";
+import Gallery from "@/components/gallery/Gallery";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -45,7 +46,7 @@ export default function Home() {
       <About />
       <Schedule />
       <Sponsor sponsors={SponsorData} />
-      {/* <Gallery /> */}
+      <Gallery />
       <Contact />
       <Faq />
       <Footer />
