@@ -10,19 +10,20 @@ const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
 const collegeSchedule = [
   { day: "Day 1", time: "09:00 AM", event: "Opening Ceremony", venue: "Nitschke Auditorium" },
-  { day: "Day 1", time: "10:00 AM", event: "Hacker Check-in and Team Formation", venue: "Nitschke Auditorium" },
+  { day: "Day 1", time: "10:00 AM", event: "Hackers Check-in and Team Formation", venue: "Nitschke Auditorium" },
   { day: "Day 1", time: "11:00 AM", event: "Hacking Starts!", venue: "Nitschke Lobby and Brady Center" },
   { day: "Day 2", time: "10:00 AM", event: "Project Submissions Due", venue: "Nitschke Lobby and Brady Center" },
-  { day: "Day 2", time: "12:00 PM", event: "Judging & Demos", venue: "Nitschke Lobby and Brady Center" },
+  { day: "Day 2", time: "12:00 PM", event: "Judging", venue: "Nitschke Lobby and Brady Center" },
   { day: "Day 2", time: "1:30 PM", event: "Closing Ceremony & Awards", venue: "Nitschke Lobby and Brady Center" },
 ];
 
 const highSchoolSchedule = [
+  { day: "Day 1", time: "10:00 AM", event: "Hackers Check-in", venue: "Nitschke Auditorium" },
   { day: "Day 1", time: "09:00 AM", event: "Opening Ceremony", venue: "Nitschke Auditorium" },
   { day: "Day 1", time: "10:00 AM", event: "Campus Tour", venue: "University Of Toledo" },
-  { day: "Day 1", time: "11:30 AM", event: "Mini Hackathon Begins", venue: "SSOE Room" },
-  { day: "Day 1", time: "03:00 PM", event: "Project Showcase", venue: "SSOE Room" },
-  { day: "Day 1", time: "5:30 PM", event: "Award Ceremony", venue: "SSOE Room" },
+  { day: "Day 1", time: "11:00 AM", event: "KoolKat Science Workshop", venue: "SSOE Room" },
+  { day: "Day 1", time: "12:00 PM", event: "Project on Scratch", venue: "SSOE Room" },
+  { day: "Day 1", time: "02:00 PM", event: "Judging", venue: "SSOE Room" },
 ];
 
 export default function Schedule() {
