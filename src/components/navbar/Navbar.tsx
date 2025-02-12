@@ -48,8 +48,13 @@ export default function Navbar() {
           {/* <Link href="#gallery">GALLERY</Link> */}
           <Link href="#contact">CONTACT</Link>
           <Link href="#faq">FAQ</Link>
-          <Link href="/assets/Code&CreateFlyer.pdf" target="_blank">
-            CODE & CREATE
+          <Link
+            href="https://forms.gle/RV3DVwCddkDvU5eK8"
+            target="_blank"
+            onClick={toggleMenu}
+          >
+            {" "}
+            CODE & CREATE{" "}
           </Link>
         </div>
       </div>
@@ -58,8 +63,13 @@ export default function Navbar() {
       {menuOpen && (
         <div className="bg-[#030c1b]/[99%] text-white inline-block xl:hidden fixed overflow-hidden inset-0  max-h-screen">
           <div className="flex flex-col space-y-10 items-center justify-center h-full text-3xl">
-            <Link
+            {/* <Link
               href="/assets/Code&CreateFlyer.pdf"
+              target="_blank"
+              onClick={toggleMenu}
+            > */}
+            <Link
+              href="https://forms.gle/RV3DVwCddkDvU5eK8"
               target="_blank"
               onClick={toggleMenu}
             >
