@@ -21,16 +21,64 @@ export default function Sponsor() {
           </h2>
         </div>
 
-        <div className="mt-16">
+        <div className="mt-5">
           {/* Mobile View */}
-          <div className="flex flex-col items-center justify-center space-y-6 md:hidden">
+          <div className="flex flex-col items-center justify-center space-y-2 md:hidden">
             <a
-              href="https://aws.amazon.com/"
+              href="https://www.nysus.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center"
             >
-              <FaAws className="h-20 w-auto hover:scale-110 transition-transform duration-300" />
+              <Image
+                src="/assets/sponsors/nysus.png"
+                alt="Nysus Solutions"
+                height={200}
+                width={200}
+                className="hover:scale-110 transition-transform duration-300 mt-3 mb-5"
+              />
+            </a>
+            {/* <a
+              href="https://www.spokehq.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/spoke.png"
+                alt="Nysus Solutions"
+                height={200}
+                width={200}
+                className="hover:scale-110 transition-transform duration-300 mt-3 mb-5"
+              />
+            </a> */}
+            <a
+              href="https://www.actualreality.tech/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/actual-tech.png"
+                alt="Actual Reality"
+                width={130}
+                height={130}
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+            <a
+              href="https://koolkatscience.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/Koolkat-Science.svg"
+                alt="Koolkat Science"
+                width={200}
+                height={200}
+                className="hover:scale-110 transition-transform duration-300"
+              />
             </a>
             <a
               href="https://www.github.com/"
@@ -38,7 +86,15 @@ export default function Sponsor() {
               rel="noopener noreferrer"
               className="flex items-center justify-center"
             >
-              <DiGithubFull className="h-32 w-auto hover:scale-110 transition-transform duration-300" />
+              <DiGithubFull className="h-24 w-auto hover:scale-110 transition-transform duration-300" />
+            </a>
+            <a
+              href="https://aws.amazon.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <FaAws className="h-20 w-auto hover:scale-110 transition-transform duration-300 mb-5" />
             </a>
             <a
               href="https://www.perplexity.ai/"
@@ -49,9 +105,9 @@ export default function Sponsor() {
               <Image
                 src="/assets/sponsors/Perplexity.png"
                 alt="Perplexity AI"
-                height={200}
-                width={200}
-                className="hover:scale-110 transition-transform duration-300"
+                height={180}
+                width={180}
+                className="hover:scale-110 transition-transform duration-300 mb-5"
               />
             </a>
             <a
@@ -65,7 +121,7 @@ export default function Sponsor() {
                 alt="Warp Terminal"
                 height={200}
                 width={200}
-                className="hover:scale-110 transition-transform duration-300"
+                className="hover:scale-110 transition-transform duration-300 mb-2"
               />
             </a>
             <a
@@ -79,7 +135,7 @@ export default function Sponsor() {
                 alt="Photoroom"
                 width={200}
                 height={200}
-                className="hover:scale-110 transition-transform duration-300"
+                className="hover:scale-110 transition-transform duration-300 mb-5"
               />
             </a>
             <a
@@ -91,9 +147,9 @@ export default function Sponsor() {
               <Image
                 src={"/assets/sponsors/xyz.svg"}
                 alt=".xyz"
-                width={100}
-                height={100}
-                className="hover:scale-110 transition-transform duration-300"
+                width={80}
+                height={80}
+                className="hover:scale-110 transition-transform duration-300 mt-2 mb-5"
               />
             </a>
             <a
@@ -107,7 +163,35 @@ export default function Sponsor() {
                 alt="Mercy Health"
                 width={250}
                 height={250}
-                className="hover:scale-110 transition-transform duration-300"
+                className="hover:scale-110 transition-transform duration-300 mb-5"
+              />
+            </a>
+            <a
+              href="https://huggingface.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src={"/assets/sponsors/Hugging-Face.png"}
+                alt="Hugging Face"
+                width={250}
+                height={250}
+                className="hover:scale-110 transition-transform duration-300 mt-1 mb-5"
+              />
+            </a>
+            <a
+              href="https://www.standoutstickers.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src={"/assets/sponsors/Standout-Stickers.svg"}
+                alt="Standout Stickers"
+                width={250}
+                height={250}
+                className="hover:scale-110 transition-transform duration-300 mt-1 mb-5"
               />
             </a>
           </div>
@@ -115,12 +199,62 @@ export default function Sponsor() {
           {/* Desktop View */}
           <div className="hidden md:grid grid-cols-3 gap-y-10 gap-x-12 justify-items-center items-center">
             <a
+              href="https://www.nysus.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/nysus.png"
+                alt="Nysus Solutions"
+                width={200}
+                height={200}
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+            <a
+              href="https://www.actualreality.tech/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/actual-tech.png"
+                alt="Nysus Solutions"
+                width={150}
+                height={150}
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+            <a
+              href="https://koolkatscience.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/Koolkat-Science.svg"
+                alt="Koolkat Science"
+                width={200}
+                height={200}
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+            <a
               href="https://www.github.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center"
             >
               <DiGithubFull className="h-36 w-auto hover:scale-110 transition-transform duration-300" />
+            </a>
+            <a
+              href="https://www.mercy.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center mt-14"
+            >
+              <Mercy className="h-28 hover:scale-110 transition-transform duration-300" />
             </a>
             <a
               href="https://aws.amazon.com/"
@@ -144,39 +278,18 @@ export default function Sponsor() {
                 className="hover:scale-110 transition-transform duration-300"
               />
             </a>
-            <a
-              href="https://www.mercy.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Mercy className="h-28 hover:scale-110 transition-transform duration-300" />
-            </a>
+
             <a
               href="https://www.warp.dev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center"
+              className="flex items-center justify-center mb-5"
             >
               <Image
                 src="/assets/sponsors/warp.png"
                 alt="Warp"
                 width={200}
                 height={200}
-                className="hover:scale-110 transition-transform duration-300"
-              />
-            </a>
-            <a
-              href="https://gen.xyz/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src={"/assets/sponsors/xyz.svg"}
-                alt=".xyz"
-                width={100}
-                height={100}
                 className="hover:scale-110 transition-transform duration-300"
               />
             </a>
@@ -189,6 +302,48 @@ export default function Sponsor() {
               <Image
                 src={"/assets/sponsors/photoroom.svg"}
                 alt="Photoroom"
+                width={250}
+                height={250}
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+            <a
+              href="https://gen.xyz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center mt-3"
+            >
+              <Image
+                src={"/assets/sponsors/xyz.svg"}
+                alt=".xyz"
+                width={100}
+                height={100}
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+            <a
+              href="https://huggingface.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src={"/assets/sponsors/Hugging-face.png"}
+                alt="Hugging Face"
+                width={250}
+                height={250}
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+            <a
+              href="https://www.standoutstickers.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src={"/assets/sponsors/standout-stickers.svg"}
+                alt="Standout Stickers"
                 width={250}
                 height={250}
                 className="hover:scale-110 transition-transform duration-300"
