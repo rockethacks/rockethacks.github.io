@@ -21,7 +21,7 @@ export default function Sponsor() {
           </h2>
         </div>
 
-        <div className="mt-16">
+        <div className="mt-5">
           {/* Mobile View */}
           <div className="flex flex-col items-center justify-center space-y-2 md:hidden">
             <a
