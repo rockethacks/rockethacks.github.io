@@ -31,7 +31,7 @@ export default function Sponsor() {
               className="flex items-center justify-center"
             >
               <Image
-                src="/assets/sponsors/nysus.png"
+                src="/assets/sponsors/Nysus-sol.png"
                 alt="Nysus Solutions"
                 height={200}
                 width={200}
@@ -205,7 +205,7 @@ export default function Sponsor() {
               className="flex items-center justify-center"
             >
               <Image
-                src="/assets/sponsors/nysus.png"
+                src="/assets/sponsors/Nysus-sol.png"
                 alt="Nysus Solutions"
                 width={200}
                 height={200}
