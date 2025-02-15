@@ -198,7 +198,7 @@ export default function Sponsor() {
               href="https://www.nysus.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center mb-14"
+              className="flex items-center justify-center"
             >
               <Image
                 src="/assets/sponsors/nysus.png"
@@ -212,7 +212,7 @@ export default function Sponsor() {
               href="https://www.actualreality.tech/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center mb-14"
+              className="flex items-center justify-center"
             >
               <Image
                 src="/assets/sponsors/actual-tech.png"
@@ -226,7 +226,7 @@ export default function Sponsor() {
               href="https://www.perplexity.ai/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center mb-14"
+              className="flex items-center justify-center"
             >
               <Image
                 src="/assets/sponsors/Perplexity.png"
@@ -241,7 +241,7 @@ export default function Sponsor() {
               href="https://www.warp.dev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center mb-14"
+              className="flex items-center justify-center mb-5"
             >
               <Image
                 src="/assets/sponsors/warp.png"
