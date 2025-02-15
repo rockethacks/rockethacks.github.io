@@ -25,6 +25,48 @@ export default function Sponsor() {
           {/* Mobile View */}
           <div className="flex flex-col items-center justify-center space-y-2 md:hidden">
             <a
+              href="https://www.nysus.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/nysus.png"
+                alt="Nysus Solutions"
+                height={200}
+                width={200}
+                className="hover:scale-110 transition-transform duration-300 mt-3 mb-5"
+              />
+            </a>
+            {/* <a
+              href="https://www.spokehq.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/spoke.png"
+                alt="Nysus Solutions"
+                height={200}
+                width={200}
+                className="hover:scale-110 transition-transform duration-300 mt-3 mb-5"
+              />
+            </a> */}
+            <a
+              href="https://www.actualreality.tech/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/actual-tech.png"
+                alt="Actual Reality"
+                width={130}
+                height={130}
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+            <a
               href="https://www.github.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -52,34 +94,6 @@ export default function Sponsor() {
                 height={180}
                 width={180}
                 className="hover:scale-110 transition-transform duration-300 mb-5"
-              />
-            </a>
-            <a
-              href="https://www.nysus.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/nysus.png"
-                alt="Nysus Solutions"
-                height={200}
-                width={200}
-                className="hover:scale-110 transition-transform duration-300 mt-3 mb-5"
-              />
-            </a>
-            <a
-              href="https://www.actualreality.tech/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/actual-tech.png"
-                alt="Actual Reality"
-                width={130}
-                height={130}
-                className="hover:scale-110 transition-transform duration-300"
               />
             </a>
             <a
@@ -171,30 +185,6 @@ export default function Sponsor() {
           {/* Desktop View */}
           <div className="hidden md:grid grid-cols-3 gap-y-10 gap-x-12 justify-items-center items-center">
             <a
-              href="https://www.github.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <DiGithubFull className="h-36 w-auto hover:scale-110 transition-transform duration-300" />
-            </a>
-            <a
-              href="https://www.mercy.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center mt-14"
-            >
-              <Mercy className="h-28 hover:scale-110 transition-transform duration-300" />
-            </a>
-            <a
-              href="https://aws.amazon.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <FaAws className="h-28 w-auto hover:scale-110 transition-transform duration-300" />
-            </a>
-            <a
               href="https://www.nysus.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -221,6 +211,30 @@ export default function Sponsor() {
                 height={150}
                 className="hover:scale-110 transition-transform duration-300"
               />
+            </a>
+            <a
+              href="https://www.github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <DiGithubFull className="h-36 w-auto hover:scale-110 transition-transform duration-300" />
+            </a>
+            <a
+              href="https://www.mercy.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center mt-14"
+            >
+              <Mercy className="h-28 hover:scale-110 transition-transform duration-300" />
+            </a>
+            <a
+              href="https://aws.amazon.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <FaAws className="h-28 w-auto hover:scale-110 transition-transform duration-300" />
             </a>
             <a
               href="https://www.perplexity.ai/"
