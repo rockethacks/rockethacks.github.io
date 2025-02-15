@@ -67,6 +67,20 @@ export default function Sponsor() {
               />
             </a>
             <a
+              href="https://koolkatscience.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/Koolkat-Science.svg"
+                alt="Koolkat Science"
+                width={200}
+                height={200}
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+            <a
               href="https://www.github.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -209,6 +223,20 @@ export default function Sponsor() {
                 alt="Nysus Solutions"
                 width={150}
                 height={150}
+                className="hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+            <a
+              href="https://koolkatscience.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/Koolkat-Science.svg"
+                alt="Koolkat Science"
+                width={200}
+                height={200}
                 className="hover:scale-110 transition-transform duration-300"
               />
             </a>
