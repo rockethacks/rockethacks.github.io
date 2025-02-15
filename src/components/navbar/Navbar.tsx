@@ -68,15 +68,15 @@ export default function Navbar() {
               target="_blank"
               onClick={toggleMenu}
             > */}
+            <Link href="#about" onClick={toggleMenu}>
+              About Us
+            </Link>
             <Link
               href="https://forms.gle/RV3DVwCddkDvU5eK8"
               target="_blank"
               onClick={toggleMenu}
             >
               Code & Create
-            </Link>
-            <Link href="#about" onClick={toggleMenu}>
-              About Us
             </Link>
             <Link href="#sponsor" onClick={toggleMenu}>
               Sponsors
