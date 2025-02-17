@@ -173,7 +173,7 @@ export default function Sponsor() {
               className="flex items-center justify-center"
             >
               <Image
-                src={"/assets/sponsors/Hugging-Face.png"}
+                src={"/assets/sponsors/Hugging-face.png"}
                 alt="Hugging Face"
                 width={250}
                 height={250}
@@ -187,7 +187,7 @@ export default function Sponsor() {
               className="flex items-center justify-center"
             >
               <Image
-                src={"/assets/sponsors/Standout-Stickers.svg"}
+                src={"/assets/sponsors/standout-stickers.svg"}
                 alt="Standout Stickers"
                 width={250}
                 height={250}
