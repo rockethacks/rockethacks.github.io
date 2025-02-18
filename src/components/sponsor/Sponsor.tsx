@@ -25,6 +25,20 @@ export default function Sponsor() {
           {/* Mobile View */}
           <div className="flex flex-col items-center justify-center space-y-2 md:hidden">
             <a
+              href="https://www.spokehq.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/spoke.png"
+                alt="SPOKE. is a digital consultancy that helps start-ups through Fortune 100s transform their Branding, Design, and Software Development strategies to create digital experiences that persuade and empower users."
+                height={200}
+                width={200}
+                className="hover:scale-110 transition-transform duration-300 mt-3 mb-5"
+              />
+            </a>
+            <a
               href="https://www.nysus.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -38,20 +52,7 @@ export default function Sponsor() {
                 className="hover:scale-110 transition-transform duration-300 mt-3 mb-5"
               />
             </a>
-            {/* <a
-              href="https://www.spokehq.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/spoke.png"
-                alt="Nysus Solutions"
-                height={200}
-                width={200}
-                className="hover:scale-110 transition-transform duration-300 mt-3 mb-5"
-              />
-            </a> */}
+
             <a
               href="https://www.actualreality.tech/"
               target="_blank"
@@ -198,6 +199,34 @@ export default function Sponsor() {
 
           {/* Desktop View */}
           <div className="hidden md:grid grid-cols-3 gap-y-10 gap-x-12 justify-items-center items-center">
+            <a
+              href="https://prhi.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/prhi.png"
+                alt="SpokeHQ"
+                width={200}
+                height={200}
+                className="hover:scale-110 transition-transform duration-300 bg-white p-1"
+              />
+            </a>
+            <a
+              href="https://spokehq.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <Image
+                src="/assets/sponsors/spoke.png"
+                alt="SpokeHQ"
+                width={200}
+                height={200}
+                className="hover:scale-110 transition-transform duration-300 bg-white p-2"
+              />
+            </a>
             <a
               href="https://www.nysus.com/"
               target="_blank"
