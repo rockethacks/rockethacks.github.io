@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 import { FaAws } from "react-icons/fa";
 import { DiGithubFull } from "react-icons/di";
-import Mercy from "../../../public/assets/sponsors/mercy.svg";
 import localFont from "next/font/local";
+
 const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
-export default function Sponsor() {
+const Sponsor = ({ sponsors = [] }) => {
   return (
     <div>
       <section
@@ -23,364 +23,70 @@ export default function Sponsor() {
 
         <div className="mt-5">
           {/* Mobile View */}
-          <div className="flex flex-col items-center justify-center space-y-2 md:hidden">
-            <a
-              href="https://www.spokehq.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/spoke.png"
-                alt="SPOKE. is a digital consultancy that helps start-ups through Fortune 100s transform their Branding, Design, and Software Development strategies to create digital experiences that persuade and empower users."
-                height={200}
-                width={200}
-                className="hover:scale-110 transition-transform duration-300 mt-3 mb-5"
-              />
-            </a>
-            <a
-              href="https://www.nysus.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/Nysus-sol.png"
-                alt="Nysus Solutions"
-                height={200}
-                width={200}
-                className="hover:scale-110 transition-transform duration-300 mt-3 mb-5"
-              />
-            </a>
-
-            <a
-              href="https://www.actualreality.tech/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/actual-tech.png"
-                alt="Actual Reality"
-                width={130}
-                height={130}
-                className="hover:scale-110 transition-transform duration-300"
-              />
-            </a>
-            <a
-              href="https://koolkatscience.net/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/Koolkat-Science.svg"
-                alt="Koolkat Science"
-                width={200}
-                height={200}
-                className="hover:scale-110 transition-transform duration-300"
-              />
-            </a>
-            <a
-              href="https://www.github.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <DiGithubFull className="h-24 w-auto hover:scale-110 transition-transform duration-300" />
-            </a>
-            <a
-              href="https://aws.amazon.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <FaAws className="h-20 w-auto hover:scale-110 transition-transform duration-300 mb-5" />
-            </a>
-            <a
-              href="https://www.perplexity.ai/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/Perplexity.png"
-                alt="Perplexity AI"
-                height={180}
-                width={180}
-                className="hover:scale-110 transition-transform duration-300 mb-5"
-              />
-            </a>
-            <a
-              href="https://www.warp.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/warp.png"
-                alt="Warp Terminal"
-                height={200}
-                width={200}
-                className="hover:scale-110 transition-transform duration-300 mb-2"
-              />
-            </a>
-            <a
-              href="https://www.photoroom.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src={"/assets/sponsors/photoroom.svg"}
-                alt="Photoroom"
-                width={200}
-                height={200}
-                className="hover:scale-110 transition-transform duration-300 mb-5"
-              />
-            </a>
-            <a
-              href="https://www.gen.xyz/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src={"/assets/sponsors/xyz.svg"}
-                alt=".xyz"
-                width={80}
-                height={80}
-                className="hover:scale-110 transition-transform duration-300 mt-2 mb-5"
-              />
-            </a>
-            <a
-              href="https://www.mercy.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src={"/assets/sponsors/mercy.svg"}
-                alt="Mercy Health"
-                width={250}
-                height={250}
-                className="hover:scale-110 transition-transform duration-300 mb-5"
-              />
-            </a>
-            <a
-              href="https://huggingface.co/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src={"/assets/sponsors/Hugging-face.png"}
-                alt="Hugging Face"
-                width={250}
-                height={250}
-                className="hover:scale-110 transition-transform duration-300 mt-1 mb-5"
-              />
-            </a>
-            <a
-              href="https://www.standoutstickers.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src={"/assets/sponsors/standout-stickers.svg"}
-                alt="Standout Stickers"
-                width={250}
-                height={250}
-                className="hover:scale-110 transition-transform duration-300 mt-1 mb-5"
-              />
-            </a>
+          <div className="flex flex-col items-center justify-center gap-y-2 md:hidden">
+            {sponsors.map((sponsor, index) => (
+              <a
+                key={index}
+                href={sponsor.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                {sponsor.type === "image" ? (
+                  <Image
+                    src={sponsor.src}
+                    alt={sponsor.alt}
+                    width={180}
+                    height={180}
+                    className={`hover:scale-110 transition-transform duration-300 object-contain ${
+                      sponsor.src.includes("xyz") ? "w-28 h-28" : ""
+                    } ${sponsor.src.includes("spoke") ? "bg-white p-3" : ""} `}
+                  />
+                ) : sponsor.type === "icon" ? (
+                  sponsor.icon === "github" ? (
+                    <DiGithubFull className="h-28 w-28 hover:scale-110 transition-transform duration-300" />
+                  ) : sponsor.icon === "aws" ? (
+                    <FaAws className="h-28 w-28 hover:scale-110 transition-transform duration-300" />
+                  ) : null
+                ) : null}
+              </a>
+            ))}
           </div>
 
           {/* Desktop View */}
-          <div className="hidden md:grid grid-cols-3 gap-y-10 gap-x-12 justify-items-center items-center">
-            <a
-              href="https://prhi.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/prhi.png"
-                alt="SpokeHQ"
-                width={200}
-                height={200}
-                className="hover:scale-110 transition-transform duration-300 bg-white p-1"
-              />
-            </a>
-            <a
-              href="https://spokehq.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/spoke.png"
-                alt="SpokeHQ"
-                width={200}
-                height={200}
-                className="hover:scale-110 transition-transform duration-300 bg-white p-2"
-              />
-            </a>
-            <a
-              href="https://www.nysus.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/Nysus-sol.png"
-                alt="Nysus Solutions"
-                width={200}
-                height={200}
-                className="hover:scale-110 transition-transform duration-300"
-              />
-            </a>
-            <a
-              href="https://www.actualreality.tech/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/actual-tech.png"
-                alt="Nysus Solutions"
-                width={150}
-                height={150}
-                className="hover:scale-110 transition-transform duration-300"
-              />
-            </a>
-            <a
-              href="https://koolkatscience.net/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/Koolkat-Science.svg"
-                alt="Koolkat Science"
-                width={200}
-                height={200}
-                className="hover:scale-110 transition-transform duration-300"
-              />
-            </a>
-            <a
-              href="https://www.github.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <DiGithubFull className="h-36 w-auto hover:scale-110 transition-transform duration-300" />
-            </a>
-            <a
-              href="https://www.mercy.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center mt-14"
-            >
-              <Mercy className="h-28 hover:scale-110 transition-transform duration-300" />
-            </a>
-            <a
-              href="https://aws.amazon.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <FaAws className="h-28 w-auto hover:scale-110 transition-transform duration-300" />
-            </a>
-            <a
-              href="https://www.perplexity.ai/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src="/assets/sponsors/Perplexity.png"
-                alt="Perplexity"
-                width={200}
-                height={200}
-                className="hover:scale-110 transition-transform duration-300"
-              />
-            </a>
-
-            <a
-              href="https://www.warp.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center mb-5"
-            >
-              <Image
-                src="/assets/sponsors/warp.png"
-                alt="Warp"
-                width={200}
-                height={200}
-                className="hover:scale-110 transition-transform duration-300"
-              />
-            </a>
-            <a
-              href="https://www.photoroom.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src={"/assets/sponsors/photoroom.svg"}
-                alt="Photoroom"
-                width={250}
-                height={250}
-                className="hover:scale-110 transition-transform duration-300"
-              />
-            </a>
-            <a
-              href="https://gen.xyz/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center mt-3"
-            >
-              <Image
-                src={"/assets/sponsors/xyz.svg"}
-                alt=".xyz"
-                width={100}
-                height={100}
-                className="hover:scale-110 transition-transform duration-300"
-              />
-            </a>
-            <a
-              href="https://huggingface.co/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src={"/assets/sponsors/Hugging-face.png"}
-                alt="Hugging Face"
-                width={250}
-                height={250}
-                className="hover:scale-110 transition-transform duration-300"
-              />
-            </a>
-            <a
-              href="https://www.standoutstickers.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <Image
-                src={"/assets/sponsors/standout-stickers.svg"}
-                alt="Standout Stickers"
-                width={250}
-                height={250}
-                className="hover:scale-110 transition-transform duration-300"
-              />
-            </a>
+          <div className="hidden md:grid grid-cols-5 justify-items-center items-center gap-8">
+            {sponsors.map((sponsor, index) => (
+              <a
+                key={index}
+                href={sponsor.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                {sponsor.type === "image" ? (
+                  <Image
+                    src={sponsor.src}
+                    alt={sponsor.alt}
+                    width={180}
+                    height={180}
+                    className={`hover:scale-110 transition-transform duration-300 object-contain ${
+                      sponsor.src.includes("xyz") ? "w-28 h-28" : ""
+                    } ${sponsor.src.includes("spoke") ? "bg-white p-3" : ""} `}
+                  />
+                ) : sponsor.type === "icon" ? (
+                  sponsor.icon === "github" ? (
+                    <DiGithubFull className="h-28 w-28 hover:scale-110 transition-transform duration-300" />
+                  ) : sponsor.icon === "aws" ? (
+                    <FaAws className="h-28 w-28 hover:scale-110 transition-transform duration-300" />
+                  ) : null
+                ) : null}
+              </a>
+            ))}
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default Sponsor;
