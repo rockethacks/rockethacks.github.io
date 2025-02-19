@@ -6,7 +6,20 @@ import localFont from "next/font/local";
 
 const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
-const Sponsor = ({ sponsors = [] }) => {
+// defining SponsorType and SponsorProps
+export type SponsorType = {
+  type: "image" | "icon";
+  src?: string;
+  icon?: "github" | "aws";
+  alt: string;
+  link: string;
+};
+
+interface SponsorProps {
+  sponsors: SponsorType[];
+}
+
+const Sponsor: React.FC<SponsorProps> = ({ sponsors }) => {
   return (
     <div>
       <section
@@ -32,7 +45,7 @@ const Sponsor = ({ sponsors = [] }) => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center"
               >
-                {sponsor.type === "image" ? (
+                {sponsor.type === "image" && sponsor.src ? (
                   <Image
                     src={sponsor.src}
                     alt={sponsor.alt}
@@ -63,7 +76,7 @@ const Sponsor = ({ sponsors = [] }) => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center"
               >
-                {sponsor.type === "image" ? (
+                {sponsor.type === "image" && sponsor.src ? (
                   <Image
                     src={sponsor.src}
                     alt={sponsor.alt}
