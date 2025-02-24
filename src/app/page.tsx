@@ -44,9 +44,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <Schedule />
-      <Sponsor sponsors={SponsorData} />
-      <Gallery />
+      <Sponsor />
+      {/* <Gallery /> */}
       <Contact />
       <Faq />
       <Footer />
