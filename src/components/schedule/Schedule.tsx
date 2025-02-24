@@ -40,7 +40,7 @@ export default function Schedule() {
 
   return (
     <section id="schedule">
-      <div className="h-screen bg-cover bg-center relative bg-gradient-to-b from-[#081d41] from-90% to-[#081d41] to-10%">
+      <div className="h-screen bg-cover bg-center relative bg-gradient-to-b from-[#030c1b] to-80% to-[#030c1b]/50 from-28%">
         <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-6 px-4">
           <div className="w-full md:w-1/2 flex justify-center items-center">
             <Image
@@ -52,7 +52,7 @@ export default function Schedule() {
               onClick={() => setShowImageModal(true)}
             />
           </div>
-          <div className={`${terminal.className} text-white w-full md:w-1/2 bg-slate-950/30 backdrop-blur-sm border-amber-300 border-2 rounded-md p-5`}>
+          <div className={`${terminal.className} text-white w-full md:w-1/2 bg-slate-950/30 backdrop-blur-sm border-blue-600 border-2 rounded-md p-5`}>
             <h2 className="text-4xl md:text-6xl text-[#FFDA20] text-center mb-6">Event Schedule</h2>
             <Tabs.Root defaultValue="college" onValueChange={setSelectedTab}>
               <Tabs.List className="flex justify-center space-x-4 mb-4 border-b border-gray-500">
