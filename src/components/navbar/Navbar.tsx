@@ -46,7 +46,7 @@ export default function Navbar() {
           </Link>
           <Link href="#schedule">SCHEDULE</Link>
           <Link href="#sponsor">SPONSORS</Link>
-          <Link href="#gallery">GALLERY</Link>
+          {/* <Link href="#gallery">GALLERY</Link> */}
           <Link href="#contact">CONTACT</Link>
           <Link href="#faq">FAQ</Link>
           <Link
@@ -72,10 +72,17 @@ export default function Navbar() {
             <Link href="#about" onClick={toggleMenu}>
               About Us
             </Link>
+            <Link
+              href="https://forms.gle/RV3DVwCddkDvU5eK8"
+              target="_blank"
+              onClick={toggleMenu}
+            >
+              Code & Create
+            </Link>
             <Link href="#sponsor" onClick={toggleMenu}>
               Sponsors
             </Link>
-            <Link href="#gallery">Gallery</Link>
+            {/* <Link href="#gallery">Gallery</Link> */}
             <Link href="#contact" onClick={toggleMenu}>
               Contact Us
             </Link>
