@@ -10,7 +10,7 @@ import { SponsorData } from "@/components/sponsor/SponsorData";
 import Footer from "@/components/footer/Footer";
 import Contact from "@/components/contact/Contact";
 import Schedule from "@/components/schedule/Schedule";
-import Gallery from "@/components/gallery/Gallery";
+/*import Gallery from "@/components/gallery/Gallery";/*/
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);

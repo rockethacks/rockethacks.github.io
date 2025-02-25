@@ -48,7 +48,7 @@ export default function Schedule() {
               alt="Event illustration"
               width={700}
               height={700}
-              className="object-cover rounded-lg shadow-lg cursor-pointer"
+              className="object-cover rounded-lg shadow-lg cursor-pointer  border-blue-600 border-2 p-5`"
               onClick={() => setShowImageModal(true)}
             />
           </div>
