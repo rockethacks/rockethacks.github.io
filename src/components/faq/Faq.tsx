@@ -95,7 +95,7 @@ function FAQ() {
                   Is Rocket Hacks 2025 in-person or virtual?
                   </AccordionTrigger>
                   <AccordionContent>
-                  Rocket Hacks 2025 is an in-person only event, We hope to give you the best hackathon experience at the University of Toledo North Engineering Campus, 1700 N Westwood Ave, Toledo, OH 43607. Unfortunately, we won't be providing a virtual option this year. We are also unable to offer travel reimbursements at this time.
+                  Rocket Hacks 2025 is an in-person only event, We hope to give you the best hackathon experience at the University of Toledo North Engineering Campus, 1700 N Westwood Ave, Toledo, OH 43607. Unfortunately, we will not be providing a virtual option this year. We are also unable to offer travel reimbursements at this time.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-8">
