@@ -44,6 +44,7 @@ export default function Navbar() {
           <Link href="#about" style={{ scrollBehavior: "smooth" }}>
             ABOUT US
           </Link>
+          <Link href="#schedule">SCHEDULE</Link>
           <Link href="#sponsor">SPONSORS</Link>
           {/* <Link href="#gallery">GALLERY</Link> */}
           <Link href="#contact">CONTACT</Link>
