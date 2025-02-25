@@ -12,10 +12,10 @@ const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
 function FAQ() {
   return (
-    <div className="space-y-8">
+    <div className="bg-gradient-to-b from-[#081d41]/60 from-10% via-[#081d41] to-[#030c1b] to-85% mb-64 md:mb-40">
       {/* Fullscreen background section */}
       <section id="faq">
-        <div className="h-screen bg-cover bg-center relative bg-gradient-to-b from-[#081d41]/60 from-10% via-[#081d41] to-[#030c1b] to-85%">
+        <div className="h-screen bg-cover bg-center relative">
           {/* FAQ text positioned at the top */}
           <div className="absolute top-8 py-10 left-1/2 transform -translate-x-1/2 text-center">
             <h2
@@ -84,50 +84,65 @@ function FAQ() {
                 </AccordionItem>
                 <AccordionItem value="item-6">
                   <AccordionTrigger>
-                  How long does Rocket Hacks last?
+                    How long does Rocket Hacks last?
                   </AccordionTrigger>
                   <AccordionContent>
-                    Rocket Hacks will last for 24 hours. The event will start on Saturday, March 15, 2025 and end on Sunday, March 16, 2025. However there is additional time before and after hacking for introductions and presentations..
+                    Rocket Hacks will last for 24 hours. The event will start on
+                    Saturday, March 15, 2025 and end on Sunday, March 16, 2025.
+                    However there is additional time before and after hacking
+                    for introductions and presentations..
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-7">
                   <AccordionTrigger>
-                  Is Rocket Hacks 2025 in-person or virtual?
+                    Is Rocket Hacks 2025 in-person or virtual?
                   </AccordionTrigger>
                   <AccordionContent>
-                  Rocket Hacks 2025 is an in-person only event, We hope to give you the best hackathon experience at the University of Toledo North Engineering Campus, 1700 N Westwood Ave, Toledo, OH 43607. Unfortunately, we will not be providing a virtual option this year. We are also unable to offer travel reimbursements at this time.
+                    Rocket Hacks 2025 is an in-person only event, We hope to
+                    give you the best hackathon experience at the University of
+                    Toledo North Engineering Campus, 1700 N Westwood Ave,
+                    Toledo, OH 43607. Unfortunately, we will not be providing a
+                    virtual option this year. We are also unable to offer travel
+                    reimbursements at this time.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-8">
                   <AccordionTrigger>
-                  How much does Rocket Hacks cost?
+                    How much does Rocket Hacks cost?
                   </AccordionTrigger>
                   <AccordionContent>
-                  Rocket Hacks is free for all students enrolled at any accredited university or high school. Swag, prizes, and great memories are all included with this completely free cost!
+                    Rocket Hacks is free for all students enrolled at any
+                    accredited university or high school. Swag, prizes, and
+                    great memories are all included with this completely free
+                    cost!
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-9">
-                  <AccordionTrigger>
-                  Should I expect a waiver?
-                  </AccordionTrigger>
+                  <AccordionTrigger>Should I expect a waiver?</AccordionTrigger>
                   <AccordionContent>
-                  You betcha. Before any hacking begins we require you to sign a waiver which will be emailed to all registered participants prior to the hackathon. If you are under 18 you will need a parent or legal guardian to sign the waiver.
+                    You betcha. Before any hacking begins we require you to sign
+                    a waiver which will be emailed to all registered
+                    participants prior to the hackathon. If you are under 18 you
+                    will need a parent or legal guardian to sign the waiver.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-10">
                   <AccordionTrigger>
-                  Is there a Code of Conduct?
+                    Is there a Code of Conduct?
                   </AccordionTrigger>
                   <AccordionContent>
-                  Absolutely! We operate on the Major League Hacking Code of Conduct to create an all-inclusive environment for our hackers.
+                    Absolutely! We operate on the Major League Hacking Code of
+                    Conduct to create an all-inclusive environment for our
+                    hackers.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-11">
                   <AccordionTrigger>
-                  What if I have more questions?
+                    What if I have more questions?
                   </AccordionTrigger>
                   <AccordionContent>
-                  Send us an email to rockethacks@utoledo.edu. We are always happy to help.
+                    Send us an email to rockethacks@utoledo.edu. We are always
+                    happy to help.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
