@@ -45,7 +45,7 @@ export default function hero() {
           </div>
           <div>
             <a
-              href={`https://form.jotform.com/rockethacks25/rh25RegForm`}
+              href={`https://form.jotform.com/250544617215049`}
               target="_blank"
             >
               <button className="bg-blue-600 py-3 px-5 rounded-md mt-6 focus:ring-2 focus:ring-blue-400 focus:outline-none hover:bg-[#FFDA20] hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_#FFDA20]">
