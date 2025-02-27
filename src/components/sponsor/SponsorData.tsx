@@ -1,11 +1,23 @@
 import { SponsorType } from "@/components/sponsor/Sponsor";
 
 export const SponsorData: SponsorType[] = [
+  // {
+  //   type: "image",
+  //   src: "/assets/sponsors/prhi.png",
+  //   alt: "Pittsburgh Regional Health Initiative",
+  //   link: "https://prhi.org/",
+  // },
   {
     type: "image",
-    src: "/assets/sponsors/prhi.png",
-    alt: "Pittsburgh Regional Health Initiative",
-    link: "https://prhi.org/",
+    src: "/assets/sponsors/College-of-engineering.png",
+    alt: "UT College of Engineering",
+    link: "https://www.utoledo.edu/engineering/",
+  },
+  {
+    type: "image",
+    src: "/assets/sponsors/eecs.png",
+    alt: "UT Department of Electrical Engineering & Computer Science",
+    link: "https://www.utoledo.edu/",
   },
   {
     type: "image",
