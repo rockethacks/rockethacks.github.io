@@ -33,12 +33,14 @@ function FAQ() {
             >
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
-                  <AccordionTrigger>What is a Hackathon?</AccordionTrigger>
-                  <AccordionContent>
-                    A hackathon is an event where individuals or teams
+                  <AccordionTrigger>What is Rocket Hacks?</AccordionTrigger>
+                  <AccordionContent>                   
+                    Rocket Hacks is an event where individuals or teams
                     collaborate intensively on software development or hardware
-                    projects, typically within a fixed time frame (e.g., 24-48
-                    hours). It{"'"}s an opportunity to learn, create, and
+                    projects, typically within 24 hours. The event will start on
+                    Saturday, March 15, 2025 and end on Sunday, March 16, 2025.
+                    However there is additional time before and after hacking
+                    for introductions and presentations.It{"'"}s an opportunity to learn, create, and
                     innovate while competing with other teams.
                   </AccordionContent>
                 </AccordionItem>
@@ -84,30 +86,6 @@ function FAQ() {
                 </AccordionItem>
                 <AccordionItem value="item-6">
                   <AccordionTrigger>
-                    How long does Rocket Hacks last?
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    Rocket Hacks will last for 24 hours. The event will start on
-                    Saturday, March 15, 2025 and end on Sunday, March 16, 2025.
-                    However there is additional time before and after hacking
-                    for introductions and presentations..
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-7">
-                  <AccordionTrigger>
-                    Is Rocket Hacks 2025 in-person or virtual?
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    Rocket Hacks 2025 is an in-person only event, We hope to
-                    give you the best hackathon experience at the University of
-                    Toledo North Engineering Campus, 1700 N Westwood Ave,
-                    Toledo, OH 43607. Unfortunately, we will not be providing a
-                    virtual option this year. We are also unable to offer travel
-                    reimbursements at this time.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-8">
-                  <AccordionTrigger>
                     How much does Rocket Hacks cost?
                   </AccordionTrigger>
                   <AccordionContent>
@@ -117,7 +95,7 @@ function FAQ() {
                     cost!
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-9">
+                <AccordionItem value="item-7">
                   <AccordionTrigger>Should I expect a waiver?</AccordionTrigger>
                   <AccordionContent>
                     You betcha. Before any hacking begins we require you to sign
@@ -126,7 +104,7 @@ function FAQ() {
                     will need a parent or legal guardian to sign the waiver.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-10">
+                <AccordionItem value="item-8">
                   <AccordionTrigger>
                     Is there a Code of Conduct?
                   </AccordionTrigger>
@@ -136,7 +114,7 @@ function FAQ() {
                     hackers.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-11">
+                <AccordionItem value="item-9">
                   <AccordionTrigger>
                     What if I have more questions?
                   </AccordionTrigger>
