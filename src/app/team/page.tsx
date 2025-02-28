@@ -31,16 +31,16 @@ const teamSections = [
     section: "Techdev",
     members: [
       { name: "Member 1", img: "/team/tech1.jpg", link: "#" },
-      { name: "Aditya Mhambrey", img: "/team photos/IMG_1905.jpg", link: "#" },
-      { name: "Shivom V R", img: "/team/tech3.jpg", link: "#" },
-      { name: "Member 4", img: "/team/tech4.jpg", link: "#" },
+      { name: "Aditya Mhambrey", img: "/team photos/aditya-tech dev.jpg", link: "https://www.linkedin.com/in/aditya-mhambrey/" },
+      { name: "Shivom V R", img: "/team photos/shivom.jpg", link: "https://www.linkedin.com/in/shivom-vr/" },
+      { name: "Pranav", img: "/team photos/pranav.jpg", link: "#" },
       { name: "Member 5", img: "/team/tech5.jpg", link: "#" },
     ],
   },
   {
     section: "Sponsorship and Finance",
     members: [
-      { name: "Nikhil Ankam", img: "/team photos/IMG_5031.jpg", link: "#" },
+      { name: "Nikhil Ankam", img: "/team photos/nikhil.jpg", link: "https://www.linkedin.com/in/nikhil-ankam/" },
       { name: "Member 2", img: "/team/sponsor2.jpg", link: "#" },
       { name: "Member 3", img: "/team/sponsor3.jpg", link: "#" },
       { name: "Member 4", img: "/team/sponsor4.jpg", link: "#" },
@@ -92,15 +92,20 @@ export default function TeamPage() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 justify-items-center">
             {group.members.map((member, i) => (
-              <Link key={i} href={member.link} className="block">
-                <Image
-                  src={member.img}
-                  alt={member.name}
-                  width={150}
-                  height={150}
-                  className="rounded-full object-cover hover:opacity-80 transition-opacity"
-                />
-              </Link>
+             <Link
+             href={member.link}
+             target="_blank"
+             rel="noopener noreferrer"
+             className="block"
+           >
+             <Image
+               src={member.img}
+               alt={member.name}
+               width={150}
+               height={150}
+               className="rounded-full object-cover hover:opacity-80 transition-opacity"
+             />
+           </Link>
             ))}
           </div>
         </div>
