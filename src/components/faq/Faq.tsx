@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-// import Image from "next/image";
 import {
   Accordion,
   AccordionContent,
@@ -12,14 +11,14 @@ const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
 function FAQ() {
   return (
-    <div className="bg-gradient-to-b from-[#081d41]/60 from-10% via-[#081d41] to-[#030c1b] to-85% mb-64 md:mb-40">
+    <div className="bg-gradient-to-b from-[#081d41]/60 from-10% via-[#081d41] to-[#030c1b] to-85%">
       {/* Fullscreen background section */}
-      <section id="faq">
-        <div className="h-screen bg-cover bg-center relative">
-          {/* FAQ text positioned at the top */}
-          <div className="absolute top-8 py-10 left-1/2 transform -translate-x-1/2 text-center">
+      <section id="faq" className="min-h-screen bg-cover bg-center">
+        <div className="flex items-center justify-center h-full px-4">
+          {/* FAQ content */}
+          <div className="text-center w-full max-w-4xl mx-auto">
             <h2
-              className={`${terminal.className} text-4xl md:text-6xl  text-[#FFDA20] z-20 hidden lg:block`}
+              className={`${terminal.className} text-4xl md:text-6xl text-[#FFDA20] z-20 hidden lg:block`}
             >
               FREQUENTLY ASKED QUESTIONS
             </h2>
@@ -29,7 +28,7 @@ function FAQ() {
               FAQ
             </h2>
             <div
-              className={`${terminal.className} rounded-md bg-slate-950/30 backdrop-blur-sm border-amber-300 border-2 mt-10 px-5 py-3 w-[400px] sm:w-[500px] md:w-[700px] lg:w-[1000px] mx-auto text-white text-balance break-normal text-left`}
+              className={`${terminal.className} rounded-md bg-slate-950/30 backdrop-blur-sm border-amber-300 border-2 mt-10 px-5 py-3 w-full sm:w-[500px] md:w-[700px] lg:w-[1000px] mx-auto text-white text-balance break-normal text-left`}
             >
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
@@ -89,8 +88,8 @@ function FAQ() {
                   <AccordionContent>
                     Rocket Hacks will last for 24 hours. The event will start on
                     Saturday, March 15, 2025 and end on Sunday, March 16, 2025.
-                    However there is additional time before and after hacking
-                    for introductions and presentations..
+                    However, there is additional time before and after hacking
+                    for introductions and presentations.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-7">
@@ -98,7 +97,7 @@ function FAQ() {
                     Is Rocket Hacks 2025 in-person or virtual?
                   </AccordionTrigger>
                   <AccordionContent>
-                    Rocket Hacks 2025 is an in-person only event, We hope to
+                    Rocket Hacks 2025 is an in-person only event. We hope to
                     give you the best hackathon experience at the University of
                     Toledo North Engineering Campus, 1700 N Westwood Ave,
                     Toledo, OH 43607. Unfortunately, we will not be providing a
@@ -122,8 +121,8 @@ function FAQ() {
                   <AccordionContent>
                     You betcha. Before any hacking begins we require you to sign
                     a waiver which will be emailed to all registered
-                    participants prior to the hackathon. If you are under 18 you
-                    will need a parent or legal guardian to sign the waiver.
+                    participants prior to the hackathon. If you are under 18,
+                    you will need a parent or legal guardian to sign the waiver.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-10">
@@ -131,8 +130,8 @@ function FAQ() {
                     Is there a Code of Conduct?
                   </AccordionTrigger>
                   <AccordionContent>
-                    Absolutely! We operate on the Major League Hacking Code of
-                    Conduct to create an all-inclusive environment for our
+                    Absolutely! We operate on the Major League Hacking Code of
+                    Conduct to create an all-inclusive environment for our
                     hackers.
                   </AccordionContent>
                 </AccordionItem>
