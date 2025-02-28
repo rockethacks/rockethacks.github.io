@@ -111,16 +111,20 @@ export default function Schedule() {
   );
 
   return (
-    <section id="schedule">
-      <div className="h-screen bg-cover bg-center relative bg-gradient-to-b from-[#030c1b] to-80% to-[#030c1b]/50 from-28% mb-20 mt-20">
-        <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-6 px-4">
+    <section id="schedule" className="mb-20">
+      <div className="h-auto bg-cover bg-center bg-gradient-to-b from-[#030c1b] to-80% to-[#030c1b]/50 px-4 py-8">
+        <div className="flex flex-col items-center justify-center gap-6">
           <div className="w-full md:w-1/2 flex justify-center items-center">
-            <Image
+            {/* <img
               src="/COE_MAP_2.png"
               alt="Event illustration"
-              width={700}
-              height={700}
-              className="object-cover rounded-lg shadow-lg cursor-pointer  border-blue-600 border-2 p-5`"
+              className="object-cover rounded-lg shadow-lg cursor-pointerp-5"
+              onClick={() => setShowImageModal(true)}
+            /> */}
+            <img
+              src="/COE_MAP_2.png"
+              alt="Event illustration"
+              className="object-cover rounded-lg shadow-lg cursor-pointer p-5 transform transition-transform duration-300 ease-in-out cursor-pointer hover:cursor-zoom-in"
               onClick={() => setShowImageModal(true)}
             />
           </div>
@@ -153,7 +157,7 @@ export default function Schedule() {
                   Code & Create
                 </Tabs.Trigger>
               </Tabs.List>
-              <div className="relative overflow-hidden">
+              <div className="overflow-hidden">
                 <AnimatePresence mode="wait">
                   {selectedTab === "college" ? (
                     <motion.div
@@ -191,9 +195,7 @@ export default function Schedule() {
                             key={index}
                             value={`college-${selectedCollegeDay}-${index}`}
                           >
-                            <AccordionTrigger className="font-bold text-white">
-                              {`${item.time} - ${item.event}`}
-                            </AccordionTrigger>
+                            <AccordionTrigger className="font-bold text-white">{`${item.time} - ${item.event}`}</AccordionTrigger>
                             <AccordionContent className="text-white">
                               <p className="text-md">Venue: {item.venue}</p>
                             </AccordionContent>
@@ -215,9 +217,7 @@ export default function Schedule() {
                             key={index}
                             value={`highschool-${index}`}
                           >
-                            <AccordionTrigger className="font-bold text-white">
-                              {`${item.day} - ${item.event}`}
-                            </AccordionTrigger>
+                            <AccordionTrigger className="font-bold text-white">{`${item.day} - ${item.event}`}</AccordionTrigger>
                             <AccordionContent className="text-white">
                               <p className="text-md">Time: {item.time}</p>
                               <p className="text-md">Venue: {item.venue}</p>
@@ -252,9 +252,9 @@ export default function Schedule() {
               <Image
                 src="/COE_MAP_2.png"
                 alt="Enlarged Event illustration"
-                width={1000}
-                height={1000}
-                className="object-contain rounded-lg shadow-xl"
+                width={1500}
+                height={1500}
+                className="object-contain rounded-lg shadow-xl mb-28 mx-auto"
               />
             </motion.div>
           </motion.div>
