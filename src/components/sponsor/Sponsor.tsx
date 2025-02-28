@@ -53,11 +53,7 @@ const Sponsor: React.FC<SponsorProps> = ({ sponsors }) => {
                     height={180}
                     className={`hover:scale-110 transition-transform duration-300 object-contain ${
                       sponsor.src.includes("xyz") ? "w-28 h-28" : ""
-                    } ${sponsor.src.includes("spoke") ? "bg-white p-3" : ""} ${
-                      sponsor.src.includes("College-of-engineering")
-                        ? "bg-white p-3"
-                        : ""
-                    } ${sponsor.src.includes("eecs") ? "bg-white p-3" : ""}`}
+                    } ${sponsor.src.includes("spoke") ? "bg-white p-3" : ""}`}
                   />
                 ) : sponsor.type === "icon" ? (
                   sponsor.icon === "github" ? (
@@ -88,11 +84,7 @@ const Sponsor: React.FC<SponsorProps> = ({ sponsors }) => {
                     height={180}
                     className={`hover:scale-110 transition-transform duration-300 object-contain ${
                       sponsor.src.includes("xyz") ? "w-28 h-28" : ""
-                    } ${sponsor.src.includes("spoke") ? "bg-white p-3" : ""}  ${
-                      sponsor.src.includes("College-of-engineering")
-                        ? "bg-white p-3"
-                        : ""
-                    } ${sponsor.src.includes("eecs") ? "bg-white p-3" : ""}`}
+                    } ${sponsor.src.includes("spoke") ? "bg-white p-3" : ""}`}
                   />
                 ) : sponsor.type === "icon" ? (
                   sponsor.icon === "github" ? (
