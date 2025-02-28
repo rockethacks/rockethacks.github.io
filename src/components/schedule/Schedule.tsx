@@ -39,7 +39,7 @@ const collegeSchedule = [
     venue: "Nitschke Hallway",
   },
   { day: "Day 1", time: "12:30 PM", event: "Lunch", venue: "Node" },
-  { day: "Day 1", time: "07:00 PM", event: "Dinner", venue: "Node" },
+  { day: "Day 1", time: "07:00 PM", event: "Dinner by SPOKE", venue: "Node" },
   { day: "Day 2", time: "08:00 AM", event: "Breakfast", venue: "Node" },
   {
     day: "Day 2",
