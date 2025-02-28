@@ -10,13 +10,13 @@ export const SponsorData: SponsorType[] = [
   {
     type: "image",
     src: "/assets/sponsors/College-of-engineering.png",
-    alt: "UT College of Engineering",
+    alt: "University of Toledo College of Engineering",
     link: "https://www.utoledo.edu/engineering/",
   },
   {
     type: "image",
     src: "/assets/sponsors/eecs.png",
-    alt: "UT Department of Electrical Engineering & Computer Science",
+    alt: "University of Toledo Department of Electrical Engineering & Computer Science",
     link: "https://www.utoledo.edu/",
   },
   {
