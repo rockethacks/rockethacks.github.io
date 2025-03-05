@@ -108,7 +108,9 @@ export default function Schedule() {
   const [zoomStyle, setZoomStyle] = useState({});
   const [mapMarginBottom, setMapMarginBottom] = useState(0);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
-  const mapRef = useRef(null);
+
+  // Declare mapRef before use
+  const mapRef = useRef<HTMLImageElement | null>(null);
 
   const filteredCollegeSchedule = collegeSchedule.filter(
     (item) => item.day === selectedCollegeDay
@@ -129,7 +131,7 @@ export default function Schedule() {
   }, []);
 
   // Calculate zoom and position based on mouse location (only for lg+ screens)
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLImageElement>) => {
     if (!mapRef.current || !isLargeScreen) return; // Only run on large screens
 
     const { left, top, width, height } = mapRef.current.getBoundingClientRect();
@@ -146,8 +148,8 @@ export default function Schedule() {
     const zoomX = ((mouseX / width) * 100).toFixed(2);
     const zoomY = ((mouseY / height) * 100).toFixed(2);
 
-    // Adjust margin-bottom when zooming in to prevent overlap
-    const newMarginBottom = zoomFactor > 1 ? zoomFactor * 200 : 0; // Increase the margin as zoom factor increases
+    // Increase margin-bottom more than before (e.g., zoomFactor * 50 for more space)
+    const newMarginBottom = zoomFactor > 1 ? zoomFactor * 50 : 0; // Increased the multiplier to 50
 
     setZoomStyle({
       transformOrigin: `${zoomX}% ${zoomY}%`,
