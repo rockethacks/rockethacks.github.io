@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import * as Tabs from "@radix-ui/react-tabs";
 import {
@@ -105,26 +105,78 @@ export default function Schedule() {
   const [selectedTab, setSelectedTab] = useState("college");
   const [selectedCollegeDay, setSelectedCollegeDay] = useState("Day 1");
   const [showImageModal, setShowImageModal] = useState(false);
+  const [zoomStyle, setZoomStyle] = useState({});
+  const [mapMarginBottom, setMapMarginBottom] = useState(0);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const mapRef = useRef(null);
 
   const filteredCollegeSchedule = collegeSchedule.filter(
     (item) => item.day === selectedCollegeDay
   );
+
+  // Check screen size on mount and window resize
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024); // 1024px is the typical breakpoint for lg screens
+    };
+
+    checkScreenSize(); // Check size initially
+    window.addEventListener("resize", checkScreenSize); // Check on resize
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize); // Clean up on unmount
+    };
+  }, []);
+
+  // Calculate zoom and position based on mouse location (only for lg+ screens)
+  const handleMouseMove = (e) => {
+    if (!mapRef.current || !isLargeScreen) return; // Only run on large screens
+
+    const { left, top, width, height } = mapRef.current.getBoundingClientRect();
+    const mouseX = e.clientX - left;
+    const mouseY = e.clientY - top;
+
+    // Only apply zoom effect if the mouse is inside the image
+    if (mouseX < 0 || mouseY < 0 || mouseX > width || mouseY > height) {
+      return;
+    }
+
+    // Adjust the zoom level and map position based on mouse position
+    const zoomFactor = 2; // Adjust the zoom level here
+    const zoomX = ((mouseX / width) * 100).toFixed(2);
+    const zoomY = ((mouseY / height) * 100).toFixed(2);
+
+    // Adjust margin-bottom when zooming in to prevent overlap
+    const newMarginBottom = zoomFactor > 1 ? zoomFactor * 200 : 0; // Increase the margin as zoom factor increases
+
+    setZoomStyle({
+      transformOrigin: `${zoomX}% ${zoomY}%`,
+      transform: `scale(${zoomFactor})`,
+      transition: "transform 0.3s ease-in-out",
+    });
+
+    setMapMarginBottom(newMarginBottom); // Set margin-bottom dynamically based on zoom factor
+  };
+
+  // Reset zoom when mouse leaves
+  const handleMouseLeave = () => {
+    setZoomStyle({});
+    setMapMarginBottom(0); // Reset margin when zoom is removed
+  };
 
   return (
     <section id="schedule" className="mb-20">
       <div className="h-auto bg-cover bg-center bg-gradient-to-b from-[#030c1b] to-80% to-[#030c1b]/50 px-4 py-8">
         <div className="flex flex-col items-center justify-center gap-6">
           <div className="w-full md:w-1/2 flex justify-center items-center">
-            {/* <img
-              src="/COE_MAP_2.png"
-              alt="Event illustration"
-              className="object-cover rounded-lg shadow-lg cursor-pointerp-5"
-              onClick={() => setShowImageModal(true)}
-            /> */}
             <img
+              ref={mapRef}
               src="/COE_MAP_2.png"
               alt="Event illustration"
-              className="object-cover rounded-lg shadow-lg cursor-pointer p-5 transform transition-transform duration-300 ease-in-out cursor-pointer hover:cursor-zoom-in"
+              className="object-cover rounded-lg shadow-lg cursor-pointer p-5"
+              style={{ ...zoomStyle, marginBottom: `${mapMarginBottom}px` }} // Apply marginBottom dynamically
+              onMouseMove={handleMouseMove} // Detect mouse position
+              onMouseLeave={handleMouseLeave} // Reset zoom when mouse leaves
               onClick={() => setShowImageModal(true)}
             />
           </div>
@@ -195,7 +247,9 @@ export default function Schedule() {
                             key={index}
                             value={`college-${selectedCollegeDay}-${index}`}
                           >
-                            <AccordionTrigger className="font-bold text-white">{`${item.time} - ${item.event}`}</AccordionTrigger>
+                            <AccordionTrigger className="font-bold text-white">
+                              {`${item.time} - ${item.event}`}
+                            </AccordionTrigger>
                             <AccordionContent className="text-white">
                               <p className="text-md">Venue: {item.venue}</p>
                             </AccordionContent>
@@ -217,7 +271,9 @@ export default function Schedule() {
                             key={index}
                             value={`highschool-${index}`}
                           >
-                            <AccordionTrigger className="font-bold text-white">{`${item.day} - ${item.event}`}</AccordionTrigger>
+                            <AccordionTrigger className="font-bold text-white">
+                              {`${item.day} - ${item.event}`}
+                            </AccordionTrigger>
                             <AccordionContent className="text-white">
                               <p className="text-md">Time: {item.time}</p>
                               <p className="text-md">Venue: {item.venue}</p>
@@ -233,6 +289,8 @@ export default function Schedule() {
           </div>
         </div>
       </div>
+
+      {/* Modal for Enlarged Image */}
       <AnimatePresence>
         {showImageModal && (
           <motion.div
