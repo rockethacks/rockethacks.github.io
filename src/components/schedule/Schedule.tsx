@@ -149,7 +149,7 @@ export default function Schedule() {
     const zoomY = ((mouseY / height) * 100).toFixed(2);
 
     // Increase margin-bottom more than before (e.g., zoomFactor * 50 for more space)
-    const newMarginBottom = zoomFactor > 1 ? zoomFactor * 50 : 0; // Increased the multiplier to 50
+    const newMarginBottom = zoomFactor > 1 ? zoomFactor * 200 : 0; // Increased the multiplier to 50
 
     setZoomStyle({
       transformOrigin: `${zoomX}% ${zoomY}%`,
