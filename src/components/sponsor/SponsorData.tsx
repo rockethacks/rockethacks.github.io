@@ -10,13 +10,13 @@ export const SponsorData: SponsorType[] = [
   {
     type: "image",
     src: "/assets/sponsors/College-of-engineering.png",
-    alt: "UT College of Engineering",
+    alt: "University of Toledo College of Engineering",
     link: "https://www.utoledo.edu/engineering/",
   },
   {
     type: "image",
     src: "/assets/sponsors/eecs.png",
-    alt: "UT Department of Electrical Engineering & Computer Science",
+    alt: "University of Toledo Department of Electrical Engineering & Computer Science",
     link: "https://www.utoledo.edu/",
   },
   {
@@ -44,18 +44,24 @@ export const SponsorData: SponsorType[] = [
     link: "https://koolkatscience.net/",
   },
   {
-    type: "icon",
-    icon: "github",
-    alt: "GitHub",
-    link: "https://www.github.com/",
-  },
-  {
     type: "image",
     src: "/assets/sponsors/mercy.svg",
     alt: "Mercy Health",
     link: "https://www.mercy.com/",
   },
+  {
+    type: "icon",
+    icon: "github",
+    alt: "GitHub",
+    link: "https://www.github.com/",
+  },
   { type: "icon", icon: "aws", alt: "AWS", link: "https://aws.amazon.com/" },
+  {
+    type: "image",
+    src: "/assets/sponsors/vercel.png",
+    alt: "Vercel",
+    link: "https://vercel.com/",
+  },
   {
     type: "image",
     src: "/assets/sponsors/codeecho.svg",
@@ -73,6 +79,12 @@ export const SponsorData: SponsorType[] = [
     src: "/assets/sponsors/warp.png",
     alt: "Warp Terminal",
     link: "https://www.warp.dev/",
+  },
+  {
+    type: "image",
+    src: "/assets/sponsors/Mistral2.png",
+    alt: "Mistral AI",
+    link: "https://www.mistral.ai/",
   },
   {
     type: "image",

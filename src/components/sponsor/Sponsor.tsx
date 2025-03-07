@@ -24,7 +24,7 @@ const Sponsor: React.FC<SponsorProps> = ({ sponsors }) => {
     <div>
       <section
         id="sponsor"
-        className="sponsor bg-gradient-to-b from-[#081d41] from-10% to-[#030c1b] to-80% text-white py-16 px-5 md:px-10 xl:py-20 xl:px-[300px]"
+        className="sponsor bg-gradient-to-b from-[#051735] from-10% to-[#030c1b] to-80% text-white py-16 px-5 md:px-10 xl:py-10 xl:px-[300px]"
       >
         <div className="text-center">
           <h2
@@ -53,11 +53,7 @@ const Sponsor: React.FC<SponsorProps> = ({ sponsors }) => {
                     height={180}
                     className={`hover:scale-110 transition-transform duration-300 object-contain ${
                       sponsor.src.includes("xyz") ? "w-28 h-28" : ""
-                    } ${sponsor.src.includes("spoke") ? "bg-white p-3" : ""} ${
-                      sponsor.src.includes("College-of-engineering")
-                        ? "bg-white p-3"
-                        : ""
-                    } ${sponsor.src.includes("eecs") ? "bg-white p-3" : ""}`}
+                    } ${sponsor.src.includes("spoke") ? "bg-white p-3" : ""}`}
                   />
                 ) : sponsor.type === "icon" ? (
                   sponsor.icon === "github" ? (
@@ -88,11 +84,7 @@ const Sponsor: React.FC<SponsorProps> = ({ sponsors }) => {
                     height={180}
                     className={`hover:scale-110 transition-transform duration-300 object-contain ${
                       sponsor.src.includes("xyz") ? "w-28 h-28" : ""
-                    } ${sponsor.src.includes("spoke") ? "bg-white p-3" : ""}  ${
-                      sponsor.src.includes("College-of-engineering")
-                        ? "bg-white p-3"
-                        : ""
-                    } ${sponsor.src.includes("eecs") ? "bg-white p-3" : ""}`}
+                    } ${sponsor.src.includes("spoke") ? "bg-white p-3" : ""}`}
                   />
                 ) : sponsor.type === "icon" ? (
                   sponsor.icon === "github" ? (

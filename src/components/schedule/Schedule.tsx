@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import * as Tabs from "@radix-ui/react-tabs";
 import {
@@ -105,22 +105,80 @@ export default function Schedule() {
   const [selectedTab, setSelectedTab] = useState("college");
   const [selectedCollegeDay, setSelectedCollegeDay] = useState("Day 1");
   const [showImageModal, setShowImageModal] = useState(false);
+  const [zoomStyle, setZoomStyle] = useState({});
+  const [mapMarginBottom, setMapMarginBottom] = useState(0);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  // Declare mapRef before use
+  const mapRef = useRef<HTMLImageElement | null>(null);
 
   const filteredCollegeSchedule = collegeSchedule.filter(
     (item) => item.day === selectedCollegeDay
   );
 
+  // Check screen size on mount and window resize
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024); // 1024px is the typical breakpoint for lg screens
+    };
+
+    checkScreenSize(); // Check size initially
+    window.addEventListener("resize", checkScreenSize); // Check on resize
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize); // Clean up on unmount
+    };
+  }, []);
+
+  // Calculate zoom and position based on mouse location (only for lg+ screens)
+  const handleMouseMove = (e: React.MouseEvent<HTMLImageElement>) => {
+    if (!mapRef.current || !isLargeScreen) return; // Only run on large screens
+
+    const { left, top, width, height } = mapRef.current.getBoundingClientRect();
+    const mouseX = e.clientX - left;
+    const mouseY = e.clientY - top;
+
+    // Only apply zoom effect if the mouse is inside the image
+    if (mouseX < 0 || mouseY < 0 || mouseX > width || mouseY > height) {
+      return;
+    }
+
+    // Adjust the zoom level and map position based on mouse position
+    const zoomFactor = 2; // Adjust the zoom level here
+    const zoomX = ((mouseX / width) * 100).toFixed(2);
+    const zoomY = ((mouseY / height) * 100).toFixed(2);
+
+    // Increase margin-bottom more than before (e.g., zoomFactor * 50 for more space)
+    const newMarginBottom = zoomFactor > 1 ? zoomFactor * 200 : 0; // Increased the multiplier to 50
+
+    setZoomStyle({
+      transformOrigin: `${zoomX}% ${zoomY}%`,
+      transform: `scale(${zoomFactor})`,
+      transition: "transform 0.3s ease-in-out",
+    });
+
+    setMapMarginBottom(newMarginBottom); // Set margin-bottom dynamically based on zoom factor
+  };
+
+  // Reset zoom when mouse leaves
+  const handleMouseLeave = () => {
+    setZoomStyle({});
+    setMapMarginBottom(0); // Reset margin when zoom is removed
+  };
+
   return (
-    <section id="schedule">
-      <div className="h-screen bg-cover bg-center relative bg-gradient-to-b from-[#030c1b] to-80% to-[#030c1b]/50 from-28% mb-20 mt-20">
-        <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-6 px-4">
+    <section id="schedule" className="mb-20">
+      <div className="h-auto bg-cover bg-center bg-gradient-to-b from-[#030c1b] to-80% to-[#030c1b]/50 px-4 py-8">
+        <div className="flex flex-col items-center justify-center gap-6">
           <div className="w-full md:w-1/2 flex justify-center items-center">
-            <Image
+            <img
+              ref={mapRef}
               src="/COE_MAP_2.png"
               alt="Event illustration"
-              width={700}
-              height={700}
-              className="object-cover rounded-lg shadow-lg cursor-pointer  border-blue-600 border-2 p-5`"
+              className="object-cover rounded-lg shadow-lg cursor-pointer p-5"
+              style={{ ...zoomStyle, marginBottom: `${mapMarginBottom}px` }} // Apply marginBottom dynamically
+              onMouseMove={handleMouseMove} // Detect mouse position
+              onMouseLeave={handleMouseLeave} // Reset zoom when mouse leaves
               onClick={() => setShowImageModal(true)}
             />
           </div>
@@ -153,7 +211,7 @@ export default function Schedule() {
                   Code & Create
                 </Tabs.Trigger>
               </Tabs.List>
-              <div className="relative overflow-hidden">
+              <div className="overflow-hidden">
                 <AnimatePresence mode="wait">
                   {selectedTab === "college" ? (
                     <motion.div
@@ -233,6 +291,8 @@ export default function Schedule() {
           </div>
         </div>
       </div>
+
+      {/* Modal for Enlarged Image */}
       <AnimatePresence>
         {showImageModal && (
           <motion.div
@@ -252,9 +312,9 @@ export default function Schedule() {
               <Image
                 src="/COE_MAP_2.png"
                 alt="Enlarged Event illustration"
-                width={1000}
-                height={1000}
-                className="object-contain rounded-lg shadow-xl"
+                width={1500}
+                height={1500}
+                className="object-contain rounded-lg shadow-xl mb-28 mx-auto"
               />
             </motion.div>
           </motion.div>
