@@ -44,18 +44,24 @@ export const SponsorData: SponsorType[] = [
     link: "https://koolkatscience.net/",
   },
   {
-    type: "icon",
-    icon: "github",
-    alt: "GitHub",
-    link: "https://www.github.com/",
-  },
-  {
     type: "image",
     src: "/assets/sponsors/mercy.svg",
     alt: "Mercy Health",
     link: "https://www.mercy.com/",
   },
+  {
+    type: "icon",
+    icon: "github",
+    alt: "GitHub",
+    link: "https://www.github.com/",
+  },
   { type: "icon", icon: "aws", alt: "AWS", link: "https://aws.amazon.com/" },
+  {
+    type: "image",
+    src: "/assets/sponsors/vercel.png",
+    alt: "Vercel",
+    link: "https://vercel.com/",
+  },
   {
     type: "image",
     src: "/assets/sponsors/codeecho.svg",
@@ -73,6 +79,12 @@ export const SponsorData: SponsorType[] = [
     src: "/assets/sponsors/warp.png",
     alt: "Warp Terminal",
     link: "https://www.warp.dev/",
+  },
+  {
+    type: "image",
+    src: "/assets/sponsors/Mistral2.png",
+    alt: "Mistral AI",
+    link: "https://www.mistral.ai/",
   },
   {
     type: "image",
