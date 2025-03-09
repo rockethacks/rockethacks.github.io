@@ -65,7 +65,7 @@ const teamSections = [
   {
     section: "Judging",
     members: [
-      { name: "Finni", img: "/team photos/Finni.jpg", link: "https://www.linkedin.com/in/finni-sam-saju-40a876296/" },
+      { name: "Finni", img: "/team photos/finni.jpg", link: "https://www.linkedin.com/in/finni-sam-saju-40a876296/" },
     ],
   },
   {
