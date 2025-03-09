@@ -45,8 +45,8 @@ const teamSections = [
     members: [
       { name: "Aditya", img: "/team photos/aditya-tech dev.jpg", link: "https://www.linkedin.com/in/aditya-mhambrey/" },
       { name: "Shivom", img: "/team photos/shivom.jpg", link: "https://www.linkedin.com/in/shivom-vr/" },
-      { name: "Pranav", img: "/team photos/pranav.jpg", link: "#" },
-      { name: "Charlie", img: "/team photos/charlie.png", link: "#" },
+      { name: "Pranav", img: "/team photos/pranav.jpg", link: "https://www.linkedin.com/in/justprnv/" },
+      { name: "Charlie", img: "/team photos/charlie.png", link: "https://www.linkedin.com/in/charles-voss-7172232bb/" },
     ],
   },
   {
@@ -59,7 +59,7 @@ const teamSections = [
   {
     section: "Judging Lead",
     members: [
-      { name: "Aditya", img: "/team photos/aditya2.jpg", link: "#" },
+      { name: "Aditya", img: "/team photos/aditya2.jpg", link: "https://www.linkedin.com/in/adithya-sudhakar-680681334/" },
     ],
   },
   {
