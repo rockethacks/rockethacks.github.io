@@ -32,12 +32,14 @@ function FAQ() {
             >
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
-                  <AccordionTrigger>What is a Hackathon?</AccordionTrigger>
-                  <AccordionContent>
-                    A hackathon is an event where individuals or teams
+                  <AccordionTrigger>What is Rocket Hacks?</AccordionTrigger>
+                  <AccordionContent>                   
+                    Rocket Hacks is an event where individuals or teams
                     collaborate intensively on software development or hardware
-                    projects, typically within a fixed time frame (e.g., 24-48
-                    hours). It{"'"}s an opportunity to learn, create, and
+                    projects, typically within 24 hours. The event will start on
+                    Saturday, March 15, 2025 and end on Sunday, March 16, 2025.
+                    However there is additional time before and after hacking
+                    for introductions and presentations.It{"'"}s an opportunity to learn, create, and
                     innovate while competing with other teams.
                   </AccordionContent>
                 </AccordionItem>
@@ -116,7 +118,7 @@ function FAQ() {
                     cost!
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-9">
+                <AccordionItem value="item-7">
                   <AccordionTrigger>Should I expect a waiver?</AccordionTrigger>
                   <AccordionContent>
                     You betcha. Before any hacking begins we require you to sign
@@ -125,7 +127,7 @@ function FAQ() {
                     you will need a parent or legal guardian to sign the waiver.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-10">
+                <AccordionItem value="item-8">
                   <AccordionTrigger>
                     Is there a Code of Conduct?
                   </AccordionTrigger>
@@ -135,7 +137,7 @@ function FAQ() {
                     hackers.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-11">
+                <AccordionItem value="item-9">
                   <AccordionTrigger>
                     What if I have more questions?
                   </AccordionTrigger>

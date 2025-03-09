@@ -57,6 +57,7 @@ export default function Navbar() {
             {" "}
             CODE & CREATE{" "}
           </Link>
+          <Link href="/team">MEET THE TEAM</Link>
         </div>
       </div>
 
@@ -88,6 +89,9 @@ export default function Navbar() {
             </Link>
             <Link href="#faq" onClick={toggleMenu}>
               FAQ
+            </Link>
+            <Link href="/team" onClick={toggleMenu}>
+              Meet The Team
             </Link>
           </div>
         </div>
