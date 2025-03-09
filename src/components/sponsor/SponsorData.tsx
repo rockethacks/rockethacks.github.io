@@ -50,6 +50,12 @@ export const SponsorData: SponsorType[] = [
     link: "https://www.mercy.com/",
   },
   {
+    type: "image",
+    src: "/assets/sponsors/cdw.png",
+    alt: "CDW",
+    link: "https://www.cdw.com/",
+  },
+  {
     type: "icon",
     icon: "github",
     alt: "GitHub",
