@@ -84,6 +84,7 @@ const teamSections = [
     members: [
       { name: "Ann", img: "/team photos/ann.jpg", link: "https://www.linkedin.com/in/ann-treasa-sojan-4380b72b6/" },
       { name: "Bhumika", img: "/team photos/bhumika.jpg", link: "https://www.linkedin.com/in/bhumika-agarwal27" },
+      { name: "Shubham", img: "/team photos/shubham.jpg", link: "linkedin.com/in/shubham-verma-cse" },
     ],
   },
   {
