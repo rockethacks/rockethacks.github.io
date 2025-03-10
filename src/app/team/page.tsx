@@ -16,7 +16,6 @@ const teamSections = [
   {
     section: "Co-director",
     members: [
-
       { name: "Aadinath", img: "/team photos/aadi.jpg", link: "https://www.linkedin.com/in/aadinath-sanjeev-686205201/" },
       { name: "Kavish", img: "/team photos/kavish.jpg", link: "https://www.linkedin.com/in/kshetty3/" },
     ],
@@ -95,10 +94,8 @@ const teamSections = [
   },
 ];
 
-// Flatten the team data into one array.
-// We use the section name as the position for each member.
-const teamMembers = teamSections.flatMap(section =>
-  section.members.map(member => ({
+const teamMembers = teamSections.flatMap((section) =>
+  section.members.map((member) => ({
     ...member,
     position: section.section,
   }))
@@ -135,6 +132,15 @@ export default function TeamPage() {
               <p className="text-center text-gray-300">{member.position}</p>
             </Link>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <Link
+            href="/"
+            className="bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-yellow-600 transition-colors"
+          >
+            Back to Home
+          </Link>
         </div>
       </section>
     </main>

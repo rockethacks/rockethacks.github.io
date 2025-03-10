@@ -94,6 +94,12 @@ export const SponsorData: SponsorType[] = [
   },
   {
     type: "image",
+    src: "/assets/sponsors/orielly.svg",
+    alt: "O'Reilly",
+    link: "https://www.oreilly.com/",
+  },
+  {
+    type: "image",
     src: "/assets/sponsors/Hugging-face.png",
     alt: "Hugging Face",
     link: "https://huggingface.co/",
