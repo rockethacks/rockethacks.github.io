@@ -58,7 +58,7 @@ const teamSections = [
   {
     section: "Judging Lead",
     members: [
-      { name: "Aditya", img: "/team photos/aditya2.jpg", link: "https://www.linkedin.com/in/adithya-sudhakar-680681334/" },
+      { name: "Adithya", img: "/team photos/aditya2.jpg", link: "https://www.linkedin.com/in/adithya-sudhakar-680681334/" },
     ],
   },
   {
@@ -104,7 +104,7 @@ const teamMembers = teamSections.flatMap((section) =>
 
 export default function TeamPage() {
   return (
-    <main className="bg-[#081d41] text-white min-h-screen w-screen m-0 p-0">
+    <main className="bg-gradient-to-b from-[#030c1b] from-20% to-[#051735] to-40% text-white min-h-screen w-screen m-0 p-0">
       <section className="py-12 px-6">
         <h1
           className={`${terminal.className} text-6xl font-bold text-center mb-12 text-[#FFDA20]`}
