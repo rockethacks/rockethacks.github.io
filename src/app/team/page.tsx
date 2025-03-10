@@ -74,7 +74,7 @@ const teamSections = [
     ],
   },
   {
-    section: "Co-Marketing Lead",
+    section: "Marketing Co-Lead",
     members: [
       { name: "Ayan", img: "/team photos/ayan.jpg", link: "https://www.linkedin.com/in/mirza-ayan-baig-0159162a9/" },
     ],
