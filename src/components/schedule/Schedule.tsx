@@ -38,8 +38,39 @@ const collegeSchedule = [
     event: "Hacking Starts!",
     venue: "Nitschke Hallway",
   },
+  {
+    day: "Day 1",
+    time: "11:00 AM",
+    event: "Nosu - Hacking Hackathons",
+    venue: "EECS 1320",
+  },
+{
+  day: "Day 1",
+  time: "12:00 PM",
+  event: "AWS - Generative AI based full-stack application",
+  venue: "EECS 1039",
+},
   { day: "Day 1", time: "12:30 PM", event: "Lunch", venue: "Node" },
+  {
+    day: "Day 1",
+    time: "01:00 PM",
+    event: "Actual Reality LLM Workshop",
+    venue: "EECS 1320",
+  },
+  {
+    day: "Day 1",
+    time: "01:00 PM",
+    event: "Perplexity Deepseek R1 Workshop",
+    venue: "EECS 1340",
+  },
+  {
+    day: "Day 1",
+    time: "02:00 PM",
+    event: "MLH Co-pilot Workshop",
+    venue: "EECS 1039",
+  },
   { day: "Day 1", time: "07:00 PM", event: "Dinner by SPOKE", venue: "Node" },
+  { day: "Day 2", time: "12:00 AM", event: "F1 WatchParty", venue: "EECS Lounge" },
   { day: "Day 2", time: "08:00 AM", event: "Breakfast", venue: "Node" },
   {
     day: "Day 2",
@@ -96,7 +127,7 @@ const highSchoolSchedule = [
   {
     day: "Day 1",
     time: "02:00 PM",
-    event: "Judging",
+    event: "Judging and Award Ceremony",
     venue: "North Engineering 2100",
   },
 ];

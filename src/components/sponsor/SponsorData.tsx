@@ -82,15 +82,21 @@ export const SponsorData: SponsorType[] = [
   },
   {
     type: "image",
-    src: "/assets/sponsors/warp.png",
-    alt: "Warp Terminal",
-    link: "https://www.warp.dev/",
-  },
-  {
-    type: "image",
     src: "/assets/sponsors/Mistral2.png",
     alt: "Mistral AI",
     link: "https://www.mistral.ai/",
+  },
+  {
+    type: "image",
+    src: "/assets/sponsors/sprintlogo.png",
+    alt: "Sprint.Dev",
+    link: "https://www.sprint.dev/",
+  },
+  {
+    type: "image",
+    src: "/assets/sponsors/warp.png",
+    alt: "Warp Terminal",
+    link: "https://www.warp.dev/",
   },
   {
     type: "image",
