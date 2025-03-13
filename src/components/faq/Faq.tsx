@@ -118,7 +118,7 @@ function FAQ() {
                     cost!
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-7">
+                <AccordionItem value="item-9">
                   <AccordionTrigger>Should I expect a waiver?</AccordionTrigger>
                   <AccordionContent>
                     You betcha. Before any hacking begins we require you to sign
@@ -127,7 +127,7 @@ function FAQ() {
                     you will need a parent or legal guardian to sign the waiver.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-8">
+                <AccordionItem value="item-10">
                   <AccordionTrigger>
                     Is there a Code of Conduct?
                   </AccordionTrigger>
@@ -137,7 +137,7 @@ function FAQ() {
                     hackers.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-9">
+                <AccordionItem value="item-11">
                   <AccordionTrigger>
                     What if I have more questions?
                   </AccordionTrigger>
