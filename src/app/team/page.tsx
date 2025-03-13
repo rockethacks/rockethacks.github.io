@@ -14,7 +14,7 @@ const teamSections = [
     ],
   },
   {
-    section: "Co-director",
+    section: "Co-Director",
     members: [
       { name: "Aadinath", img: "/team photos/aadi.jpg", link: "https://www.linkedin.com/in/aadinath-sanjeev-686205201/" },
       { name: "Kavish", img: "/team photos/kavish.jpg", link: "https://www.linkedin.com/in/kshetty3/" },
@@ -27,20 +27,20 @@ const teamSections = [
     ],
   },
   {
-    section: "Sponsorship",
+    section: "Sponsorship Team",
     members: [
       { name: "Maheen", img: "/team photos/maheen.jpg", link: "https://www.linkedin.com/in/maheenasim?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
       { name: "Kartik", img: "/team photos/karthik.jpg", link: "https://www.linkedin.com/in/kartik-nair-b290b72b6/" },
     ],
   },
   {
-    section: "Techdev Lead",
+    section: "Tech-Dev Lead",
     members: [
       { name: "Vedant", img: "/team photos/vedant.png", link: "https://www.linkedin.com/in/vedantgosavi/" },
     ],
   },
   {
-    section: "Techdev",
+    section: "Tech-Dev",
     members: [
       { name: "Aditya", img: "/team photos/aditya-tech dev.jpg", link: "https://www.linkedin.com/in/aditya-mhambrey/" },
       { name: "Shivom", img: "/team photos/shivom.jpg", link: "https://www.linkedin.com/in/shivom-vr/" },
@@ -49,7 +49,7 @@ const teamSections = [
     ],
   },
   {
-    section: "Safety",
+    section: "Safety Team",
     members: [
       { name: "Shaan", img: "/team photos/shaan.png", link: "https://www.linkedin.com/in/shaankagadagar/" },
       { name: "Nandan", img: "/team photos/nandan.jpg", link: "https://www.linkedin.com/in/nandanreddy15/" },
@@ -62,7 +62,7 @@ const teamSections = [
     ],
   },
   {
-    section: "Judging",
+    section: "Judging Team",
     members: [
       { name: "Finni", img: "/team photos/finni.jpg", link: "https://www.linkedin.com/in/finni-sam-saju-40a876296/" },
     ],
@@ -88,7 +88,7 @@ const teamSections = [
     ],
   },
   {
-    section: "High-school Planning",
+    section: "High-School Planning",
     members: [
       { name: "Insiyah", img: "/team photos/insiyah.jpg", link: "https://www.linkedin.com/in/irajkot1106/" },
     ],
