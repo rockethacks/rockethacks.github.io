@@ -51,6 +51,12 @@ export const SponsorData: SponsorType[] = [
   },
   {
     type: "image",
+    src: "/assets/sponsors/firstsolar.png",
+    alt: "First Solar",
+    link: "https://www.firstsolar.com/",
+  },
+  {
+    type: "image",
     src: "/assets/sponsors/cdw-education.png",
     alt: "CDW",
     link: "https://www.cdw.com/",
