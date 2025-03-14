@@ -45,7 +45,7 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger Menu for Mobile */}
-        <div className="inline-block lg:hidden z-30">
+        <div className="inline-block md:hidden z-30">
           <button
             onClick={toggleMenu}
             className="text-white focus:outline-none"
@@ -56,7 +56,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className="space-x-10 hidden lg:block lg:mr-20 font-medium">
+        <div className="space-x-10 hidden md:block lg:mr-20 font-medium">
           {navLinks.map((link, index) => (
             <Link
               key={index}
