@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import * as Tabs from "@radix-ui/react-tabs";
 import {
@@ -137,10 +137,6 @@ export default function Schedule() {
   const [selectedTab, setSelectedTab] = useState("college");
   const [selectedCollegeDay, setSelectedCollegeDay] = useState("Day 1");
   const [showImageModal, setShowImageModal] = useState(false);
-  const [zoomStyle, setZoomStyle] = useState({});
-  const [mapMarginBottom, setMapMarginBottom] = useState(0);
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
-
   const filteredCollegeSchedule = collegeSchedule.filter(
     (item) => item.day === selectedCollegeDay
   );
