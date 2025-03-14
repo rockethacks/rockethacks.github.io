@@ -1,5 +1,6 @@
 import React from "react";
 import { terminal } from "@/app/fonts/fonts";
+import Image from "next/image";
 
 export const Prizes = () => {
     return (
@@ -15,7 +16,9 @@ export const Prizes = () => {
                         PRIZES
                     </h2>
                 </div>
-                <div className="mt-5"></div>
+                <div className="mt-5 w-96 md:w-2/3 mx-auto">
+                    <Image src={"/assets/Prizes.gif"} width={1915} height={1800} alt="Prizes" />
+                </div>
 
             </section>
         </div>
