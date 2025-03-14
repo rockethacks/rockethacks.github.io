@@ -34,7 +34,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-[#030c1b]/[0.97] backdrop-blur-sm text-white text-base sticky top-0 z-20 shadow-xl">
+    <nav className="bg-gradient-to-r from-[#030c1b] to-[#030c1b] lg:from-[#030c1b]/[0.98] lg:to-90% lg:to-[#06142e]/[0.98] backdrop-blur-sm shadow-lg text-white text-base sticky top-0 z-20">
       {/* Logo and Hamburger Menu */}
       <div className="container flex justify-around sm:justify-between sm:mx-auto md:justify-center md:space-x-20 items-center h-[3.8rem]">
         {/* Logo */}
