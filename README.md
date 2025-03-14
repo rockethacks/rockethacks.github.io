@@ -1,4 +1,4 @@
-# Rockethacks Hackathon Website
+# Rockethacks Website
 ![image](https://github.com/Shivom2110/rockethacks.github.io/blob/main/public/rockethacks.png)
 ![image](https://github.com/Shivom2110/rockethacks.github.io/blob/main/public/meet-the-team.png)
 
