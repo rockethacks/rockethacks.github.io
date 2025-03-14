@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import * as Tabs from "@radix-ui/react-tabs";
 import {
@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/accordion";
 import localFont from "next/font/local";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
 
@@ -44,12 +45,12 @@ const collegeSchedule = [
     event: "Nosu - Hacking Hackathons Workshop",
     venue: "EECS 1320",
   },
-{
-  day: "Day 1",
-  time: "12:00 PM",
-  event: "AWS - Gen AI Full-Stack App. Workshop",
-  venue: "EECS 1039",
-},
+  {
+    day: "Day 1",
+    time: "12:00 PM",
+    event: "AWS - Gen AI Full-Stack App. Workshop",
+    venue: "EECS 1039",
+  },
   { day: "Day 1", time: "12:30 PM", event: "Lunch", venue: "Node" },
   {
     day: "Day 1",
@@ -135,83 +136,25 @@ const highSchoolSchedule = [
 export default function Schedule() {
   const [selectedTab, setSelectedTab] = useState("college");
   const [selectedCollegeDay, setSelectedCollegeDay] = useState("Day 1");
-  const [showImageModal, setShowImageModal] = useState(false);
-  const [zoomStyle, setZoomStyle] = useState({});
-  const [mapMarginBottom, setMapMarginBottom] = useState(0);
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
-
-  // Declare mapRef before use
-  const mapRef = useRef<HTMLImageElement | null>(null);
-
   const filteredCollegeSchedule = collegeSchedule.filter(
     (item) => item.day === selectedCollegeDay
   );
 
-  // Check screen size on mount and window resize
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsLargeScreen(window.innerWidth >= 1024); // 1024px is the typical breakpoint for lg screens
-    };
-
-    checkScreenSize(); // Check size initially
-    window.addEventListener("resize", checkScreenSize); // Check on resize
-
-    return () => {
-      window.removeEventListener("resize", checkScreenSize); // Clean up on unmount
-    };
-  }, []);
-
-  // Calculate zoom and position based on mouse location (only for lg+ screens)
-  const handleMouseMove = (e: React.MouseEvent<HTMLImageElement>) => {
-    if (!mapRef.current || !isLargeScreen) return; // Only run on large screens
-
-    const { left, top, width, height } = mapRef.current.getBoundingClientRect();
-    const mouseX = e.clientX - left;
-    const mouseY = e.clientY - top;
-
-    // Only apply zoom effect if the mouse is inside the image
-    if (mouseX < 0 || mouseY < 0 || mouseX > width || mouseY > height) {
-      return;
-    }
-
-    // Adjust the zoom level and map position based on mouse position
-    const zoomFactor = 2; // Adjust the zoom level here
-    const zoomX = ((mouseX / width) * 100).toFixed(2);
-    const zoomY = ((mouseY / height) * 100).toFixed(2);
-
-    // Increase margin-bottom more than before (e.g., zoomFactor * 50 for more space)
-    const newMarginBottom = zoomFactor > 1 ? zoomFactor * 200 : 0; // Increased the multiplier to 50
-
-    setZoomStyle({
-      transformOrigin: `${zoomX}% ${zoomY}%`,
-      transform: `scale(${zoomFactor})`,
-      transition: "transform 0.3s ease-in-out",
-    });
-
-    setMapMarginBottom(newMarginBottom); // Set margin-bottom dynamically based on zoom factor
-  };
-
-  // Reset zoom when mouse leaves
-  const handleMouseLeave = () => {
-    setZoomStyle({});
-    setMapMarginBottom(0); // Reset margin when zoom is removed
-  };
-
   return (
     <section id="schedule" className="mb-20">
-      <div className="h-auto bg-cover bg-center bg-gradient-to-b from-[#030c1b] to-80% to-[#030c1b]/50 px-4 py-8">
+      <div className="h-auto bg-cover bg-center bg-gradient-to-b from-[#051735] from-10%  to-80% to-[#030c1b]/50 px-4 py-8">
         <div className="flex flex-col items-center justify-center gap-6">
-          <div className="w-full md:w-1/2 flex justify-center items-center">
-            <img
-              ref={mapRef}
-              src="/COE_MAP_2.png"
-              alt="Event illustration"
-              className="object-cover rounded-lg shadow-lg cursor-pointer p-5"
-              style={{ ...zoomStyle, marginBottom: `${mapMarginBottom}px` }} // Apply marginBottom dynamically
-              onMouseMove={handleMouseMove} // Detect mouse position
-              onMouseLeave={handleMouseLeave} // Reset zoom when mouse leaves
-              onClick={() => setShowImageModal(true)}
-            />
+          <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
+            <h1 className={`${terminal.className} text-4xl md:text-6xl text-[#FFDA20] text-center mt-5`}>EVENT MAP</h1>
+            <Link href="/Map" target="_blank" rel="noopener noreferrer" aria-label="Event Map" prefetch={true}>
+              <Image
+                src="/COE_MAP_2.png"
+                width={2000}
+                height={1501}
+                alt="Event illustration"
+                className="object-cover rounded-lg cursor-pointer" data-tooltip="Click to expand"
+              />
+            </Link>
           </div>
           <div
             className={`${terminal.className} text-white w-full md:w-1/2 bg-slate-950/30 backdrop-blur-sm border-blue-600 border-2 rounded-md p-5`}
@@ -223,21 +166,19 @@ export default function Schedule() {
               <Tabs.List className="flex justify-center space-x-4 mb-4 border-b border-gray-500">
                 <Tabs.Trigger
                   value="college"
-                  className={`px-6 py-3 text-2xl md:text-3xl font-bold border-b-2 ${
-                    selectedTab === "college"
-                      ? "border-yellow-400"
-                      : "border-transparent"
-                  } transition`}
+                  className={`px-6 py-3 text-2xl md:text-3xl font-bold border-b-2 ${selectedTab === "college"
+                    ? "border-yellow-400"
+                    : "border-transparent"
+                    } transition`}
                 >
                   RocketHacks
                 </Tabs.Trigger>
                 <Tabs.Trigger
                   value="highschool"
-                  className={`px-6 py-3 text-2xl md:text-3xl font-bold border-b-2 ${
-                    selectedTab === "highschool"
-                      ? "border-yellow-400"
-                      : "border-transparent"
-                  } transition`}
+                  className={`px-6 py-3 text-2xl md:text-3xl font-bold border-b-2 ${selectedTab === "highschool"
+                    ? "border-yellow-400"
+                    : "border-transparent"
+                    } transition`}
                 >
                   Code & Create
                 </Tabs.Trigger>
@@ -255,21 +196,19 @@ export default function Schedule() {
                       <div className="flex justify-center space-x-4 mb-4">
                         <button
                           onClick={() => setSelectedCollegeDay("Day 1")}
-                          className={`px-4 py-2 rounded ${
-                            selectedCollegeDay === "Day 1"
-                              ? "bg-yellow-400 text-black text-xl"
-                              : "bg-transparent border border-white text-white"
-                          } transition`}
+                          className={`px-4 py-2 rounded ${selectedCollegeDay === "Day 1"
+                            ? "bg-yellow-400 text-black text-xl"
+                            : "bg-transparent border border-white text-white"
+                            } transition`}
                         >
                           Day 1
                         </button>
                         <button
                           onClick={() => setSelectedCollegeDay("Day 2")}
-                          className={`px-4 py-2 rounded ${
-                            selectedCollegeDay === "Day 2"
-                              ? "bg-yellow-400 text-black text-xl"
-                              : "bg-transparent border border-white text-white"
-                          } transition`}
+                          className={`px-4 py-2 rounded ${selectedCollegeDay === "Day 2"
+                            ? "bg-yellow-400 text-black text-xl"
+                            : "bg-transparent border border-white text-white"
+                            } transition`}
                         >
                           Day 2
                         </button>
@@ -323,34 +262,6 @@ export default function Schedule() {
         </div>
       </div>
 
-      {/* Modal for Enlarged Image */}
-      <AnimatePresence>
-        {showImageModal && (
-          <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            onClick={() => setShowImageModal(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Image
-                src="/COE_MAP_2.png"
-                alt="Enlarged Event illustration"
-                width={1500}
-                height={1500}
-                className="object-contain rounded-lg shadow-xl mb-28 mx-auto"
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 }

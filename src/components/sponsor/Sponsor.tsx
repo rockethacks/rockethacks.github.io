@@ -2,9 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { FaAws } from "react-icons/fa";
 import { DiGithubFull } from "react-icons/di";
-import localFont from "next/font/local";
-
-const terminal = localFont({ src: "../../app/fonts/terminal-grotesque.ttf" });
+import { terminal } from "@/app/fonts/fonts";
 
 // defining SponsorType and SponsorProps
 export type SponsorType = {
@@ -51,9 +49,8 @@ const Sponsor: React.FC<SponsorProps> = ({ sponsors }) => {
                     alt={sponsor.alt}
                     width={180}
                     height={180}
-                    className={`hover:scale-110 transition-transform duration-300 object-contain ${
-                      sponsor.src.includes("xyz") ? "w-28 h-28" : ""
-                    } ${sponsor.src.includes("spoke") ? "bg-white p-3" : ""}`}
+                    className={`hover:scale-110 transition-transform duration-300 object-contain ${sponsor.src.includes("xyz") ? "w-28 h-28" : ""
+                      } ${sponsor.src.includes("spoke") ? "bg-white p-3" : ""}`}
                   />
                 ) : sponsor.type === "icon" ? (
                   sponsor.icon === "github" ? (
@@ -82,9 +79,8 @@ const Sponsor: React.FC<SponsorProps> = ({ sponsors }) => {
                     alt={sponsor.alt}
                     width={180}
                     height={180}
-                    className={`hover:scale-110 transition-transform duration-300 object-contain ${
-                      sponsor.src.includes("xyz") ? "w-28 h-28" : ""
-                    } ${sponsor.src.includes("spoke") ? "bg-white p-3" : ""}`}
+                    className={`hover:scale-110 transition-transform duration-300 object-contain ${sponsor.src.includes("xyz") ? "w-28 h-28" : ""
+                      } ${sponsor.src.includes("spoke") ? "bg-white p-3" : ""}`}
                   />
                 ) : sponsor.type === "icon" ? (
                   sponsor.icon === "github" ? (

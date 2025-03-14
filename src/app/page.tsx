@@ -9,6 +9,7 @@ import Sponsor from "@/components/sponsor/Sponsor";
 import { SponsorData } from "@/components/sponsor/SponsorData";
 import Footer from "@/components/footer/Footer";
 import Contact from "@/components/contact/Contact";
+import { Prizes } from "@/components/prizes/Prizes";
 import Schedule from "@/components/schedule/Schedule";
 /*import Gallery from "@/components/gallery/Gallery";/*/
 
@@ -45,6 +46,7 @@ export default function Home() {
       <Hero />
       <About />
       <Sponsor sponsors={SponsorData} />
+      <Prizes />
       <Schedule />
       {/* <Gallery /> */}
       <Contact />
