@@ -136,7 +136,6 @@ const highSchoolSchedule = [
 export default function Schedule() {
   const [selectedTab, setSelectedTab] = useState("college");
   const [selectedCollegeDay, setSelectedCollegeDay] = useState("Day 1");
-  const [showImageModal, setShowImageModal] = useState(false);
   const filteredCollegeSchedule = collegeSchedule.filter(
     (item) => item.day === selectedCollegeDay
   );
@@ -147,13 +146,13 @@ export default function Schedule() {
         <div className="flex flex-col items-center justify-center gap-6">
           <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
             <h1 className={`${terminal.className} text-4xl md:text-6xl text-[#FFDA20] text-center mt-5`}>EVENT MAP</h1>
-            <Link href="/Map" target="_blank" rel="noopener noreferrer">
+            <Link href="/Map" target="_blank" rel="noopener noreferrer" aria-label="Event Map" prefetch={true}>
               <Image
                 src="/COE_MAP_2.png"
                 width={2000}
                 height={1501}
                 alt="Event illustration"
-                className="object-cover rounded-lg cursor-pointer"
+                className="object-cover rounded-lg cursor-pointer" data-tooltip="Click to expand"
               />
             </Link>
           </div>
@@ -263,34 +262,6 @@ export default function Schedule() {
         </div>
       </div>
 
-      {/* Modal for Enlarged Image */}
-      <AnimatePresence>
-        {showImageModal && (
-          <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            onClick={() => setShowImageModal(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Image
-                src="/COE_MAP_2.png"
-                alt="Enlarged Event illustration"
-                width={1500}
-                height={1500}
-                className="object-contain rounded-lg shadow-xl mb-28 mx-auto"
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 }
