@@ -64,6 +64,7 @@ export default function Navbar() {
               target={link.external ? "_blank" : undefined}
               style={link.href.startsWith('#') ? { scrollBehavior: "smooth" } : undefined}
               onClick={link.external ? toggleMenu : undefined}
+              prefetch={true}
             >
               {link.label}
             </Link>
@@ -81,6 +82,7 @@ export default function Navbar() {
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 onClick={toggleMenu}
+                prefetch={true}
               >
                 {link.mobileLabel}
               </Link>
