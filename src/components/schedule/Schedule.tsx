@@ -44,12 +44,12 @@ const collegeSchedule = [
     event: "Nosu - Hacking Hackathons Workshop",
     venue: "EECS 1320",
   },
-{
-  day: "Day 1",
-  time: "12:00 PM",
-  event: "AWS - Gen AI Full-Stack App. Workshop",
-  venue: "EECS 1039",
-},
+  {
+    day: "Day 1",
+    time: "12:00 PM",
+    event: "AWS - Gen AI Full-Stack App. Workshop",
+    venue: "EECS 1039",
+  },
   { day: "Day 1", time: "12:30 PM", event: "Lunch", venue: "Node" },
   {
     day: "Day 1",
@@ -199,7 +199,7 @@ export default function Schedule() {
 
   return (
     <section id="schedule" className="mb-20">
-      <div className="h-auto bg-cover bg-center bg-gradient-to-b from-[#030c1b] to-80% to-[#030c1b]/50 px-4 py-8">
+      <div className="h-auto bg-cover bg-center bg-gradient-to-b from-[#051735] from-10%  to-80% to-[#030c1b]/50 px-4 py-8">
         <div className="flex flex-col items-center justify-center gap-6">
           <div className="w-full md:w-1/2 flex justify-center items-center">
             <img
@@ -223,21 +223,19 @@ export default function Schedule() {
               <Tabs.List className="flex justify-center space-x-4 mb-4 border-b border-gray-500">
                 <Tabs.Trigger
                   value="college"
-                  className={`px-6 py-3 text-2xl md:text-3xl font-bold border-b-2 ${
-                    selectedTab === "college"
-                      ? "border-yellow-400"
-                      : "border-transparent"
-                  } transition`}
+                  className={`px-6 py-3 text-2xl md:text-3xl font-bold border-b-2 ${selectedTab === "college"
+                    ? "border-yellow-400"
+                    : "border-transparent"
+                    } transition`}
                 >
                   RocketHacks
                 </Tabs.Trigger>
                 <Tabs.Trigger
                   value="highschool"
-                  className={`px-6 py-3 text-2xl md:text-3xl font-bold border-b-2 ${
-                    selectedTab === "highschool"
-                      ? "border-yellow-400"
-                      : "border-transparent"
-                  } transition`}
+                  className={`px-6 py-3 text-2xl md:text-3xl font-bold border-b-2 ${selectedTab === "highschool"
+                    ? "border-yellow-400"
+                    : "border-transparent"
+                    } transition`}
                 >
                   Code & Create
                 </Tabs.Trigger>
@@ -255,21 +253,19 @@ export default function Schedule() {
                       <div className="flex justify-center space-x-4 mb-4">
                         <button
                           onClick={() => setSelectedCollegeDay("Day 1")}
-                          className={`px-4 py-2 rounded ${
-                            selectedCollegeDay === "Day 1"
-                              ? "bg-yellow-400 text-black text-xl"
-                              : "bg-transparent border border-white text-white"
-                          } transition`}
+                          className={`px-4 py-2 rounded ${selectedCollegeDay === "Day 1"
+                            ? "bg-yellow-400 text-black text-xl"
+                            : "bg-transparent border border-white text-white"
+                            } transition`}
                         >
                           Day 1
                         </button>
                         <button
                           onClick={() => setSelectedCollegeDay("Day 2")}
-                          className={`px-4 py-2 rounded ${
-                            selectedCollegeDay === "Day 2"
-                              ? "bg-yellow-400 text-black text-xl"
-                              : "bg-transparent border border-white text-white"
-                          } transition`}
+                          className={`px-4 py-2 rounded ${selectedCollegeDay === "Day 2"
+                            ? "bg-yellow-400 text-black text-xl"
+                            : "bg-transparent border border-white text-white"
+                            } transition`}
                         >
                           Day 2
                         </button>
