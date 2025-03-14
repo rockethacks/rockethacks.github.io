@@ -95,7 +95,7 @@ export default function About() {
                 </p>
               </div>
               <Link
-                href="https://form.jotform.com/250544617215049"
+                href="https://form.jotform.com/rockethacks25/rh25RegForm"
                 target="_blank"
                 aria-label="Apply to be a hacker"
               >
