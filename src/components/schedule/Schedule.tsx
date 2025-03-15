@@ -184,6 +184,17 @@ export default function Schedule() {
                 data-tooltip="Click to expand"
               />
             </Link>
+            <p className="text-white text-lg md:text-xl mt-4 text-center">
+              <span className="font-semibold">Event Address:</span>{" "}
+              <Link
+                href="https://maps.app.goo.gl/xC2YjujFcZfS65PF8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#FFDA20] transition-colors duration-300 underline"
+              >
+                1700 N Westwood Ave, Toledo, OH 43607
+              </Link>
+            </p>
           </div>
           <div
             className={`${terminal.className} text-white w-full md:w-1/2 bg-slate-950/30 backdrop-blur-sm border-blue-600 border-2 rounded-md p-5`}
