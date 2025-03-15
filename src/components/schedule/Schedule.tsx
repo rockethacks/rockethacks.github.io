@@ -70,6 +70,7 @@ const collegeSchedule = [
     event: "MLH - Co-Pilot Workshop",
     venue: "EECS 1039",
   },
+  { day: "Day 1", time: "04:00 PM", event: "Gaming Session", venue: "EECS 2100" },
   { day: "Day 1", time: "07:00 PM", event: "Dinner by SPOKE", venue: "Node" },
   { day: "Day 2", time: "12:00 AM", event: "F1 WatchParty", venue: "EECS Lounge" },
   { day: "Day 2", time: "08:00 AM", event: "Breakfast", venue: "Node" },
