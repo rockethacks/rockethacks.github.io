@@ -59,7 +59,7 @@ export default function Hero() {
               href="https://maps.app.goo.gl/xC2YjujFcZfS65PF8"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl font-bold hover:text-[#FFDA20] transition-colors duration-300 underline"
+              className="text-3xl font-bold hover:text-[#FFDA20] transition-colors duration-300 underline"
             >
               1700 N Westwood Ave, Toledo, OH 43607
             </Link>
