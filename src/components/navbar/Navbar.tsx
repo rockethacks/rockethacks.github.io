@@ -18,7 +18,7 @@ export default function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className="bg-[#030c1b] text-white text-base sticky top-0 z-20 shadow-xl">
+    <nav className="bg-[#030c1b]/[0.97] backdrop-blur-sm text-white text-base sticky top-0 z-20 shadow-md">
       {/* Logo and Hamburger Menu */}
       <div className="container flex justify-around sm:justify-between sm:mx-auto md:justify-center md:space-x-20 items-center h-[3.8rem]">
         {/* Logo */}
