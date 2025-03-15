@@ -82,6 +82,7 @@ const collegeSchedule = [
     event: "George - Intro. to Arduinos Workshop",
     venue: "EECS 1320",
   },
+  { day: "Day 1", time: "04:00 PM", event: "Gaming Session", venue: "EECS 2100" },
   { day: "Day 1", time: "07:00 PM", event: "Dinner by SPOKE", venue: "Node" },
   {
     day: "Day 2",
