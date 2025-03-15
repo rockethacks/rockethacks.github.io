@@ -62,7 +62,7 @@ const collegeSchedule = [
     day: "Day 1",
     time: "01:00 PM",
     event: "Perplexity - Deepseek R1 Workshop",
-    venue: "EECS 1340",
+    venue: "EECS 1300",
   },
   {
     day: "Day 1",
@@ -70,9 +70,26 @@ const collegeSchedule = [
     event: "MLH - Co-Pilot Workshop",
     venue: "EECS 1039",
   },
-  { day: "Day 1", time: "04:00 PM", event: "Gaming Session", venue: "EECS 2100" },
+  {
+    day: "Day 1",
+    time: "03:00 PM",
+    event: "MLH - Figma Workshop",
+    venue: "EECS 1039",
+  },
+  {
+    day: "Day 1",
+    time: "03:00 PM",
+    event: "George - Intro. to Arduinos Workshop",
+    venue: "EECS 1320",
+  },
+  { day: "Day 1", time: "04:00 PM", event: "Gaming Session", venue: "NE 2100" },
   { day: "Day 1", time: "07:00 PM", event: "Dinner by SPOKE", venue: "Node" },
-  { day: "Day 2", time: "12:00 AM", event: "F1 WatchParty", venue: "EECS Lounge" },
+  {
+    day: "Day 2",
+    time: "12:00 AM",
+    event: "F1 WatchParty",
+    venue: "SSOE Room",
+  },
   { day: "Day 2", time: "08:00 AM", event: "Breakfast", venue: "Node" },
   {
     day: "Day 2",
@@ -146,14 +163,25 @@ export default function Schedule() {
       <div className="h-auto bg-cover bg-center bg-gradient-to-b from-[#051735] from-10%  to-80% to-[#030c1b]/50 px-4 py-8">
         <div className="flex flex-col items-center justify-center gap-6">
           <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
-            <h1 className={`${terminal.className} text-4xl md:text-6xl text-[#FFDA20] text-center mt-5`}>EVENT MAP</h1>
-            <Link href="/Map" target="_blank" rel="noopener noreferrer" aria-label="Event Map" prefetch={true}>
+            <h1
+              className={`${terminal.className} text-4xl md:text-6xl text-[#FFDA20] text-center mt-5`}
+            >
+              EVENT MAP
+            </h1>
+            <Link
+              href="/Map"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Event Map"
+              prefetch={true}
+            >
               <Image
                 src="/COE_MAP_2.png"
                 width={2000}
                 height={1501}
                 alt="Event illustration"
-                className="object-cover rounded-lg cursor-pointer" data-tooltip="Click to expand"
+                className="object-cover rounded-lg cursor-pointer"
+                data-tooltip="Click to expand"
               />
             </Link>
           </div>
@@ -167,19 +195,21 @@ export default function Schedule() {
               <Tabs.List className="flex justify-center space-x-4 mb-4 border-b border-gray-500">
                 <Tabs.Trigger
                   value="college"
-                  className={`px-6 py-3 text-2xl md:text-3xl font-bold border-b-2 ${selectedTab === "college"
-                    ? "border-yellow-400"
-                    : "border-transparent"
-                    } transition`}
+                  className={`px-6 py-3 text-2xl md:text-3xl font-bold border-b-2 ${
+                    selectedTab === "college"
+                      ? "border-yellow-400"
+                      : "border-transparent"
+                  } transition`}
                 >
                   RocketHacks
                 </Tabs.Trigger>
                 <Tabs.Trigger
                   value="highschool"
-                  className={`px-6 py-3 text-2xl md:text-3xl font-bold border-b-2 ${selectedTab === "highschool"
-                    ? "border-yellow-400"
-                    : "border-transparent"
-                    } transition`}
+                  className={`px-6 py-3 text-2xl md:text-3xl font-bold border-b-2 ${
+                    selectedTab === "highschool"
+                      ? "border-yellow-400"
+                      : "border-transparent"
+                  } transition`}
                 >
                   Code & Create
                 </Tabs.Trigger>
@@ -197,19 +227,21 @@ export default function Schedule() {
                       <div className="flex justify-center space-x-4 mb-4">
                         <button
                           onClick={() => setSelectedCollegeDay("Day 1")}
-                          className={`px-4 py-2 rounded ${selectedCollegeDay === "Day 1"
-                            ? "bg-yellow-400 text-black text-xl"
-                            : "bg-transparent border border-white text-white"
-                            } transition`}
+                          className={`px-4 py-2 rounded ${
+                            selectedCollegeDay === "Day 1"
+                              ? "bg-yellow-400 text-black text-xl"
+                              : "bg-transparent border border-white text-white"
+                          } transition`}
                         >
                           Day 1
                         </button>
                         <button
                           onClick={() => setSelectedCollegeDay("Day 2")}
-                          className={`px-4 py-2 rounded ${selectedCollegeDay === "Day 2"
-                            ? "bg-yellow-400 text-black text-xl"
-                            : "bg-transparent border border-white text-white"
-                            } transition`}
+                          className={`px-4 py-2 rounded ${
+                            selectedCollegeDay === "Day 2"
+                              ? "bg-yellow-400 text-black text-xl"
+                              : "bg-transparent border border-white text-white"
+                          } transition`}
                         >
                           Day 2
                         </button>
@@ -262,7 +294,6 @@ export default function Schedule() {
           </div>
         </div>
       </div>
-
     </section>
   );
 }
