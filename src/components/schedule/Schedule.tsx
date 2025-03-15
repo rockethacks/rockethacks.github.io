@@ -89,7 +89,7 @@ const collegeSchedule = [
     event: "F1 WatchParty",
     venue: "EECS Lounge",
   },
-  { day: "Day 2", time: "09:00 AM", event: "Breakfast", venue: "Node" },
+  { day: "Day 2", time: "08:00 AM", event: "Breakfast", venue: "Node" },
   {
     day: "Day 2",
     time: "11:00 AM",
