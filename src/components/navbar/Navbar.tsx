@@ -17,29 +17,13 @@ export default function Navbar() {
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  // Navigation links as a constant
-  const navLinks = [
-    { href: "#about", label: "ABOUT US", mobileLabel: "About Us" },
-    { href: "#sponsor", label: "SPONSORS", mobileLabel: "Sponsors" },
-    { href: "#schedule", label: "SCHEDULE", mobileLabel: "Schedule" },
-    { href: "#contact", label: "CONTACT", mobileLabel: "Contact" },
-    { href: "#faq", label: "FAQ", mobileLabel: "FAQ" },
-    {
-      href: "https://forms.gle/RV3DVwCddkDvU5eK8",
-      label: "CODE & CREATE",
-      mobileLabel: "Code & Create",
-      external: true
-    },
-    { href: "/team", label: "TEAM", mobileLabel: "Team" }
-  ];
-
   return (
-    <nav className="bg-gradient-to-r from-[#030c1b] to-[#030c1b] lg:from-[#030c1b]/[0.98] lg:to-90% lg:to-[#06142e]/[0.98] backdrop-blur-sm shadow-lg text-white text-base sticky top-0 z-20">
+    <nav className="bg-[#030c1b] text-white text-base sticky top-0 z-20 shadow-xl">
       {/* Logo and Hamburger Menu */}
       <div className="container flex justify-around sm:justify-between sm:mx-auto md:justify-center md:space-x-20 items-center h-[3.8rem]">
         {/* Logo */}
         <div className="font-bold">
-          <Link href="/">
+          <Link href="/" prefetch={true}>
             <RocketHacks className="h-16 w-auto" />
           </Link>
         </div>
@@ -48,7 +32,7 @@ export default function Navbar() {
         <div className="inline-block md:hidden z-30">
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none"
+            className="text-white focus:outline-none" // Added right margin
             aria-label="Toggle menu"
           >
             {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -57,36 +41,60 @@ export default function Navbar() {
 
         {/* Desktop Navigation Links */}
         <div className="space-x-10 hidden md:block lg:mr-20 font-medium">
-          {navLinks.map((link, index) => (
-            <Link
-              key={index}
-              href={link.href}
-              target={link.external ? "_blank" : undefined}
-              style={link.href.startsWith('#') ? { scrollBehavior: "smooth" } : undefined}
-              onClick={link.external ? toggleMenu : undefined}
-              prefetch={true}
-            >
-              {link.label}
-            </Link>
-          ))}
+          <Link href="#about" style={{ scrollBehavior: "smooth" }} prefetch={true}>
+            ABOUT US
+          </Link>
+          <Link href="#schedule" prefetch={true}>SCHEDULE</Link>
+          <Link href="#sponsor" prefetch={true}>SPONSORS</Link>
+          {/* <Link href="#gallery">GALLERY</Link> */}
+          <Link href="#contact" prefetch={true}>CONTACT</Link>
+          <Link href="#faq" prefetch={true}>FAQ</Link>
+          <Link
+            href="https://forms.gle/RV3DVwCddkDvU5eK8"
+            target="_blank"
+            onClick={toggleMenu}
+            prefetch={true}
+          >
+            {" "}
+            CODE & CREATE{" "}
+          </Link>
+          <Link href="/team" prefetch={true}>MEET THE TEAM</Link>
         </div>
       </div>
 
       {/* Mobile Full-Screen Navigation Menu */}
       {menuOpen && (
-        <div className="bg-[#030c1b]/[99%] text-white inline-block xl:hidden fixed overflow-hidden inset-0 max-h-screen">
+        <div className="bg-[#030c1b]/[99%] text-white inline-block xl:hidden fixed overflow-hidden inset-0  max-h-screen">
           <div className="flex flex-col space-y-10 items-center justify-center h-full text-3xl">
-            {navLinks.map((link, index) => (
-              <Link
-                key={index}
-                href={link.href}
-                target={link.external ? "_blank" : undefined}
-                onClick={toggleMenu}
-                prefetch={true}
-              >
-                {link.mobileLabel}
-              </Link>
-            ))}
+            {/* <Link
+              href="/assets/Code&CreateFlyer.pdf"
+              target="_blank"
+              onClick={toggleMenu}
+            > */}
+            <Link href="#about" onClick={toggleMenu} prefetch={true}>
+              About Us
+            </Link>
+            <Link
+              href="https://forms.gle/RV3DVwCddkDvU5eK8"
+              target="_blank"
+              onClick={toggleMenu}
+              prefetch={true}
+            >
+              Code & Create
+            </Link>
+            <Link href="#sponsor" onClick={toggleMenu} prefetch={true}>
+              Sponsors
+            </Link>
+            {/* <Link href="#gallery">Gallery</Link> */}
+            <Link href="#contact" onClick={toggleMenu} prefetch={true}>
+              Contact Us
+            </Link>
+            <Link href="#faq" onClick={toggleMenu} prefetch={true}>
+              FAQ
+            </Link>
+            <Link href="/team" onClick={toggleMenu} prefetch={true}>
+              Meet The Team
+            </Link>
           </div>
         </div>
       )}
